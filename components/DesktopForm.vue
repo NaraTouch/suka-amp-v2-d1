@@ -24,25 +24,25 @@ export default {
 
 <style lang="scss" scoped>
 .d-login-form {
-    overflow: hidden;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    line-height: 45px;
-    text-align: center; 
-    display: block;
-    font-size: 14px;
-    right: 60px; 
-    top: 0px;
-    bottom: 0px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  line-height: 45px;
+  text-align: center; 
+  display: block;
+  font-size: 14px;
+  right: 60px; 
+  top: 0px;
+  bottom: 0px;
   .left-inner-addon {
-      position: relative;
-      padding-bottom: 1em;
+    position: relative;
+    padding-bottom: 1em;
   }
   .left-inner-addon span {
     position: absolute;
     padding: 12px 12px;
     pointer-events: none;
-}
+  }
 }
 </style>
