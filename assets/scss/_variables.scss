@@ -1,0 +1,26 @@
+// Template scss variable
+// Please define here
+
+$theme-color: #ffcd02;
+$theme-color-2: #ffeea9;
+$theme-color-3: #ffc11e;
+
+$text-color-1: white;
+$border-color-1: #ffa900;
+
+// gradient color build
+$rgb-light-1: rgb(255,168,0);
+$rgba-older-1: rgba(255,205,2,1);
+
+
+// Media Screen
+$xxl-device: 'only screen and (min-width: 1400px)';
+$xl-device: 'only screen and (max-width: 1399px)';
+$lg-device: 'only screen and (max-width: 1199px)';
+$md-device: 'only screen and (max-width: 991px)';
+$sm-device: 'only screen and (max-width: 767px)';
+$xs-device: 'only screen and (max-width: 575px)';
+$xxs-device: 'only screen and (max-width: 479.98px)';
+$xss-device: 'only screen and (max-width: 359.98px)';
+$xl-down-device: 'only screen and (min-width: 1200px)';
+$lg-down-device: 'only screen and (min-width: 992px)';

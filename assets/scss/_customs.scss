@@ -1,0 +1,15 @@
+.bg-gradient-1 {
+    background: $rgb-light-1;
+    background: linear-gradient(0deg, $rgb-light-1 0%, $rgba-older-1 35%, $rgba-older-1 100%);
+}
+.input-border-radius-15 {
+    border-radius: 15px;
+}
+.input-height-30 {
+    height: 30px;
+}
+
+.input-gradient {
+    background: $theme-color-3;
+    background: linear-gradient(0deg, $theme-color-3 0%, $theme-color-2 35%, $theme-color-2 100%);
+}
