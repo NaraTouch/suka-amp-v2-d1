@@ -1,18 +1,15 @@
 // Template scss variable
 // Please define here
-
 $theme-color: #ffcd02;
 $theme-color-2: #ffeea9;
 $theme-color-3: #ffc11e;
-
 $text-color-1: white;
 $border-color-1: #ffa900;
-
+$btn-color-1:#990000;
+$color-white: #ffffff;
 // gradient color build
-$rgb-light-1: rgb(255,168,0);
-$rgba-older-1: rgba(255,205,2,1);
-
-
+$rgb-light-1: rgb(255, 168, 0);
+$rgba-older-1: rgba(255, 205, 2, 1);
 // Media Screen
 $xxl-device: 'only screen and (min-width: 1400px)';
 $xl-device: 'only screen and (max-width: 1399px)';
