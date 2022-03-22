@@ -40,26 +40,27 @@ export default {
   display: block;
   font-size: 14px;
   right: 60px; 
-  top: 13px;
+  top: 15px;
   bottom: 0px;
   .left-inner-addon {
     position: relative;
     .span-style {
-       position: absolute;
-      padding: 0px 3px ;
-      margin: 0px -25px 0px 0px;
-      border-radius: 10px;
+      position: absolute;
+      padding: 2px 5px;
+      margin: 1px -14px 0px 1px;
+      border-radius: 12px;
       background-color: $rgb-light-1;
     }
     .input-custom-style {
       @extend .input-gradient;
-      padding: 2px 13px 1px 22px;
-      border: 1px solid $rgb-light-1;
-      border-radius: 14px;
+      padding: 4px 12px 4px 26px;
+      border: 1px solid #ffa800;
+      border-radius: 15px;
     }
     .btn {
-      border-radius: 10px;
-      border: 1px solid $rgb-light-1;
+      border-radius: 13px;
+      border: 1px solid #ffa800;
+      padding: 4px 15px 5px 15px;
     }
     .btn-color {
       background: $btn-color-1;
@@ -67,6 +68,9 @@ export default {
     }
     svg{ 
       fill:  $color-white; 
+    }
+    input:focus {
+      outline: none;
     }
   }
   

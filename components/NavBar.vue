@@ -54,7 +54,7 @@ export default {
     display: block;
     font-size: 14px;
     right: 0px; 
-    top: 0px;
+    top: 3px;
     bottom: 0px;
     color: $text-color-1;
   }
