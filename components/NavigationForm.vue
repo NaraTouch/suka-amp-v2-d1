@@ -4,7 +4,6 @@
             width="auto"
             height="30"
             layout="fixed-height"
-            src="/static/inline-examples/data/amp-list-urls.json"
             class="nav-responsive"
             >
             <template type="amp-mustache">
@@ -23,39 +22,35 @@ export default {
             items: [
                 {
                     title: 'Home',
-                    url: 'https://www.w3schools.com/'
+                    url: '/'
                 },
                 {
-                    title: 'Baccarat',
-                    url: 'http://localhost:3000/'
+                    title: 'bandar-baccarat',
+                    url: '/bandar-baccarat'
                 },
                 {
                     title: 'Sports',
-                    url: 'http://localhost:3000/'
+                    url: '/sports'
                 },
                 {
                     title: 'Casino',
-                    url: 'http://localhost:3000/'
+                    url: '/casino'
                 },
                 {
                     title: 'Slots',
-                    url: 'http://localhost:3000/'
+                    url: '/slots'
                 },
                 {
                     title: 'Poker',
-                    url: 'http://localhost:3000/'
+                    url: '/pokers'
                 },
                 {
                     title: 'Togel',
-                    url: 'http://localhost:3000/'
-                },
-                {
-                    title: 'Arcade',
-                    url: 'http://localhost:3000/'
+                    url: '/togels'
                 },
                 {
                     title: 'Cock Fighter',
-                    url: 'http://localhost:3000/'
+                    url: '/cock-fights'
                 },
             ]
         }
