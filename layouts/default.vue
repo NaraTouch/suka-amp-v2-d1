@@ -36,6 +36,7 @@ html {
 }
 .content {
   min-height: 100vh;
+  background: #000000;
 }
 .container {
   margin: 0 auto;
