@@ -30,8 +30,8 @@
         </svg>
       </button>
       <div class="">
-        <NavigationForm />
-        <RunningTextComponent />
+        <Navigation />
+        <RunningText />
       </div>
     </header>
     <div class="header-clear"></div>
@@ -40,10 +40,9 @@
 <script>
   export default {
     components: {
-      // DesktopForm: () => import('@/components/')
       DesktopForm: () => import('../components/DesktopForm'),
-      NavigationForm: () => import('../components/NavigationForm'),
-      RunningTextComponent: () => import('../components/RunningTextComponent'),
+      Navigation: () => import('../components/Navigation'),
+      RunningText: () => import('../components/RunningText'),
     },
   };
 </script>
