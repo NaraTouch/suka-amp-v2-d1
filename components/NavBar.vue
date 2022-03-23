@@ -31,6 +31,7 @@
       </button>
       <div class="">
         <NavigationForm />
+        <RunningTextComponent />
       </div>
     </header>
     <div class="header-clear"></div>
@@ -42,6 +43,7 @@
       // DesktopForm: () => import('@/components/')
       DesktopForm: () => import('../components/DesktopForm'),
       NavigationForm: () => import('../components/NavigationForm'),
+      RunningTextComponent: () => import('../components/RunningTextComponent'),
     },
   };
 </script>
