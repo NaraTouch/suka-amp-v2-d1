@@ -7,6 +7,7 @@ $text-color-1: white;
 $border-color-1: #ffa900;
 $btn-color-1:#990000;
 $color-white: #ffffff;
+$color-black: #000000;
 // gradient color build
 $rgb-light-1: rgb(255, 168, 0);
 $rgba-older-1: rgba(255, 205, 2, 1);
@@ -21,3 +22,4 @@ $xxs-device: 'only screen and (max-width: 479.98px)';
 $xss-device: 'only screen and (max-width: 359.98px)';
 $xl-down-device: 'only screen and (min-width: 1200px)';
 $lg-down-device: 'only screen and (min-width: 992px)';
+$sm-down-device: 'only screen and (min-width: 768px)';
