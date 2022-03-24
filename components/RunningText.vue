@@ -1,43 +1,22 @@
 <template>
-    <div id="running-text">
+    <div class="running-text">
         <div class="heading-block bg-1">
-            <div class="text-center">
-                 <!-- loading number -->
-                <div class="loading-number"></div>
+            <div class="box-area">
+                <span class="box num3"></span>
+                <span class="box num2"></span> 
+                <span class="box num1"></span>
             </div>
-            <div class="overlay"></div>
-	    </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-   data() {
-       return {
-       }
-   },
 }
 </script>
 
 <style lang="scss" scoped>
-    .loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    animation: spin 2s linear infinite;
-    }
-
-    @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    }
-    #running-text {
+    .running-text {
         margin: 0px 20px;
         .heading-block {
            padding: 10px 20px;
@@ -50,38 +29,47 @@ export default {
         .bg-1 {
             background-image: url(/images/slide-bar/image-1.jpg);
         }
-        .img-layout  {
-            img {
-                max-width: 1000px;
-                max-height: 100px;
-            }
-        }
-        .text-color {
-            color: $color-white;
-        }
-    }
-    // loading number
-    @property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
     }
 
-    .loading-number {
-    animation: counter 5s infinite alternate ease-in-out;
-    counter-reset: num var(--num);
-    font: 800 40px system-ui;
+    .box-area {
+        text-align: center;
     }
-    .loading-number::after {
-    content: counter(num);
+    .box-area span {
+        color: #fff;
+        padding: 0 10px;
+    }
+    .box {
+        display: inline-block;
+        overflow: hidden;
+        height: 1em;
+        line-height: 1em;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .box::after {
+        position: relative;
+        white-space: pre;
+        content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+    }
+    .box.num1::after {
+        animation: animate 1s steps(10) infinite;
+    }
+    .box.num2::after {
+        animation: animate 10s steps(10) infinite;
+    }
+    .box.num3::after {
+        animation: animate 100s steps(10) infinite;
+    }
+    @keyframes animate {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -10em;
+        }
     }
 
-    @keyframes counter {
-    from {
-        --num: 0;
-    }
-    to {
-        --num: 100;
-    }
-    }
+
+// running text
+
 </style>
