@@ -32,6 +32,7 @@
       <div class="container-div">
         <Navigation />
         <RunningText />
+        <CarouselGame />
       </div>
     </header>
     <div class="header-clear"></div>
@@ -43,6 +44,7 @@
       DesktopForm: () => import('../components/DesktopForm'),
       Navigation: () => import('../components/Navigation'),
       RunningText: () => import('../components/RunningText'),
+      CarouselGame: () => import('../components/CarouselGame'),
     },
   };
 </script>
