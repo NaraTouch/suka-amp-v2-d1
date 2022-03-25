@@ -1,64 +1,61 @@
 export default {
-  target: 'static',
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // ssr: false,
+    target: 'static',
+    // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+    // ssr: false,
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'suka-amp-v2-d1',
-    htmlAttrs: {
-      lang: 'en'
+    // Global page headers: https://go.nuxtjs.dev/config-head
+    head: {
+        title: 'suka-amp-v2-d1',
+        htmlAttrs: {
+            lang: 'en'
+        },
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: '' },
+            { name: 'format-detection', content: 'telephone=no' }
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ],
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+
+    loading: { color: "#a8cac3" },
+    // Global CSS: https://go.nuxtjs.dev/config-css
+    css: [],
+
+    // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+    plugins: [],
+
+    // Auto import components: https://go.nuxtjs.dev/config-components
+    components: true,
+
+    // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+    buildModules: [],
+
+    // Modules: https://go.nuxtjs.dev/config-modules
+    modules: [
+        "@nuxt/http",
+        "@nuxtjs/axios",
+        "@nuxtjs/amp",
+        "@nuxtjs/style-resources"
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-  },
+    styleResources: {
+        scss: [
+            '~/assets/scss/_variables.scss',
+            '~/assets/scss/_customs.scss',
+        ]
+    },
 
-  loading: { color: "#a8cac3" },
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    "@nuxt/http",
-    "@nuxtjs/axios",
-    "@nuxtjs/amp",
-    "@nuxtjs/style-resources"
-  ],
-  styleResources: {
-      scss: [
-          '~/assets/scss/_variables.scss',
-          '~/assets/scss/_customs.scss',
-      ]
-  },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-     extend(config, ctx) {}
-  },
-  amp: {
-    origin: "http://localhost:3000",
-    mode: 'only'
-  }
+    // Build Configuration: https://go.nuxtjs.dev/config-build
+    build: {
+        /*
+         ** You can extend webpack config here
+         */
+        extend(config, ctx) {}
+    },
+    amp: {
+        origin: "http://localhost:3000",
+        mode: 'only'
+    }
 }

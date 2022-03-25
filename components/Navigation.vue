@@ -29,12 +29,12 @@ export default {
 
 <style lang="scss">
     .navigation {
-        margin: 10px;
+        margin: 10px 0px 0px 0px;
         .nav-responsive {
             display: flex;
             .url-entry {
                 display: inline;
-                margin: 5px 14px;
+                margin: 5px 15px 0px 0px;
                 a {
                     text-decoration: none;
                     color: $text-color-1;
