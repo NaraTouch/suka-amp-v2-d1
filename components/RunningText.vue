@@ -1,31 +1,11 @@
 <template>
-    <div>
-        <div class="running-dev">
-            <div class="running-text">
-                <div class="row">
-                    <div>
-                        <hr />
-                    </div>
-                    <ImageIcon :src="jackport"  :width="widthImage" :height="heightImage" />
-                   <LoadingComponent />
-                    <ImageIcon :src="idn"  :width="widthImage" :height="heightImage" />
-                </div>
-                <div class="row">
-                    <div>
-                        <hr />
-                    </div>
-                    <ImageIcon :src="jackport"  :width="widthImage" :height="heightImage" />
-                   <LoadingComponent />
-                    <ImageIcon :src="idn"  :width="widthImage" :height="heightImage" />
-                </div>
-                <div class="row">
-                    <div>
-                        <hr />
-                    </div>
-                   <ImageIcon :src="jackport"  :width="widthImage" :height="heightImage" />
-                   <LoadingComponent />
-                   <ImageIcon :src="pg"  :width="widthImage" :height="heightImage" />
-                </div>
+    <div class="running-dev">
+        <div class="running-text">
+            <div class="row" v-for="(cardItem, index) in cardItems" :key="index">
+               <div class="line"></div>
+                <ImageIcon :src="cardItem.imageOne"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
+                 <LoadingComponent />
+                <ImageIcon :src="cardItem.imageTwo"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
             </div>
         </div>
     </div>
@@ -36,6 +16,7 @@ export default {
     components: {
         LoadingComponent: () => import('./loadingNumber'),
         ImageIcon: () => import('./ImageIcon'),
+        CountAnimation: () => import('./CountAnimation'),
     },
     data() {
         return {
@@ -43,7 +24,27 @@ export default {
             idn: '../images/running-icon/idn.png',
             pg: '../images/running-icon/idn.png',
             widthImage: '100px',
-            heightImage: '20px'
+            heightImage: '20px',
+            cardItems: [
+                {
+                    imageOne: '../images/running-icon/jackpot.png',
+                    imageTwo: '../images/running-icon/idn.png',
+                    widthImage: '100px',
+                    heightImage: '20px',
+                },
+                {
+                    imageOne: '../images/running-icon/jackpot.png',
+                    imageTwo: '../images/running-icon/idn.png',
+                    widthImage: '100px',
+                    heightImage: '20px',
+                },
+                {
+                    imageOne: '../images/running-icon/jackpot.png',
+                    imageTwo: '../images/running-icon/idn.png',
+                    widthImage: '100px',
+                    heightImage: '20px',
+                }
+            ]
         }
     },
 }
@@ -64,11 +65,18 @@ export default {
             display: flex;
             .row {
                 display: flex;
-            }
-            hr {
-                height: 100%;
-                margin: 0px 10px;
-                border: 1px solid $border-color-1;
+                 &:first-child {
+                        .line {
+                        width: 0px;
+                        background: $border-color-1;
+                        margin: 0px 10px;
+                    }
+                }
+                .line {
+                    width: 1px;
+                    background: $border-color-1;
+                    margin: 0px 10px;
+                }
             }
         }
         @-moz-keyframes marquee {

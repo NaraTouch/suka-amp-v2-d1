@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header bg-gradient-1">
+    <!-- <header class="header bg-gradient-1">
       <NuxtLink to="/" class="header-logo">
         <amp-img
           alt="site logo"
@@ -23,6 +23,7 @@
       </NuxtLink>
       <div class="hidden-input">
         <DesktopForm />
+       
       </div>
       <button class="header-nav-icon" on='tap:sidebar.toggle'>
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -32,10 +33,11 @@
       <div class="container-div">
         <Navigation />
         <RunningText />
-        <CarouselGame />
+        <CountAnimation />
       </div>
-    </header>
+    </header> -->
     <div class="header-clear"></div>
+
   </div>
 </template>
 <script>
@@ -45,6 +47,7 @@
       Navigation: () => import('../components/Navigation'),
       RunningText: () => import('../components/RunningText'),
       CarouselGame: () => import('../components/CarouselGame'),
+      CountAnimation: () => import('../components/CountAnimation'),
     },
   };
 </script>
@@ -55,7 +58,7 @@
     height: 50px;
     width: 100%;
     z-index: 99999;
-      border-bottom: solid 1px rgba(0,0,0,0.1);
+    border-bottom: solid 1px rgba(0,0,0,0.1);
     .header-logo {
       width: 100px;
       height: 100%;
