@@ -1,11 +1,8 @@
 <template>
-    <div class="running-dev">
-        <div class="running-text">
-            <div class="row" v-for="(cardItem, index) in cardItems" :key="index">
-               <div class="line"></div>
-                <ImageIcon :src="cardItem.imageOne"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
-                 <LoadingComponent />
-                <ImageIcon :src="cardItem.imageTwo"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
+    <div>
+        <div class="position-relative marquee-container d-none d-sm-block">
+            <div class="marquee d-flex justify-content-around">
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim debitis blanditiis corrupti minus commodi vel ab nihil architecto doloremque, dolorem, eos, assumenda dicta dolor quos. Ratione repellendus corrupti molestias laborum!</span>
             </div>
         </div>
     </div>
@@ -13,99 +10,41 @@
 
 <script>
 export default {
-    components: {
-        LoadingComponent: () => import('./loadingNumber'),
-        ImageIcon: () => import('./ImageIcon'),
-        CountAnimation: () => import('./CountAnimation'),
-    },
-    data() {
-        return {
-            jackport: '../images/running-icon/jackpot.png',
-            idn: '../images/running-icon/idn.png',
-            pg: '../images/running-icon/idn.png',
-            widthImage: '100px',
-            heightImage: '20px',
-            cardItems: [
-                {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                },
-                {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                },
-                {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                }
-            ]
-        }
-    },
+    
 }
 </script>
 
 <style lang="scss" scoped>
-    .running-dev {
-        background-color: $color-black;
+    span { 
         color: $color-white;
-        padding: 10px;
-        border: 1px solid $border-color-1;
-        border-radius: 15px;
-        overflow: hidden;
-        .running-text {
-            -moz-animation: marquee 15s linear infinite;
-            -webkit-animation: marquee 15s linear infinite;
-            animation: marquee 15s linear infinite;
-            display: flex;
-            .row {
-                display: flex;
-                 &:first-child {
-                        .line {
-                        width: 0px;
-                        background: $border-color-1;
-                        margin: 0px 10px;
-                    }
-                }
-                .line {
-                    width: 1px;
-                    background: $border-color-1;
-                    margin: 0px 10px;
-                }
-            }
-        }
-        @-moz-keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        @-webkit-keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        @keyframes marquee {
-            0% {
-                -moz-transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%)
-            }
-            100% {
-                -moz-transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-            }
-        }
     }
+    .marquee-container {
+        height: 30px;
+        overflow: hidden;
+        line-height: 30px;
+        background: $color-gray;
+        margin-bottom: 10px;
+
+        .marquee {
+            left: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+
+        .marquee2 {
+            animation-delay: 5s;
+        }
+        }
+
+        @keyframes marquee {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: -100%
+        }
+        }
 </style>

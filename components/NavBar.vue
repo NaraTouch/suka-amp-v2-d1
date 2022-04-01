@@ -43,9 +43,7 @@
 <script>
   export default {
     components: {
-      DesktopForm: () => import('../components/DesktopForm'),
       Navigation: () => import('../components/Navigation'),
-      RunningText: () => import('../components/RunningText'),
       CarouselGame: () => import('../components/CarouselGame'),
       CountAnimation: () => import('../components/CountAnimation'),
     },
