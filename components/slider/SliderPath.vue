@@ -58,11 +58,6 @@ export default {
                 background-color: $btn-color-1;
             }
         }
-
-        .button--primary {
-            color: #fff;
-            background-color: #005af0;
-        }
     }
     // @keyframes run {
     //     0% {

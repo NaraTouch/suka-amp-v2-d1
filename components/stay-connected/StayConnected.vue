@@ -1,7 +1,11 @@
 <template>
     <div class="stay-connected-list">
-        <span> Stay connected </span>
-        <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
+        <div class="header">
+            <span>Stay connected</span>
+        </div>
+        <div>
+            <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
+        </div>
     </div>
 </template>
 
@@ -11,8 +15,8 @@ export default {
         return {
             imageList: `
                 <template type="amp-mustache">
-                    <amp-carousel  class="test" id="custom-button"  width="50" height="50" type="slides" >
-                        <a href="{{logo}}" target="_blank"> <amp-img src="{{logo}}" width="50" height="50" layout="responsive" alt="AMP Carousel"></amp-img></a>
+                    <amp-carousel  class="connected-image" id="custom-button"  width="50" height="50" type="slides" >
+                        <a href="{{url}}" target="_blank"> <amp-img src="{{logo}}" width="50" height="50" layout="responsive" alt="AMP Carousel"></amp-img></a>
                     </amp-carousel>
                 </template>
             `
@@ -24,9 +28,13 @@ export default {
 <style lang="scss">
     .stay-connected-list {
         margin: 15px 0px 0px 0px;
-        span {
-            display: flex;
-            margin: 0px 0px 0px 20px;
+        .header {
+            text-align: justify;
+            margin: 10px 0px 10px 20px;
+            span {
+                font-size: 16px;
+                font-weight: 400;
+            }
         }
         .list-overflow[overflow] {
             position: absolute;
@@ -36,7 +44,7 @@ export default {
             }
             .connected {
                 margin: 10px 0px 0px 0px;
-                .test {
+                .connected-image {
                     margin: 0px 15px;
                 }
             }

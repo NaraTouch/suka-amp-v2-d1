@@ -34,6 +34,10 @@
         <div class="stay-connected">
           <StayConnected />
         </div>
+        
+        <div class="payment-method">
+          <PaymentMethod />
+        </div>
 
         <div class="content-text">
           <ContentText />
@@ -71,7 +75,8 @@ export default {
     StayConnected: () => import('../components/stay-connected/StayConnected'),
     ContentText: () => import('../components/content/ContentText'),
     SliderPath: () => import('../components/slider/SliderPath'),
-    Test: () => import('../components/slider/test'),
+    PaymentMethod: () => import('../components/Payment/PaymentMethod'),
+    
   },
   data() {
     return {
@@ -113,8 +118,8 @@ export default {
       "tab-winner slider-image slider-image slider-image"
       "slider-promotion slider-image slider-image slider-image"
       "stay-connected slider-image slider-image slider-image"
-      "content-text slider-image slider-image slider-image";
-      // "content-text sidebar-right sidebar-right sidebar-right"
+      "payment-method slider-image slider-image slider-image"
+      "content-text sidebar-right sidebar-right sidebar-right";
       // "footer footer footer footer";
       gap: 0.5rem;
       height: 100vh;
@@ -149,6 +154,11 @@ export default {
     }
     .stay-connected {
       grid-area: stay-connected;
+      background-color: $color-gray;
+      @extend .border-radius-5px;
+    }
+    .payment-method {
+      grid-area: payment-method;
       background-color: $color-gray;
     }
     .content-text {

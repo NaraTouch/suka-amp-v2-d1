@@ -51,7 +51,7 @@ export default {
 <style lang="scss">
     .slider-promotion {
         .carousel {
-            border-radius: 5px;
+            border-radius: 10px;
             .slide > amp-img > img {
                 position: fixed;
             }
