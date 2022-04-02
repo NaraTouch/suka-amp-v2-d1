@@ -1,7 +1,7 @@
 <template>
-    <div class="connection-list">
+    <div class="stay-connected-list">
         <span> Stay connected </span>
-        <amp-list class="connection" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
+        <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
     </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
         return {
             imageList: `
                 <template type="amp-mustache">
-                    <amp-carousel id="custom-button"  width="50" height="50" type="slides" >
+                    <amp-carousel  class="test" id="custom-button"  width="50" height="50" type="slides" >
                         <a href="{{logo}}" target="_blank"> <amp-img src="{{logo}}" width="50" height="50" layout="responsive" alt="AMP Carousel"></amp-img></a>
                     </amp-carousel>
                 </template>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-    .connection-list {
+    .stay-connected-list {
         margin: 15px 0px 0px 0px;
         span {
             display: flex;
@@ -34,8 +34,11 @@ export default {
             left: 0;
             right: 0;
             }
-            .connection {
+            .connected {
                 margin: 10px 0px 0px 0px;
+                .test {
+                    margin: 0px 15px;
+                }
             }
     }
 </style>

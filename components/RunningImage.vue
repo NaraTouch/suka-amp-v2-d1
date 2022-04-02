@@ -54,7 +54,7 @@ export default {
     .running-dev {
         background-color: $color-black;
         color: $color-white;
-        padding: 10px;
+        padding: 15px;
         border: 1px solid $color-white;
         border-radius: 5px;
         overflow: hidden;

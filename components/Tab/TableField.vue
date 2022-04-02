@@ -16,8 +16,8 @@ export default {
                             <amp-img width="50" height="50" alt="{{ name }}" src="{{ image }}"></amp-img>
                         </div>
                         <div>
-                            <div>{{ name }}</div>
-                            <div>{{ price }}</div>
+                            <div class="font-size-name">{{ name }}</div>
+                            <div class="font-size-price">{{ price }}</div>
                         </div>
                     </div>
                 </template>
@@ -28,10 +28,12 @@ export default {
 </script>
 
 <style lang="scss">
-
     .table-field {
         overflow: auto;
-        height: 305px;
+        height: 340px;
+        background: $color-gray;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
     .table-field::-webkit-scrollbar {
             width: 5px;          
@@ -44,7 +46,6 @@ export default {
         border-radius: 20px;       
         // border: 1px solid $color-white;  
     }
-
   .list-overflow {
     width: max-content;
     margin: var( --space-2);
@@ -58,29 +59,39 @@ export default {
     // max-width: 400px;
     // box-shadow: var(--box-shadow-1);
     // background: var(--color-bg-light);
-    border-radius: 2px;
-    margin: var( --space-2);
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid $color-white;
+        border-radius: 2px;
+        margin: 7px 25px;
+        padding: 0px 0px 6px 10px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $color-white;
+        .image-placeholder {
+            margin-right: var(--space-3);
+        }
+        .image-placeholder {
+            width: 150px;
+            height: 100px;
+            background-color: #999;
+        }
+        .image-padding {
+            margin: 0px 50px 0px 0px;
+        }
+        .font-size-name {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .font-size-price {
+            font-size: 30px;
+            font-weight: 700;
+            color: red;
+            line-height: 32px;
+            text-align: justify;
+        }
+        
   }
-
-  .product amp-img, .product .image-placeholder {
-    margin-right: var(--space-3);
-  }
-
-  .product .image-placeholder {
-    width: 150px;
-    height: 100px;
-    background-color: #999;
-  }
-  .image-padding {
-        margin: 0px 40px 0px 0px;
-  }
-
   amp-selector[role=tablist].tabs-with-flex [role=tabpanel][data-v-064377cf] {
-      padding: 0px;
-  }
+            padding: 0px;
+        }
 //   amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel][data-v-064377cf] {
 //     overflow: auto;
 //     position: relative;

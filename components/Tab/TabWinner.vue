@@ -2,7 +2,7 @@
     <div class="testss">
         <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
             <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Winner</div>
-            <div class="test" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
+            <div class="tab1-style" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
                 <table-field />
             </div>
             <div id="tab2" role="tab" aria-controls="tabpanel2" option>ToGel</div>
@@ -26,7 +26,10 @@ export default {
 }
 </script>
 
-<style lang="scss" >  
+<style lang="scss" > 
+    .tab1-style {
+        height: 350px;
+    } 
     // .testss {
     //     display: grid;
     // }
@@ -37,7 +40,7 @@ export default {
     amp-selector[role=tablist].tabs-with-flex {
         display: flex;
         flex-wrap: wrap;
-        
+        padding: 1px;
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab] {
         flex-grow: 1;
@@ -54,7 +57,7 @@ export default {
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
         outline: none;
-        border-bottom: 2px solid var(--color-primary);
+        // border-bottom: 2px solid var(--color-primary);
         background: $btn-color-1;
         color: white;
         padding: 10px;

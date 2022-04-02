@@ -1,43 +1,58 @@
 <template>
-  <section >
-    <div class="container">
-      <div class="header">
-        <Header />
+  <section>
+    <div class="home-page">
+      <!-- NavBar  -->
+      <div>
+          <NavBarHeader />
       </div>
-
-      <!-- <div class="test"> -->
-        <main class="main container-div">
+      
+      <!-- Container -->
+      <div class="display-container container-content container-wide">
+        <!-- Header -->
+          <div class="running-text">
             <RunningText />
-            <NavImageGame />
+          </div>
+
+          <div class="header-text">
+            <NavImage />
+          </div>
+
+          <div class="running-image">
             <RunningImage />
-            <!-- <MultipleCarousel /> -->
-        </main>
-        
-         <div class="tab-winner">
-           <TabWinner />
+          </div>
+
+        <!-- Body -->
+        <!-- col-left -->
+        <div class="tab-winner">
+          <TabWinner />
         </div>
-        <div class="image-slider"> 
+
+        <div class="slider-promotion"> 
           <Slider :slide-list="sliderPromotion" :slider="slderCondition" />
         </div>
-         <div class="slider-image container-div">
-             <Slider :slide-list="sliderImage" />
-             <SliderPath />
+
+        <div class="stay-connected">
+          <StayConnected />
         </div>
-        <div class="connection">
-          <Connection />
-        </div>
+
         <div class="content-text">
           <ContentText />
         </div>
-        <div class="sidebar-right container-div">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, beatae perferendis animi eveniet maxime voluptatibus sapiente suscipit provident? Magni beatae laboriosam eos blanditiis doloribus atque aspernatur magnam voluptatum ea ipsum!</p>
-        </div>
-       
-      <!-- </div> -->
 
-      <footer>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio voluptate possimus placeat repellendus a officiis, est temporibus laborum reiciendis reprehenderit vel veritatis perspiciatis, quod in, rerum quae natus earum tempore.</p>
-      </footer>
+        <!-- Body -->
+        <!-- col-right -->
+        <div class="slider-image">
+          <!-- <Test /> -->
+             <Slider :slide-list="sliderImage" />
+             <SliderPath /> 
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div>
+
+      </div>
     </div>
   </section>
 </template>
@@ -48,14 +63,15 @@ export default {
     Navigation: () => import('../components/Navigation'),
     RunningImage: () => import('../components/RunningImage'),
     MultipleCarousel: () => import('../components/MultipleCarousel'),
-    Header: () => import('../components/header/Header'),
+    NavBarHeader: () => import('../components/header/NavBarHeader'),
     RunningText: () => import('../components/RunningText'),
-    NavImageGame: () => import('../components/body/NavImageGame'),
+    NavImage: () => import('../components/body/NavImage'),
     TabWinner: () => import('../components/Tab/TabWinner'),
     Slider: () => import('../components/slider/Slider'),
-    Connection: () => import('../components/connection/Connection'),
+    StayConnected: () => import('../components/stay-connected/StayConnected'),
     ContentText: () => import('../components/content/ContentText'),
     SliderPath: () => import('../components/slider/SliderPath'),
+    Test: () => import('../components/slider/test'),
   },
   data() {
     return {
@@ -81,97 +97,67 @@ export default {
 
 
 <style lang="scss" scoped>
-
-// slide menu
-  .hamburger {
-    padding-left: 10px;
-    .sidebar {
-      padding: 10px;
-      margin: 0;
-      .sidebar > li {
-        list-style: none;
-        margin-bottom:10px;
-      }
-      .sidebar a {
-        text-decoration: none;
-      }
-      .close-sidebar {
-        font-size: 1.5em;
-        padding-left: 5px;
-      }
-      p {
-        color: red;
-      }
+  .home-page {
+    // Navbar-Header
+    
+    // Container-style
+    .display-container {
+      margin-top: 10px;
+      display: grid;        
+      grid-template-columns: repeat(4, 1fr); 
+      grid-template-rows: 0.1fr 0.2fr 0.1fr 1.2fr;
+      grid-template-areas:
+      "running-text running-text running-text running-text"
+      "header-text header-text header-text header-text"
+      "running-image running-image running-image running-image"
+      "tab-winner slider-image slider-image slider-image"
+      "slider-promotion slider-image slider-image slider-image"
+      "stay-connected slider-image slider-image slider-image"
+      "content-text slider-image slider-image slider-image";
+      // "content-text sidebar-right sidebar-right sidebar-right"
+      // "footer footer footer footer";
+      gap: 0.5rem;
+      height: 100vh;
+      font-weight: 800;
+      font-size: 12px;
+      color: $color-white;
+      text-align: center;
     }
-  }
-
-  .container {
-    display: grid;        
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: 0.1fr 0.5fr 1.2fr 1.2fr; 
-    grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "tab-winner slider-image slider-image slider-image"
-    "image-slider sidebar-right sidebar-right sidebar-right"
-    "connection sidebar-right sidebar-right sidebar-right"
-    "content-text sidebar-right sidebar-right sidebar-right"
-    "footer footer footer footer";
-    gap: 0.5rem;
-    height: 100vh;
-    font-weight: 800;
-    font-size: 12px;
-    color: $color-white;
-    text-align: center;
-    .header{
-      background-color: #3770F6;
-      grid-area: header;
+    .container-content {
+      max-width: 1500px;
     }
-    .main{
-      // background-color: red;
-      grid-area: main;
+    .container-wide {
+      margin-left: auto;
+      margin-right: auto;
     }
-    .sidebar-right {
-      background: #D3D4D7;
-      grid-area: sidebar-right;
+    // cloumn
+    //left
+    .running-text {
+      grid-area: running-text;
+    }
+    .header-text {
+      grid-area: header-text;
+    }
+    .running-image {
+      grid-area: running-image;
     }
     .tab-winner {
-      background: $color-gray;
-      grid-area: tab-winner;
-      border-radius: 5px;
+       grid-area: tab-winner;
     }
-    .image-slider {
-      background: #BDBCBB;
-      grid-area: image-slider;
-      border-radius: 5px;
+    .slider-promotion {
+      grid-area: slider-promotion;
     }
-    .connection {
-      background: #BDBCBB;
-      grid-area: connection;
-      border-radius: 5px;
+    .stay-connected {
+      grid-area: stay-connected;
+      background-color: $color-gray;
     }
     .content-text {
-      //  background: #BDBCBB;
       grid-area: content-text;
-      border-radius: 5px;
     }
+
+    // right
     .slider-image {
-       
        grid-area: slider-image;
-      border-radius: 5px;
-      
-    }
-    .body {
-      margin: 0px 20px;
-    }
-    footer {
-      background-color: #3770F6;
-      grid-area: footer;
-      color: #ffffff;
-    }
-    .container-div {
-      margin: 0px 20px;
     }
   }
-
 </style>

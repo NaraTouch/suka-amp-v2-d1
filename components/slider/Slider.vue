@@ -1,10 +1,10 @@
 <template>
     <div>
         <div v-if="slider" class="slider-promotion">
-            <amp-list class="slider" height="400" items="." single-item="." :src="slideList" v-html="listSlierPromotion" /> 
+            <amp-list class="slider" width="375" height="400" items="." single-item="." :src="slideList" v-html="listSlierPromotion" /> 
         </div>
         <div v-else class="slider-image">
-            <amp-list class="slider" height="300" items="." single-item="." :src= "slideList" v-html="listSlierImage" />
+            <amp-list class="slider" width="1116" height="300" items="." single-item="." :src= "slideList" v-html="listSlierImage" />
         </div>
     </div>
 </template>
@@ -19,11 +19,11 @@ export default {
         return {
             listSlierPromotion: `
                 <template type="amp-mustache">
-                    <amp-carousel class="carousel" width="239" height="400"  type="slides" autoplay lightbox delay="3000">
+                    <amp-carousel class="carousel" width="375" height="400"  type="slides" autoplay lightbox delay="3000">
                             {{#items}}
                             <div class="slide">           
                                 <amp-img src="{{url}}"
-                                width="239" height="400"
+                                width="375" height="400"
                                 layout="responsive"></amp-img>
                             </div>
                         {{/items}}
@@ -32,12 +32,12 @@ export default {
             `,
             listSlierImage: `
                 <template type="amp-mustache">
-                    <amp-carousel width="700" height="300" class="carousel" type="slides" autoplay lightbox delay="3000">
+                    <amp-carousel width="1123" height="300" class="carousel" type="slides" autoplay lightbox delay="3000">
                             {{#items}}
                             <div class="slide">           
                                 <amp-img src="{{url}}"
-                                width="700" height="300"
-                                layout="responsive"></amp-img>
+                                width="1123" height="300"
+                                ></amp-img>
                             </div>
                         {{/items}}
                     </amp-carousel>
@@ -51,8 +51,9 @@ export default {
 <style lang="scss">
     .slider-promotion {
         .carousel {
+            border-radius: 5px;
             .slide > amp-img > img {
-                // object-fit: contain;
+                position: fixed;
             }
             .caption {
                 position: absolute;
@@ -68,19 +69,21 @@ export default {
         }
     }
     .slider-image {
+        margin: 0px 0px -2px;
         .slider {
-            @extend .card;
+             @extend .card;
         }
         .carousel {
             .slide > amp-img > img {
-                // object-fit: contain;
+                //  object-fit: contain;
+                position: fixed;
             }
             .caption {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
-                padding: .5rem;
+                // padding: .5rem;
                 background: rgba(0, 0, 0, 0.6);
                 font-family:Arial;
                 color: white;

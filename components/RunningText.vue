@@ -19,12 +19,12 @@ export default {
         color: $color-white;
     }
     .marquee-container {
-        height: 30px;
         overflow: hidden;
-        line-height: 30px;
+        // line-height: 30px;
         background: $color-gray;
-        margin-bottom: 10px;
-
+        padding: 15px;
+        margin: 10px 0px;
+        border-radius: 2px;
         .marquee {
             left: 100%;
             width: 100%;

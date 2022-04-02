@@ -17,7 +17,6 @@
               </svg>
             </span>
             <input type="password" class="form-control input-custom-style" placeholder="input text" />
-
             <button class="btn btn-color">Masuk</button>
             <button class="btn ">Masuk</button>
             
@@ -42,7 +41,7 @@ export default {
   display: block;
   font-size: 14px;
   right: 60px; 
-  top: 15px;
+  top: 12px;
   bottom: 0px;
   .left-inner-addon {
     position: relative;
@@ -52,21 +51,50 @@ export default {
     }
     .span-style {
       position: absolute;
-      padding: 2px 5px;
-      margin: 1px -14px 0px 1px;
-      // border-radius: 12px;
+      padding: 4px 6px;
+      margin: 1px -14px 0px -1px;
+      border-radius: 4px;
       background-color: $rgb-light-1;
     }
     .input-custom-style {
       // @extend .input-gradient;
-      padding: 4px 12px 4px 26px;
-      border: 1px solid #ffa800;
+          padding: 6px 12px 6px 30px;
+      border: 1px solid black;
+      border-radius: 4px;
+      box-shadow: var(--box-shadow-1);
       // border-radius: 15px;
+    }
+    button { 
+      display: inline-block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      line-height: 1.3em;
+      padding: 0.8em 7em;
+      margin-right: 0.3em;
+      
+      font-size: 1em;
+      font-weight: 700;
+      
+      color: #005af0;
+      text-decoration: none;
+      text-align: center;
+      
+      border: 0;
+      border-radius: 3px;
+      background-color: #fff;
+      
+      box-shadow: var(--box-shadow-1);
+      transition: 
+          transform .3s cubic-bezier(.25,.1,.25,1),
+          box-shadow .3s cubic-bezier(.25,.1,.25,1);
+      
+      cursor: pointer;
     }
     .btn {
       // border-radius: 13px;
-      border: 1px solid #ffa800;
-      padding: 4px 15px 5px 15px;
+      // border: 1px solid #ffa800;
+      padding: 3px 15px 5px 15px;
     }
     .btn-color {
       background: $btn-color-1;
