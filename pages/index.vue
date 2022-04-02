@@ -17,7 +17,11 @@
            <TabWinner />
         </div>
         <div class="image-slider"> 
-          <Slider />
+          <Slider :slide-list="sliderPromotion" :slider="slderCondition" />
+        </div>
+         <div class="slider-image container-div">
+             <Slider :slide-list="sliderImage" />
+             <SliderPath />
         </div>
         <div class="connection">
           <Connection />
@@ -51,11 +55,15 @@ export default {
     Slider: () => import('../components/slider/Slider'),
     Connection: () => import('../components/connection/Connection'),
     ContentText: () => import('../components/content/ContentText'),
+    SliderPath: () => import('../components/slider/SliderPath'),
   },
   data() {
     return {
-       count: 0,
-       src: "../static/images/images.jpg",
+        count: 0,
+        src: "../static/images/images.jpg",
+        sliderPromotion: "/data/slider-list.json",
+        sliderImage: "/data/slider-image-list.json",
+        slderCondition: true,
     }
   },
   methods: {
@@ -104,7 +112,7 @@ export default {
     grid-template-areas:
     "header header header header"
     "main main main main"
-    "tab-winner sidebar-right sidebar-right sidebar-right"
+    "tab-winner slider-image slider-image slider-image"
     "image-slider sidebar-right sidebar-right sidebar-right"
     "connection sidebar-right sidebar-right sidebar-right"
     "content-text sidebar-right sidebar-right sidebar-right"
@@ -113,7 +121,7 @@ export default {
     height: 100vh;
     font-weight: 800;
     font-size: 12px;
-    color: #004d40;
+    color: $color-white;
     text-align: center;
     .header{
       background-color: #3770F6;
@@ -143,9 +151,15 @@ export default {
       border-radius: 5px;
     }
     .content-text {
-       background: #BDBCBB;
+      //  background: #BDBCBB;
       grid-area: content-text;
       border-radius: 5px;
+    }
+    .slider-image {
+       
+       grid-area: slider-image;
+      border-radius: 5px;
+      
     }
     .body {
       margin: 0px 20px;

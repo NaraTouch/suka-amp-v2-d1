@@ -1,0 +1,19 @@
+{
+    "items": [{
+            "url": "/images/slide-bar/image-1.jpg",
+            "alt": "Her er en kat!"
+        },
+        {
+            "url": "/images/slide-bar/image-2.jpg",
+            "alt": "Her er en anden kat!"
+        },
+        {
+            "url": "/images/slide-bar/image-1.jpg",
+            "alt": "Her er en kat!"
+        },
+        {
+            "url": "/images/slide-bar/image-2.jpg",
+            "alt": "Her er en anden kat!"
+        }
+    ]
+}

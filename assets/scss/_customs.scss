@@ -15,3 +15,7 @@
     background: $theme-color-3;
     background: linear-gradient(0deg, $theme-color-3 0%, $theme-color-2 35%, $theme-color-2 100%);
 }
+
+.card {
+    box-shadow: var(--box-shadow-1);
+}
