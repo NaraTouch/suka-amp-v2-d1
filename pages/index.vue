@@ -1,61 +1,68 @@
 <template>
-  <section>
-    <div class="home-page">
-      <!-- NavBar  -->
-      <div>
-          <NavBarHeader />
-      </div>
-      
-      <!-- Container -->
-      <div class="display-container container-content container-wide">
-        <!-- Header -->
-          <div class="running-text">
-            <RunningText />
-          </div>
+  <section >
+    <div class="grid-body">
+      <header class="page-header">
+        <NavBarHeader />
+      </header>
 
-          <div class="header-text">
-            <NavImage />
-          </div>
-
-          <div class="running-image">
-            <RunningImage />
-          </div>
-
-        <!-- Body -->
-        <!-- col-left -->
-        <div class="tab-winner">
-          <TabWinner />
+      <div class="container">
+        <!-- running-text -->
+        <div class="running-text">
+          <running-text />
         </div>
 
-        <div class="slider-promotion"> 
+        <!-- navbar -->
+        <nav class="navbar">
+            <nav-image />
+        </nav>
+
+        <!-- running-image -->
+        <div class="running-image">
+          <running-image />
+        </div>
+
+        <!-- left -->
+        <aside class="tab-winner">
+          <TabWinner />
+        </aside>
+
+        <div class="ads-image">
           <Slider :slide-list="sliderPromotion" :slider="slderCondition" />
         </div>
 
         <div class="stay-connected">
-          <StayConnected />
+          <h2>stay connected</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero tempore adipisci rem illo esse distinctio tempora ducimus. Porro, molestias sequi placeat rerum reprehenderit illo eum laudantium culpa unde, sunt eligendi.</p>
         </div>
-        
+
         <div class="payment-method">
-          <PaymentMethod />
+          <h2>Payment Methods</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellat accusamus corrupti eligendi sunt corporis, fuga quas velit vitae, ex dolorum saepe. Perferendis inventore dicta placeat similique doloribus obcaecati voluptates.</p>
         </div>
-
         <div class="content-text">
-          <ContentText />
+          <h2>content-text</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias reiciendis doloremque quidem cupiditate exercitationem! Optio ex quasi perspiciatis suscipit corrupti, aut nisi est error quod provident tempora commodi, velit consequatur?</p>
         </div>
 
-        <!-- Body -->
-        <!-- col-right -->
+        <!-- right -->
         <div class="slider-image">
-          <!-- <Test /> -->
-             <Slider :slide-list="sliderImage" />
-             <SliderPath /> 
+          <Slider :slide-list="sliderImage" />
+          <SliderPath />
         </div>
 
-      </div>
+        <!-- <div class="button-slider">
+          <h2>button button button</h2>
+        </div> -->
 
-      <!-- Footer -->
-      <div>
+        <div class="card">
+          <h2>card</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis soluta vitae necessitatibus officia, nemo, dolore natus neque perspiciatis amet ut iusto voluptates ad libero sapiente! Quibusdam optio perspiciatis blanditiis ut.</p>
+        </div>
 
+        <!-- footer -->
+        <footer class="footer">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum inventore eveniet beatae rem provident atque ducimus! Adipisci culpa, dolor dolorum cupiditate sit sunt eos, ad hic est ipsum provident nemo!</p>
+        </footer>
       </div>
     </div>
   </section>
@@ -64,19 +71,13 @@
 <script>
 export default {
   components: {
-    Navigation: () => import('../components/Navigation'),
-    RunningImage: () => import('../components/RunningImage'),
-    MultipleCarousel: () => import('../components/MultipleCarousel'),
     NavBarHeader: () => import('../components/header/NavBarHeader'),
     RunningText: () => import('../components/RunningText'),
     NavImage: () => import('../components/body/NavImage'),
+    RunningImage: () => import('../components/RunningImage'),
     TabWinner: () => import('../components/Tab/TabWinner'),
     Slider: () => import('../components/slider/Slider'),
-    StayConnected: () => import('../components/stay-connected/StayConnected'),
-    ContentText: () => import('../components/content/ContentText'),
     SliderPath: () => import('../components/slider/SliderPath'),
-    PaymentMethod: () => import('../components/Payment/PaymentMethod'),
-    
   },
   data() {
     return {
@@ -87,87 +88,137 @@ export default {
         slderCondition: true,
     }
   },
-  methods: {
-    say: function (message) {
-      alert(message)
-    }
-  },
-  watch: {
-     say: function (count) {
-      alert(this.count)
-    }
-  },
 }
 </script>
 
+<style lang="scss">
+  .grid-body {
+    .container {
+      // display: grid;
+      // grid-template-areas: 
+      //   "running-text running-text"
+      //   "navbar navbar"
+      //   "running-image running-image"
+      //   "aside section"
+      //   "footer footer";
+      // grid-template-rows: 50px 100px 50px 1fr 50px;
+      // grid-template-columns: 30% 1fr;
+      // grid-row-gap: 10px;
+      // grid-column-gap: 10px;
+      // height: 100vh;
+      // margin: 0;
 
-<style lang="scss" scoped>
-  .home-page {
-    // Navbar-Header
-    
-    // Container-style
-    .display-container {
-      margin-top: 10px;
-      display: grid;        
-      grid-template-columns: repeat(4, 1fr); 
-      grid-template-rows: 0.1fr 0.2fr 0.1fr 1.2fr;
-      grid-template-areas:
-      "running-text running-text running-text running-text"
-      "header-text header-text header-text header-text"
-      "running-image running-image running-image running-image"
-      "tab-winner slider-image slider-image slider-image"
-      "slider-promotion slider-image slider-image slider-image"
-      "stay-connected slider-image slider-image slider-image"
-      "payment-method slider-image slider-image slider-image"
-      "content-text sidebar-right sidebar-right sidebar-right";
-      // "footer footer footer footer";
-      gap: 0.5rem;
-      height: 100vh;
-      font-weight: 800;
-      font-size: 12px;
-      color: $color-white;
-      text-align: center;
-    }
-    .container-content {
-      max-width: 1500px;
-    }
-    .container-wide {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    // cloumn
-    //left
-    .running-text {
-      grid-area: running-text;
-    }
-    .header-text {
-      grid-area: header-text;
-    }
-    .running-image {
-      grid-area: running-image;
-    }
-    .tab-winner {
-       grid-area: tab-winner;
-    }
-    .slider-promotion {
-      grid-area: slider-promotion;
-    }
-    .stay-connected {
-      grid-area: stay-connected;
-      background-color: $color-gray;
-      @extend .border-radius-5px;
-    }
-    .payment-method {
-      grid-area: payment-method;
-      background-color: $color-gray;
-    }
-    .content-text {
-      grid-area: content-text;
-    }
+      .content-text,.card,.button-slider,.payment-method,.ads-image,.stay-connected,.connected,.section, .aside,  .footer {
+        // padding: 1.2em;
+        background: gold;
+      }
 
-    // right
-    .slider-image {
-       grid-area: slider-image;
+      .page-header {
+        grid-area: page-header;
+      }
+      
+      .running-text {
+        grid-area: running-text;
+      }
+
+      .navbar {
+        grid-area: navbar;
+      }
+
+      .running-image {
+        grid-area: running-image;
+      }
+      // left
+      .tab-winner {
+        grid-area: tab-winner;
+      }
+      .stay-connected {
+        grid-area: stay-connected;
+      }
+      .ads-image {
+        grid-area: ads-image;
+      }
+      .payment-method {
+        grid-area: payment-method;
+      }
+      .content-text {
+        grid-area: content-text;
+      }
+
+      // right
+      .card {
+        grid-area: card;
+      }
+      .slider-image {
+        grid-area: slider-image;
+        background-image: url('/images/header/header-background.jpg');
+      }
+      .button-slider {
+        grid-area: button-slider;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+
+      @media #{$lg-down-device} {
+            display: grid;
+            grid-template-areas: 
+              "running-text   running-text"
+              "navbar         navbar"
+              "running-image  running-image"
+              "tab-winner     slider-image"
+              "tab-winner     slider-image"
+              "ads-image      card"
+              "stay-connected card"
+              "payment-method card"
+              "content-text   card"
+              "footer         footer";
+            grid-template-rows: 50px 100px 50px 330px 50px 200px 100px 150px 100px 2fr 50px;
+            // grid-template-rows: running-text navbar running-image tabwinner button ads-image stay-connect payment-methods content-text card footer;
+            grid-template-columns: 30% 1fr;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+
+            //tabwinner
+            .aside {
+
+            }
+            // card
+            .slider-image {
+
+            }
+            .section {}
+        }
+
+      // Mobile Landscpe
+      // @media #{$md-device} { 
+
+      // }
+
+      // Mobile Landscpe
+      @media #{$sm-down-device} { 
+        // .grid-body {
+        //   .container {
+        //     display: grid;
+        //     grid-template-areas: 
+        //       "running-text running-text running-text"
+        //       "navbar navbar"
+        //       "running-image running-image"
+        //       "aside section"
+        //       "footer footer";
+        //     grid-template-rows: 50px 100px 50px 1fr 50px;
+        //     grid-template-columns: 30% 1fr;
+        //     grid-row-gap: 10px;
+        //     grid-column-gap: 10px;
+        //     height: 100vh;
+        //     margin: 0;
+        //   }
+        // }
+      }
+      @media #{$xs-device} { 
+
+      }
     }
   }
 </style>

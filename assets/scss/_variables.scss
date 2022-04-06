@@ -9,6 +9,7 @@ $btn-color-1:#990000;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #2C3E50;
+$background-image: url("/images/header/header-announcement-back.png");
 :root {
     --color-primary: #005AF0;
     --space-1: .5rem;
@@ -21,8 +22,13 @@ $color-gray: #2C3E50;
 }
 
 // gradient color build
-$rgb-light-1: rgb(255, 168, 0);
-$rgba-older-1: rgba(255, 205, 2, 1);
+$rgb-light-1: rgb(255,
+168,
+0);
+$rgba-older-1: rgba(255,
+205,
+2,
+1);
 // Media Screen
 $xxl-device: 'only screen and (min-width: 1400px)';
 $xl-device: 'only screen and (max-width: 1399px)';

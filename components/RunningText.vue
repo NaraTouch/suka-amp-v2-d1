@@ -21,8 +21,10 @@ export default {
     .marquee-container {
         overflow: hidden;
         // line-height: 30px;
-        background: $color-gray;
-        padding: 15px;
+        // background: $color-gray;
+        background-image: $background-image;
+        background-repeat: no-repeat;
+        padding: 10px;
         margin: 10px 0px;
         border-radius: 2px;
         .marquee {
@@ -37,14 +39,14 @@ export default {
         .marquee2 {
             animation-delay: 5s;
         }
-        }
+    }
 
-        @keyframes marquee {
+    @keyframes marquee {
         0% {
             left: 100%;
         }
         100% {
             left: -100%
         }
-        }
+    }
 </style>

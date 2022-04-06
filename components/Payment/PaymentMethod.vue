@@ -75,12 +75,12 @@ export default {
                 box-shadow .3s cubic-bezier(.25,.1,.25,1);
             
             cursor: pointer;
-            &:hover {
-                // transform: translateY(-.125em);
-                color: $color-white;
-                background-color: $btn-color-1;
+                &:hover {
+                    // transform: translateY(-.125em);
+                    color: $color-white;
+                    background-color: $btn-color-1;
+                }
             }
-        }
         }
     }
 </style>

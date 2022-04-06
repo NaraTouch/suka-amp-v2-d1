@@ -2,8 +2,8 @@
     <div class="navbar-header">
         <div class="header bg-gradient-2">
             <NuxtLink to="/" class="header-logo">
-                <amp-img alt="site logo" src="/images/logo-small.png" width="100" height="40" layout="responsive" class="desktop"></amp-img>
-                <amp-img alt="site logo" src="/images/logo-small-test.png" width="100" height="40" layout="responsive" class="mobile"></amp-img>
+                <amp-img alt="site logo" src="/images/sk-image/SK-Logo-New.png" width="300" height="41" layout="responsive" class="desktop"></amp-img>
+                <amp-img alt="site logo" src="/images/sk-image/SK-Logo-New.png" width="300" height="41" layout="responsive" class="mobile"></amp-img>
             </NuxtLink>
             <div class="hidden-input">
               <LoginForm />
@@ -35,21 +35,29 @@ export default {
 
 <style lang="scss" scoped>
   .navbar-header {
-    padding: 0px 192px;
+    // padding: 0px 192px;
     border-bottom: solid 1px rgba(0,0,0,0.1);
-    background-color: $color-gray;
+    // background-color: $color-gray;
+    background-image: url("/images/header/header-background.jpg");
+    background-repeat: no-repeat;
+    // fix scoll
+    // overflow: hidden;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
     .header {
       position: relative;
       // position: fixed;
-      height: 50px;
+      height: 60px;
       width: 100%;
       z-index: 99999;
       
       .header-logo {
-        width: 100px;
+        width: 150px;
         height: 100%;
         margin-left: 15px;
-        display: block;
+        display: inline-block;
+        padding: 20px 0px 0px;
       }
       .header-nav-icon {
         overflow: hidden;
@@ -82,7 +90,35 @@ export default {
       // background: linear-gradient(0deg, #ffa800, #ffcd02 35%, #ffcd02)
     }
 
+    // @media #{$md-device} {
+    //   .navbar-header {
+    //     padding: 0px 55px;
+    //   }
+    // }
+    @media #{$xxl-device} {
+      // .navbar-header[data-v-5ceb96d8] {
+      //   padding: 0px 55px;
+      // }
+    }
+    @media #{$xl-device} {
+      .header {
+        // padding: 0px 100px;
+      }
+    }
+
+    @media #{$md-device} {
+        .header-logo {
+          width: 90%;
+          height: 100%;
+          margin-left: 15px;
+          display: inline-block;
+          padding: 15px 0px;
+        }
+    }
     @media #{$sm-device} {
+      //  .navbar-header {
+      //   padding: 0px 55px;
+      // }
       .header {
         .hidden-input:first-of-type {
             visibility: hidden;
@@ -91,8 +127,8 @@ export default {
             visibility: hidden;
         }
         .header-logo {
-          margin-left: auto;
-          margin-right: auto;
+          // margin-left: auto;
+          // margin-right: auto;
         }
         // desktop
         .desktop {
@@ -104,7 +140,11 @@ export default {
           background: $color-black;
       }
     }
+
     @media #{$sm-down-device} {
+      // .navbar-header {
+      //   padding: 0px 55px;
+      // }
       .header {
         .mobile {
           display: none;

@@ -52,11 +52,12 @@ export default {
 
 <style lang="scss" scoped>
     .running-dev {
-        background-color: $color-black;
+        background-image: $background-image;
+        background-repeat: no-repeat;
         color: $color-white;
-        padding: 15px;
+        padding: 10px;
         border: 1px solid $color-white;
-        border-radius: 5px;
+        border-radius: 3px;
         overflow: hidden;
         .running-text {
             -moz-animation: marquee 15s linear infinite;

@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" > 
     .tab1-style {
-        height: 350px;
+        // height: 350px;
     } 
     // .testss {
     //     display: grid;
@@ -40,7 +40,7 @@ export default {
     amp-selector[role=tablist].tabs-with-flex {
         display: flex;
         flex-wrap: wrap;
-        padding: 1px;
+        // padding: 1px;
     }
     amp-selector[role=tablist].tabs-with-flex [role=tab] {
         flex-grow: 1;

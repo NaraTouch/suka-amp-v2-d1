@@ -35,7 +35,7 @@ html {
   margin: 0;
 }
 .content {
-  min-height: 200vh;
+  min-height: 100vh;
   background: #000000;
 }
 .container {
@@ -43,5 +43,8 @@ html {
   padding: 0 10px;
   width: 100%;
   max-width: 1140px;
+  /* running-text */
+  
+  /* position: relative; */
 }
 </style>
