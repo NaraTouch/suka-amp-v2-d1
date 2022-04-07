@@ -7,15 +7,21 @@
         </div>
     </div> -->
     <div class="inner-grid">
-        <button>PROMOSI</button>
-        <button >BONUS</button>
-        <button >HADIAH</button>
+        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imagePromosi" width="220" height="30"   />
+        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imageBonus" width="220" height="30"  /> 
+        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imageHadiah" width="220" height="30"  /> 
     </div>
 </template>
 
 <script>
 export default {
-    
+    data() {
+        return {
+            imagePromosi: "/images/button/Banner_Button_promosi_red.png",
+            imageBonus: "/images/button/Banner_Button_bonus_white.png",
+            imageHadiah: "/images/button/Banner_Button_hadiah_white.png"
+        }
+    },
 }
 </script>
 
@@ -24,6 +30,10 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 5px;
+        
+        .image-size {
+            top: 15px;
+        }
         // div {
         //     background: lightgreen;
         //     padding: 8px;

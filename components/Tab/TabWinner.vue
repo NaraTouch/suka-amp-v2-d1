@@ -1,5 +1,5 @@
 <template>
-    <div class="testss">
+    <div>
         <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
             <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Winner</div>
             <div class="tab1-style" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">

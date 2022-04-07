@@ -2,70 +2,63 @@
   <section >
     <div class="grid-body">
       <header class="page-header">
-        <NavBarHeader />
+        <nav-bar-header />
       </header>
-
-      <div class="container">
-        <!-- running-text -->
-        <div class="running-text">
+      
+      <div class="container container-content container-wide">
+        <!-- header -->
+        <div class="running-text-header">
           <running-text />
         </div>
 
-        <!-- navbar -->
-        <nav class="navbar">
-            <nav-image />
+        <nav class="navbar-header">
+          <nav-image /> 
         </nav>
 
-        <!-- running-image -->
-        <div class="running-image">
+        <div class="running-image-header">
           <running-image />
         </div>
 
-        <!-- left -->
-        <aside class="tab-winner">
-          <TabWinner />
-        </aside>
+        <!-- left-box -->
+         <div class="box tab-winner-left">
+          <tab-winner />
+        </div>
 
-        <div class="ads-image">
+        <div class="box slider-promotion-left">
           <Slider :slide-list="sliderPromotion" :slider="slderCondition" />
         </div>
 
-        <div class="stay-connected">
-          <h2>stay connected</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero tempore adipisci rem illo esse distinctio tempora ducimus. Porro, molestias sequi placeat rerum reprehenderit illo eum laudantium culpa unde, sunt eligendi.</p>
+        <div class="box stay-connected-left">
+            <stay-connected />
         </div>
 
-        <div class="payment-method">
-          <h2>Payment Methods</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repellat accusamus corrupti eligendi sunt corporis, fuga quas velit vitae, ex dolorum saepe. Perferendis inventore dicta placeat similique doloribus obcaecati voluptates.</p>
-        </div>
-        <div class="content-text">
-          <h2>content-text</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias reiciendis doloremque quidem cupiditate exercitationem! Optio ex quasi perspiciatis suscipit corrupti, aut nisi est error quod provident tempora commodi, velit consequatur?</p>
+        <div class="box payment-methods-left">
+          <h2>four</h2>
         </div>
 
-        <!-- right -->
-        <div class="slider-image">
+        <div class="box footer-text-left">
+          <h2>five</h2>
+        </div> 
+        
+        <!-- right-box -->
+         <div class="box carousel-slide">
           <Slider :slide-list="sliderImage" />
           <SliderPath />
         </div>
 
-        <!-- <div class="button-slider">
-          <h2>button button button</h2>
-        </div> -->
-
-        <div class="card">
-          <h2>card</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis soluta vitae necessitatibus officia, nemo, dolore natus neque perspiciatis amet ut iusto voluptates ad libero sapiente! Quibusdam optio perspiciatis blanditiis ut.</p>
-        </div>
+        <div class="box card">
+          <h2>seven</h2>
+        </div> 
 
         <!-- footer -->
-        <footer class="footer">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum inventore eveniet beatae rem provident atque ducimus! Adipisci culpa, dolor dolorum cupiditate sit sunt eos, ad hic est ipsum provident nemo!</p>
-        </footer>
+        <div class="box footer">
+          <h2>eight</h2>
+        </div>
+      
       </div>
+
     </div>
-  </section>
+  </section> 
 </template>
 
 <script>
@@ -77,15 +70,16 @@ export default {
     RunningImage: () => import('../components/RunningImage'),
     TabWinner: () => import('../components/Tab/TabWinner'),
     Slider: () => import('../components/slider/Slider'),
-    SliderPath: () => import('../components/slider/SliderPath'),
+    TabWinner: () => import('../components/Tab/TabWinner'),
+    StayConnected: () => import('../components/stay-connected/StayConnected'),
   },
   data() {
     return {
-        count: 0,
-        src: "../static/images/images.jpg",
-        sliderPromotion: "/data/slider-list.json",
-        sliderImage: "/data/slider-image-list.json",
-        slderCondition: true,
+      count: 0,
+      src: "../static/images/images.jpg",
+      sliderPromotion: "/data/slider-list.json",
+      sliderImage: "/data/slider-image-list.json",
+      slderCondition: true,
     }
   },
 }
@@ -94,131 +88,85 @@ export default {
 <style lang="scss">
   .grid-body {
     .container {
-      // display: grid;
-      // grid-template-areas: 
-      //   "running-text running-text"
-      //   "navbar navbar"
-      //   "running-image running-image"
-      //   "aside section"
-      //   "footer footer";
-      // grid-template-rows: 50px 100px 50px 1fr 50px;
-      // grid-template-columns: 30% 1fr;
-      // grid-row-gap: 10px;
-      // grid-column-gap: 10px;
-      // height: 100vh;
-      // margin: 0;
+      display: grid;
+      background: blue;
+      // padding: 1em 5em;
+      grid-gap: 0.5em;
+      border-bottom: 5px solid darkblue;
+        border-top: 5px solid darkblue;
+      grid-template-areas: 
+      'running-text running-text running-text running-text running-text'
+      'navbar navbar navbar navbar navbar'
+      'running-image running-image running-image running-image running-image'
+      'tab-winner carousel-slide carousel-slide carousel-slide carousel-slide'
+      'slider-promotion card card card card'
+      'stay-connected card card card card'
+      'payment-methods card card card card'
+      'footer-text card card card card'
+      'footer footer footer footer footer';
+      grid-template-columns: 25% 1fr;
 
-      .content-text,.card,.button-slider,.payment-method,.ads-image,.stay-connected,.connected,.section, .aside,  .footer {
-        // padding: 1.2em;
-        background: gold;
+     .running-image-header,.running-text-header , .stay-connected-left, .payment-methods-left, .footer-text-left, .card, .footer {
+        background-color: aqua;
+      }
+       .container-wide {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .box {
+        // padding: 3em;
+        // text-align: center;
+        // transition: all .1s linear;
+        // background: white;
       }
 
-      .page-header {
-        grid-area: page-header;
-      }
-      
-      .running-text {
+      // header 
+      .running-text-header {
         grid-area: running-text;
       }
-
-      .navbar {
+      .navbar-header {
         grid-area: navbar;
       }
-
-      .running-image {
+      .running-image-header {
         grid-area: running-image;
       }
+
       // left
-      .tab-winner {
+      .tab-winner-left {
         grid-area: tab-winner;
+        height: 400px;
       }
-      .stay-connected {
+      .slider-promotion-left {
+        grid-area: slider-promotion;
+        height: 360px;
+      }
+      .stay-connected-left {
         grid-area: stay-connected;
       }
-      .ads-image {
-        grid-area: ads-image;
+      .payment-methods-left {
+        grid-area: payment-methods;
+        height: 200px;
       }
-      .payment-method {
-        grid-area: payment-method;
-      }
-      .content-text {
-        grid-area: content-text;
+      .footer-text-left {
+        grid-area: footer-text;
       }
 
-      // right
+      // right 
+      .carousel-slide{ 
+        grid-area: carousel-slide;
+        height: 340px;
+        background-image: url(/images/header/header-announcement-back.png);
+      }
       .card {
         grid-area: card;
+        margin-top: -60px;
       }
-      .slider-image {
-        grid-area: slider-image;
-        background-image: url('/images/header/header-background.jpg');
-      }
-      .button-slider {
-        grid-area: button-slider;
-      }
-
+      
+      // footer
       .footer {
         grid-area: footer;
       }
 
-      @media #{$lg-down-device} {
-            display: grid;
-            grid-template-areas: 
-              "running-text   running-text"
-              "navbar         navbar"
-              "running-image  running-image"
-              "tab-winner     slider-image"
-              "tab-winner     slider-image"
-              "ads-image      card"
-              "stay-connected card"
-              "payment-method card"
-              "content-text   card"
-              "footer         footer";
-            grid-template-rows: 50px 100px 50px 330px 50px 200px 100px 150px 100px 2fr 50px;
-            // grid-template-rows: running-text navbar running-image tabwinner button ads-image stay-connect payment-methods content-text card footer;
-            grid-template-columns: 30% 1fr;
-            grid-row-gap: 10px;
-            grid-column-gap: 10px;
-
-            //tabwinner
-            .aside {
-
-            }
-            // card
-            .slider-image {
-
-            }
-            .section {}
-        }
-
-      // Mobile Landscpe
-      // @media #{$md-device} { 
-
-      // }
-
-      // Mobile Landscpe
-      @media #{$sm-down-device} { 
-        // .grid-body {
-        //   .container {
-        //     display: grid;
-        //     grid-template-areas: 
-        //       "running-text running-text running-text"
-        //       "navbar navbar"
-        //       "running-image running-image"
-        //       "aside section"
-        //       "footer footer";
-        //     grid-template-rows: 50px 100px 50px 1fr 50px;
-        //     grid-template-columns: 30% 1fr;
-        //     grid-row-gap: 10px;
-        //     grid-column-gap: 10px;
-        //     height: 100vh;
-        //     margin: 0;
-        //   }
-        // }
-      }
-      @media #{$xs-device} { 
-
-      }
     }
   }
 </style>

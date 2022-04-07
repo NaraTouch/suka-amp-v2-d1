@@ -3,7 +3,7 @@
         <div class="header">
             <span>Stay connected</span>
         </div>
-        <div>
+        <div class="inner-grid-connected">
             <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
         </div>
     </div>
@@ -15,8 +15,8 @@ export default {
         return {
             imageList: `
                 <template type="amp-mustache">
-                    <amp-carousel  class="connected-image" id="custom-button"  width="50" height="50" type="slides" >
-                        <a href="{{url}}" target="_blank"> <amp-img src="{{logo}}" width="50" height="50" layout="responsive" alt="AMP Carousel"></amp-img></a>
+                    <amp-carousel  class="connected-image" id="custom-button"  width="40" height="40" type="slides" >
+                        <a href="{{url}}" target="_blank"> <amp-img src="{{logo}}" width="40" height="40" layout="responsive" alt="AMP Carousel"></amp-img></a>
                     </amp-carousel>
                 </template>
             `
@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss">
     .stay-connected-list {
-        margin: 15px 0px 0px 0px;
+        // margin: 15px 0px 0px 0px;
         .header {
             text-align: justify;
             margin: 10px 0px 10px 20px;
@@ -36,17 +36,20 @@ export default {
                 font-weight: 400;
             }
         }
-        .list-overflow[overflow] {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            }
+        .inner-grid-connected {
+            margin: 10px 0px 0px 10px;
             .connected {
-                margin: 10px 0px 0px 0px;
+                    margin: 0px 0px -8px 7px;
                 .connected-image {
-                    margin: 0px 15px;
+                    margin: 0px 10px;
+                    &:first-child {
+                        margin: 0px 8px 0px 0px;
+                    }
+                    &:last-child {
+                        margin: 0px 0px 0px 0px;
+                    }
                 }
             }
+        }
     }
 </style>

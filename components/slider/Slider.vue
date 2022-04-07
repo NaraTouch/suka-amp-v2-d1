@@ -2,9 +2,10 @@
     <div>
         <div v-if="slider" class="slider-promotion">
             <!-- <amp-list class="slider" width="375" height="400" items="." single-item="." :src="slideList" v-html="listSlierPromotion" />  -->
+            <amp-img class="image-br" :src="imagePromotion" height="360" layout="fixed-height"></amp-img>
         </div>
         <div v-else class="test">
-            <amp-list class="slider" height="330" items="." single-item="." layout="fixed-height" :src= "slideList" v-html="listSlierImage" />
+            <amp-list class="slider" height="280" items="." single-item="." layout="fixed-height" :src= "slideList" v-html="listSlierImage" />
         </div>
     </div>
 </template>
@@ -17,6 +18,7 @@ export default {
     },
     data() {
         return {
+            imagePromotion: '/images/slider-promotion/Sidebar-Banner.png',
             listSlierPromotion: `
                 <template type="amp-mustache">
                     <amp-carousel class="carousel" width="375" height="400"  type="slides" autoplay lightbox delay="3000">
@@ -32,11 +34,11 @@ export default {
             `,
             listSlierImage: `
                 <template type="amp-mustache">
-                    <amp-carousel  height="330" class="carousel" layout="fixed-height" type="slides" autoplay lightbox delay="3000">
+                    <amp-carousel  height="280" class="carousel" layout="fixed-height" type="slides" autoplay lightbox delay="3000">
                             {{#items}}
                             <div class="slide">           
                                 <amp-img src="{{url}}"
-                                 layout="fixed-height" height="330"
+                                 layout="fixed-height" height="280"
                                 ></amp-img>
                             </div>
                         {{/items}}
@@ -50,6 +52,9 @@ export default {
 
 <style lang="scss">
     .slider-promotion {
+        .image-br {
+            @extend .border-radius-5px;
+        }
         .carousel {
             border-radius: 10px;
             .slide > amp-img > img {

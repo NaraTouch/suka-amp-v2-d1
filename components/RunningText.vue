@@ -25,8 +25,9 @@ export default {
         background-image: $background-image;
         background-repeat: no-repeat;
         padding: 10px;
-        margin: 10px 0px;
+        margin: 0px 0px;
         border-radius: 2px;
+        display: inline-grid;
         .marquee {
             left: 100%;
             width: 100%;

@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
     .table-field {
         overflow: auto;
-        height: 350px;
+        height: 360px;
         background: $color-gray;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -60,7 +60,7 @@ export default {
     // box-shadow: var(--box-shadow-1);
     // background: var(--color-bg-light);
         border-radius: 2px;
-        margin: 7px 25px;
+        margin: 7px 15px;
         padding: 0px 0px 6px 10px;
         display: flex;
         align-items: center;
