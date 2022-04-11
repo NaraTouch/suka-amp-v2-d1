@@ -18,13 +18,14 @@ export default {
 </script>
 
 <style lang="scss">
-   .square-small {
-      text-align: left;
-      .link-text {
-          a {
-              text-decoration: none;
-              color: $btn-color-1;
-          }
-      }
-   }
+    .square-small {
+        text-align: left;
+            .link-text {
+            margin: 10px 0px;
+            a {
+                text-decoration: none;
+                color: $btn-color-1;
+            }
+        }
+    }
 </style>

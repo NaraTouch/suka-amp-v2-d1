@@ -33,11 +33,11 @@
         </div>
 
         <div class="box payment-methods-left">
-          <h2>four</h2>
+          <payment-method />
         </div>
 
         <div class="box footer-text-left">
-          <h2>five</h2>
+          <content-text />
         </div> 
         
         <!-- right-box -->
@@ -72,6 +72,8 @@ export default {
     Slider: () => import('../components/slider/Slider'),
     TabWinner: () => import('../components/Tab/TabWinner'),
     StayConnected: () => import('../components/stay-connected/StayConnected'),
+    PaymentMethod: () => import('../components/Payment/PaymentMethod'),
+    ContentText: () => import('../components/content/ContentText'),
   },
   data() {
     return {
@@ -145,7 +147,7 @@ export default {
       }
       .payment-methods-left {
         grid-area: payment-methods;
-        height: 200px;
+        height: 285px;
       }
       .footer-text-left {
         grid-area: footer-text;
