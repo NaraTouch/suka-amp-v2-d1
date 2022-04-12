@@ -121,7 +121,7 @@
         padding-right: 15px;
 
         .tab-winner {
-          
+          border-bottom-right-radius: 5px;
         }
         .slider-promotion {
           @extend .mr-box;
