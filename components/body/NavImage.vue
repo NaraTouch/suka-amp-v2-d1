@@ -5,7 +5,7 @@
                 <amp-img sizes="(max-width: 767px) 100px, 140px" class="image-space" :src="ampImage.src" :width="ampImage.width" :height="ampImage.height" :alt="ampImage.alt"></amp-img>
             </div>
         </div> -->
-            <div v-for=" (ampImage, index) in ampImages" :key="index">
+            <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
                 <a :href="ampImage.url" target="_blank"> 
                     <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
                 </a>
@@ -40,8 +40,12 @@ export default {
         grid-auto-rows: 100px;
         
         grid-column-gap: 10px;
-        div {
-            
+        .bg-color-ig {
+            @extend .nav-image-bg;
+            background-repeat: repeat-x;
+            background-size: contain;
+            height: max-content;
+            border-radius: 5px;
         }
          // Mobile Landscpe
         @media #{$md-device} { 

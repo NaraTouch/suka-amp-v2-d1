@@ -6,136 +6,45 @@
             <button >HADIAH</button>
         </div>
     </div> -->
-    <div class="inner-grid">
-        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imagePromosi" width="220" height="30"   />
+    <div class="inner-grid-btn">
+        <!-- <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imagePromosi" width="220" height="30"   />
         <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imageBonus" width="220" height="30"  /> 
-        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imageHadiah" width="220" height="30"  /> 
+        <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imageHadiah" width="220" height="30"  />  -->
+       
+        <button class="btn btn-color-promosi">PROMOSI</button>
+        <button class="btn btn-color-bonus">BONUS</button>
+        <button class="btn btn-color-hadiah">HADIAH</button>
     </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            imagePromosi: "/images/button/Banner_Button_promosi_red.png",
-            imageBonus: "/images/button/Banner_Button_bonus_white.png",
-            imageHadiah: "/images/button/Banner_Button_hadiah_white.png"
-        }
-    },
+   
 }
 </script>
 
 <style lang="scss">
-    .inner-grid {
+    .inner-grid-btn {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 5px;
-        
-        .image-size {
-            top: 15px;
+        padding: 13px 10px;
+
+        .btn {
+            border: 1px;
+            padding: 8px 15px 8px 10px;
+            border-radius: 3px;
+            font-weight: 600;
         }
-        // div {
-        //     background: lightgreen;
-        //     padding: 8px;
-        // }
-        button {
-            padding: 8px 10px;
-            margin: 15px 10px 0px 10px;
-            // display: inline-block;
-            max-width: 100%;
-            width: auto;
-            height: auto;
-            line-height: 1.3em;
-            // padding: 0.8em 12em;
-            // margin-right: 1.3em;
-            
-             font-family: 'Poppins', sans-serif;
-            font-size: 1em;
-            font-weight: 700;
-            
-             color: #005af0;
-             text-decoration: none;
-            // text-align: center;
-            
-             border: 0;
-             border-radius: 3px;
-            // background-color: #fff;
-            
-             box-shadow: var(--box-shadow-1);
-            // transition: 
-            //     transform .3s cubic-bezier(.25,.1,.25,1),
-            //     box-shadow .3s cubic-bezier(.25,.1,.25,1);
-            
-             cursor: pointer;
-            &:hover {
-                // transform: translateY(-.125em);
-                color: $color-white;
-                background-color: $btn-color-1;
-             }
-             //&:last-child {
-            //     margin-right: 0em;
-            // }
+        .btn-color-promosi {
+            @extend .btn-bg-red;
+            color: $color-white;
+        }
+        .btn-color-bonus {
+            @extend .btn-bg-white;
+        }
+        .btn-color-hadiah {
+            @extend .btn-bg-white;
         }
     }
-    // .button-style {
-    //     background: $color-gray;
-    //     .row {
-    //         // margin-bottom: 1.5rem;
-    //         padding: 10px;
-    //     }
-    //     .gradient {
-    //         color: #fff;
-    //         background: linear-gradient(225deg,#00dcc0 0,#005af0 75%);
-    //     }
-    //     button {
-    //         display: inline-block;
-    //         max-width: 100%;
-    //         width: auto;
-    //         height: auto;
-    //         line-height: 1.3em;
-    //         padding: 0.8em 12em;
-    //         margin-right: 1.3em;
-            
-    //         font-family: 'Poppins', sans-serif;
-    //         font-size: 1em;
-    //         font-weight: 700;
-            
-    //         color: #005af0;
-    //         text-decoration: none;
-    //         text-align: center;
-            
-    //         border: 0;
-    //         border-radius: 3px;
-    //         background-color: #fff;
-            
-    //         box-shadow: var(--box-shadow-1);
-    //         transition: 
-    //             transform .3s cubic-bezier(.25,.1,.25,1),
-    //             box-shadow .3s cubic-bezier(.25,.1,.25,1);
-            
-    //         cursor: pointer;
-    //         &:hover {
-    //             // transform: translateY(-.125em);
-    //             color: $color-white;
-    //             background-color: $btn-color-1;
-    //         }&:last-child {
-    //             margin-right: 0em;
-    //         }
-    //     }
-    // }
-    // @keyframes run {
-    //     0% {
-    //         transform: translateX(0px);
-    //     }
-    //     25% {
-    //         transform: translateX(2em);
-    //         opacity: 0;
-    //     }
-    //     50% {
-    //         transform: translate(-5em);
-    //     }
-    //     100% {
-    //         transform: translateX(0px);
-    //     }
-    // }
 </style>

@@ -23,3 +23,40 @@
 .border-radius-5px {
     border-radius: 5px;
 }
+
+.mr-box {
+    margin: 10px 0px;
+}
+
+.bg-gradient-2-color {
+    background: linear-gradient(0deg, #434247 0%, #54555a 35%, #6f737c 100%);
+}
+
+.container-size {
+    width: 1024px;
+}
+
+.nav-image-bg {
+    background-image: url('/images/navbar-logo/nav-ig-game.jpg');
+}
+
+.running-image-br-ig {
+    background-image: url('/images/running-ig/running-image.jpg');
+}
+
+.header-image-br-ig {
+    background-image: url('/images/header/nav-bg.jpg');
+}
+
+//button 
+.btn-bg-red {
+    background-image: url('/images/button/button-nav-red.jpg');
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.btn-bg-white {
+    background-image: url('/images/button/button-nav-white.jpg');
+    background-size: contain;
+    background-repeat: repeat-x;
+}

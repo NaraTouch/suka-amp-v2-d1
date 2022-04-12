@@ -24,7 +24,7 @@ export default {
             margin: 10px 0px;
             a {
                 text-decoration: none;
-                color: $btn-color-1;
+                color: $text-red;
             }
         }
     }

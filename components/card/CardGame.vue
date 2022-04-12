@@ -1,6 +1,7 @@
 <template>
     <div class="column-container">
-        <section>
+        
+        <!-- <section>
             <section>
                 <Card />
                 <Card />
@@ -16,8 +17,7 @@
                 <Card />
             </section>
             
-        </section>
-        
+        </section> -->
     </div>
 </template>
 

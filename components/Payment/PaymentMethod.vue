@@ -36,7 +36,8 @@ export default {
     .payment-methods {
         .header {
             text-align: justify;
-            margin: 10px 0px 10px 20px;
+            padding: 10px 0px 10px 15px;
+            color: $color-white;
             span {
                 font-size: 16px;
                 font-weight: 400;

@@ -16,8 +16,8 @@ export default {
 </script>
 <style>
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:  Arial,"Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -42,9 +42,9 @@ html {
   margin: 0 auto;
   padding: 0 10px;
   width: 100%;
-  max-width: 1140px;
+  /* max-width: 1140px; */
   /* running-text */
-  
+
   /* position: relative; */
 }
 </style>

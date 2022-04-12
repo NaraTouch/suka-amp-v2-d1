@@ -20,27 +20,27 @@ export default {
     },
     data() {
         return {
-            jackport: '../images/running-icon/jackpot.png',
-            idn: '../images/running-icon/idn.png',
-            pg: '../images/running-icon/idn.png',
+            jackport: '../images/running-ig/jackpot.png',
+            idn: '../images/running-ig/idn.png',
+            pg: '../images/running-ig/idn.png',
             widthImage: '100px',
             heightImage: '20px',
             cardItems: [
                 {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
+                    imageOne: '../images/running-ig/jackpot.png',
+                    imageTwo: '../images/running-ig/idn.png',
                     widthImage: '100px',
                     heightImage: '20px',
                 },
                 {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
+                    imageOne: '../images/running-ig/jackpot.png',
+                    imageTwo: '../images/running-ig/idn.png',
                     widthImage: '100px',
                     heightImage: '20px',
                 },
                 {
-                    imageOne: '../images/running-icon/jackpot.png',
-                    imageTwo: '../images/running-icon/idn.png',
+                    imageOne: '../images/running-ig/jackpot.png',
+                    imageTwo: '../images/running-ig/idn.png',
                     widthImage: '100px',
                     heightImage: '20px',
                 }
@@ -52,10 +52,11 @@ export default {
 
 <style lang="scss" scoped>
     .running-dev {
-        background-image: $background-image;
-        background-repeat: no-repeat;
+        @extend .running-image-br-ig;
+        background-repeat: repeat-x;
+        background-size: contain;
         color: $color-white;
-        padding: 10px;
+        padding: 15px;
         border: 1px solid $color-white;
         border-radius: 3px;
         overflow: hidden;
