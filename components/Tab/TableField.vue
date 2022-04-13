@@ -1,7 +1,7 @@
 <template>
     <div class="table-field">
         <!-- <amp-list width="auto" height="300px" layout="fixed-height" src="/data/tablelist.json" v-html="tableList" /> -->
-        <amp-list class="table-responsive" id="myAmpList" reset-on-refresh layout="fixed-height" height="600" src="/data/table-field-list-winner.json" binding="no" v-html="tableList" />
+        <amp-list class="table-responsive" id="myAmpList" reset-on-refresh layout="fixed-height" height="725" src="/data/table-field-list-winner.json" binding="no" v-html="tableList" />
     </div>
 </template>
 

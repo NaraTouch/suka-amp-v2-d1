@@ -1,25 +1,23 @@
 <template>
     <div class="list-show">
-        <amp-list class="image-list" height="230" layout="fixed-height" src="/data/card/list-image.json" v-html="imageList" />
-        <!-- <amp-img sizes="(max-width: 767px) 100px, 140px" class="image-space" :src="ampImage.src" :width="ampImage.width" :height="ampImage.height" :alt="ampImage.alt"></amp-img> -->
-        <!-- <amp-img lightbox :src="image" layout="fixed" width="400" height="400" /> -->
+        <div class="image-left">
+            <amp-img alt="image" :src="firstImage" width="1" height="1" layout="responsive" />
+        </div>
+        <div class="image-right">
+            <amp-img alt="image" :src="firstImage" width="1" height="1" layout="responsive" />
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        image: String,
+        firstImage: String,
+        secondImage: String,
     },
     data() {
         return {
-            imageList: `
-                <template type="amp-mustache">
-                    <amp-carousel  class="connected-image" id="custom-button"  width="200" height="200" type="slides">
-                       <amp-img class="test" src="{{image}}" width="200" height="200" layout="responsive" alt="AMP Carousel"></amp-img>
-                    </amp-carousel>
-                </template>
-            `
+          
         }
     },
 }
@@ -27,17 +25,9 @@ export default {
 
 <style lang="scss">
      .list-show {
-        .image-list {
-            display: flex;
-            .connected-image {
-                margin: 10px;
-                &:first-child {
-                    margin-right: 40px;
-                }
-                .test {
-                   
-                }
-            }
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        margin: 10px 20px;
      }
 </style>

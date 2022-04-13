@@ -2,7 +2,7 @@
     <div>
         <div v-if="slider" class="slider-promotion">
             <!-- <amp-list class="slider" width="375" height="400" items="." single-item="." :src="slideList" v-html="listSlierPromotion" />  -->
-            <amp-img class="image-br" :src="imagePromotion" height="360" layout="fixed-height"></amp-img>
+            <amp-img class="image-br" :src="imagePromotion" height="400" layout="fixed-height"></amp-img>
         </div>
         <div v-else class="test">
             <amp-list class="slider" height="280" items="." single-item="." layout="fixed-height" :src= "slideList" v-html="listSlierImage" />
@@ -60,17 +60,6 @@ export default {
             .slide > amp-img > img {
                 // position: fixed;
             }
-            // .caption {
-            //     position: absolute;
-            //     bottom: 0;
-            //     left: 0;
-            //     right: 0;
-            //     padding: .5rem;
-            //     background: rgba(0, 0, 0, 0.6);
-            //     font-family:Arial;
-            //     color: white;
-            //     max-height: 20%;
-            // }
         }
     }
     .test {
@@ -83,17 +72,6 @@ export default {
                 // object-fit: contain;
                 //  position: fixed;
             }
-            // .caption {
-            //     position: absolute;
-            //     bottom: 0;
-            //     left: 0;
-            //     right: 0;
-            //     // padding: .5rem;
-            //     background: rgba(0, 0, 0, 0.6);
-            //     font-family:Arial;
-            //     color: white;
-            //     max-height: 20%;
-            // }
         }
     }
 </style>

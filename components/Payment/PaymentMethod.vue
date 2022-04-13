@@ -9,7 +9,7 @@
                 <amp-list class="connected" width="auto" height="200" layout="fixed-height" src="/data/bank-list-one.json" v-html="banlList" />
             </div>
              <div >
-                <amp-list class="connected" width="auto" height="200" layout="fixed-height" src="/data/bank-list-one.json" v-html="banlList" />
+                <amp-list class="connected" width="auto" height="200" layout="fixed-height" src="/data/bank-list-two.json" v-html="banlList" />
             </div>
         </div>
         <div class="button-style">

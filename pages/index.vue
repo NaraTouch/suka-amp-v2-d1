@@ -58,7 +58,7 @@
             </div>
 
             <div class="card-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas alias possimus libero, totam, necessitatibus cum quo molestias perferendis reiciendis expedita impedit facilis quae. Tenetur magnam cupiditate natus suscipit nemo.</p>
+              <card-game />
             </div>
           </article>
         </div>
@@ -79,12 +79,13 @@
       NavBarHeader: () => import('../components/header/NavBarHeader'),
       RunningText: () => import('../components/RunningText'),
       NavImage: () => import("../components/body/NavImage"),
-      RunningImage: () => import("../components/RunningImage"),
-      TabWinner: () => import("../components/Tab/TabWinner"),
-      Slider: () => import("../components/slider/Slider"),
-      SliderPath: () => import("../components/slider/SliderPath"),
-      PaymentMethod: () => import("../components/Payment/PaymentMethod"),
-      ContentText: () => import("../components/content/ContentText"),
+      RunningImage: () => import('../components/RunningImage'),
+      TabWinner: () => import('../components/Tab/TabWinner'),
+      Slider: () => import('../components/slider/Slider'),
+      SliderPath: () => import('../components/slider/SliderPath'),
+      PaymentMethod: () => import('../components/Payment/PaymentMethod'),
+      ContentText: () => import('../components/content/ContentText'),
+      CardGame: () => import('../components/card/CardGame')
     },
     data() {
       return {
