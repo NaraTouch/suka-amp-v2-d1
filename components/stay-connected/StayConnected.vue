@@ -37,11 +37,11 @@ export default {
   // margin: 15px 0px 0px 0px;
   .header {
     text-align: justify;
-    padding: 10px 0px 0px 15px;
+    padding: 15px 0px 0px 15px;
     color: $color-white;
     span {
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 15px;
+      font-weight: 500;
     }
   }
   .inner-grid-connected {

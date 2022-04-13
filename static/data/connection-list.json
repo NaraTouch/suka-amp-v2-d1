@@ -1,23 +1,23 @@
 {
     "items": [{
-            "title": "AMP",
+            "title": "ig",
             "url": "https://www.youtube.com/channel/UCXPBsjgKKG2HqsKBhWA4uQw",
-            "logo": "/images/brand-logo/1.png"
+            "logo": "/images/brand-logo/ig-contact.png"
         },
         {
-            "title": "org",
+            "title": "fb",
             "url": "https://www.ampproject.org/",
-            "logo": "/images/brand-logo/2.png"
+            "logo": "/images/brand-logo/fb-contact.png"
         },
         {
             "title": "By",
             "url": "https://ampbyexample.com/",
-            "logo": "/images/brand-logo/3.png"
+            "logo": "/images/brand-logo/brid-contact.png"
         },
         {
             "title": "Start",
             "url": "https://ampstart.com/",
-            "logo": "/images/brand-logo/4.png"
+            "logo": "/images/brand-logo/youtube-contact.png"
         }
     ]
 }

@@ -121,7 +121,7 @@
         padding-right: 15px;
 
         .tab-winner {
-          border-bottom-right-radius: 5px;
+          border-bottom-right-radius: 4px;
         }
         .slider-promotion {
           @extend .mr-box;
@@ -132,7 +132,7 @@
           @extend .border-radius-5px;
         }
         .payment-method {
-          padding-bottom: 5px;
+          padding-bottom: 10px;
           @extend .border-radius-5px;
           background-color: $bg-body-field;
         }

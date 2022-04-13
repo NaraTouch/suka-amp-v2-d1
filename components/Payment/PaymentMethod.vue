@@ -1,18 +1,19 @@
 <template>
     <div class="payment-methods">
         <div class="header">
-            <span>Payment Method</span>
+            <span class="span-left"></span>
+            <span class="span-right">Payment Method</span>
         </div>
         <div class="grid-container-item">
-            <div class="test1">
+            <div>
                 <amp-list class="connected" width="auto" height="200" layout="fixed-height" src="/data/bank-list-one.json" v-html="banlList" />
             </div>
-             <div class="test2">
+             <div >
                 <amp-list class="connected" width="auto" height="200" layout="fixed-height" src="/data/bank-list-one.json" v-html="banlList" />
             </div>
         </div>
         <div class="button-style">
-            <amp-img class="image-size" on="tap:lightbox1" role="button" tabindex="0" :src="imagePromosi" width="220" height="30"   />
+            <button class="btn btn-color-promosi">Lihat semua</button>
         </div>
     </div>
 </template>
@@ -36,19 +37,32 @@ export default {
     .payment-methods {
         .header {
             text-align: justify;
-            padding: 10px 0px 10px 15px;
+            padding: 20px 0px 15px 15px;
             color: $color-white;
-            span {
-                font-size: 16px;
-                font-weight: 400;
+
+            .span-left {
+                background-image: url(/images/bank/sidebar-payment-logos.png);
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 21px;
+                display: block;
+                float: left;
+                margin: -3px 10px 0px 0px;
+                border-radius: 2px;
+            }
+            .span-right {
+                font-size: 15px;
+                font-weight: 500;
             }
         }
         .grid-container-item {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                // grid-gap: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            margin: 0px 15px;
+
             .mr-r-l {
-                padding: 0px 10px 10px 10px;   
+                padding: 0px 0px 10px 0px;
             }
             // .amp-padding-image {
             //     margin: 0px 5px;
@@ -56,39 +70,16 @@ export default {
         }
         .button-style { 
             text-align: center;
-
-            button {
-                display: inline-block;
-                max-width: 100%;
-                width: auto;
-                height: auto;
-                line-height: 1.3em;
-                padding: 0.5em 1em;
-                margin-right: 0.3em;
-                
-                font-family: 'Poppins', sans-serif;
-                font-size: 1em;
-                font-weight: 700;
-                
-                color: #005af0;
-                text-decoration: none;
-                text-align: center;
-                
-                border: 0;
+            margin: 5px 0px 5px 0px;
+            .btn {
+                border: 1px;
+                padding: 8px 40px 8px 40px;
                 border-radius: 3px;
-                background-color: #fff;
-                
-                box-shadow: var(--box-shadow-1);
-                transition: 
-                    transform .3s cubic-bezier(.25,.1,.25,1),
-                    box-shadow .3s cubic-bezier(.25,.1,.25,1);
-                
-            cursor: pointer;
-                &:hover {
-                    // transform: translateY(-.125em);
-                    color: $color-white;
-                    background-color: $btn-color-1;
-                }
+                font-weight: 600;
+            }
+            .btn-color-promosi {
+                @extend .btn-bg-red;
+                color: $color-white;
             }
         }
     }

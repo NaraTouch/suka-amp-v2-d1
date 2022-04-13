@@ -1,7 +1,7 @@
 <template>
     <div class="table-field">
         <!-- <amp-list width="auto" height="300px" layout="fixed-height" src="/data/tablelist.json" v-html="tableList" /> -->
-        <amp-list class="table-responsive" id="myAmpList" reset-on-refresh layout="fixed-height" height="600" src="/data/tablelist.json" binding="no" v-html="tableList" />
+        <amp-list class="table-responsive" id="myAmpList" reset-on-refresh layout="fixed-height" height="600" src="/data/table-field-list-winner.json" binding="no" v-html="tableList" />
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
                <template type="amp-mustache">
                     <div class="product">
                         <div class="image-padding">
-                            <amp-img width="50" height="50" alt="{{ name }}" src="{{ image }}"></amp-img>
+                            <amp-img width="60" height="60" alt="{{ name }}" src="{{ image }}"></amp-img>
                         </div>
                         <div class="tab-text">
                             <div class="font-size-name">{{ name }}</div>
@@ -30,8 +30,8 @@ export default {
 <style lang="scss">
     .table-field {
         background: $bg-body-field;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
 
         .list-overflow {
             width: max-content;
@@ -44,7 +44,7 @@ export default {
 
         .product {
             margin: 7px 15px;
-            padding: 0px 0px 6px 10px;
+            padding: 0px 0px 0px 10px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid $border-right-cr;
@@ -58,17 +58,18 @@ export default {
                 background-color: #999;
             }
             .image-padding {
-                margin: 0px 50px 0px 0px;
+                margin: 0px 25px 0px 0px;
             }
             .tab-text {
                 margin: 5px;
                 .font-size-name {
-                    font-size: 12px;
-                    font-weight: 300;
+                    font-size: 13px;
+                    font-weight: 200;
                     color: $tab-cr;
+                    margin: 0px 0px 5px 1px;
                 }
                 .font-size-price {
-                    font-size: 30px;
+                    font-size: 45px;
                     font-weight: 700;
                     color: $text-red;
                     line-height: 32px;

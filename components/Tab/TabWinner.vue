@@ -1,13 +1,13 @@
 <template>
     <div class="tab-scroll-bar">
         <amp-selector class="tabs-with-flex scroll-bar" role="tablist" keyboard-select-mode="focus">
-                <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Winner</div>
+                <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>WINNER</div>
                 <div class="tab1-style" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
                     <table-field />
                 </div>
-                <div id="tab2" role="tab" aria-controls="tabpanel2" option>ToGel</div>
+                <div id="tab2" role="tab" aria-controls="tabpanel2" option>TOGEL</div>
                 <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
-                <div id="tab3" role="tab" aria-controls="tabpanel3" option>Daily Win</div>
+                <div id="tab3" role="tab" aria-controls="tabpanel3" option>DAILY WIN</div>
                 <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">Tab three content... </div>
         </amp-selector>
     </div>
@@ -49,12 +49,14 @@ export default {
         }
 
         #tab3 { 
-            border-top-right-radius: 5px;
+            border-top-right-radius: 4px;
         }
 
         amp-selector[role=tablist].tabs-with-flex {
             display: flex;
             flex-wrap: wrap;
+            font-weight: 700;
+            font-size: 15px;
             #tab1 {
                 border-right: 1px solid $border-right-cr;
             }
@@ -66,12 +68,12 @@ export default {
             @extend .tab-bg-img;
             flex-grow: 1;
             text-align: center;
-            padding: var(--space-1);
+            // padding: var(--space-1);
             color: $text-color-1;
-            padding: 10px;
+            padding: 10px 8px 10px 5px;
 
             &:first-child {
-                border-top-left-radius: 5px;
+                border-top-left-radius: 4px;
             }
         }
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
