@@ -1,9 +1,9 @@
 <template>
    <div class="square-small" >
-        <amp-fit-text class="color-text" width="300" height="100" layout="responsive" max-font-size="16">
-            Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque
-            inermis reprehendunt. Lorem ipsum dolor sit amet, has nisl nihil convenire
-            et, vim at aeque inermis reprehendunt
+        <amp-fit-text class="color-text" width="255" height="140"  max-font-size="16">
+            Selamat datang di situs Sukabet, situs permainan online terlengkap dan terpercaya. Pada halaman ini anda dapat 
+            memilih kategori permainan yang anda ingin mainkan saat ini. Bagi anda yang belum memiliki akun, silahkan membuat 
+            akun dengun mengklik "Datfar" dan
         </amp-fit-text>
         <div class="link-text">
             <a href="https://www.w3schools.com">Baca selanjutnya</a>
@@ -20,16 +20,18 @@ export default {
 <style lang="scss">
     .square-small {
         text-align: left;
+
             .color-text {
                 color: $color-white;
             }
             
             .link-text {
-            margin: 10px 0px;
-            a {
-                text-decoration: none;
-                color: $text-red;
-            }
+                margin: 10px 0px 0px 0px;
+
+                a {
+                    text-decoration: none;
+                    color: $text-red;
+                }
         }
     }
 </style>

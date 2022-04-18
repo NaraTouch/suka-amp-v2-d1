@@ -68,7 +68,7 @@ export default {
         }
         .button-style { 
             text-align: center;
-            margin: 5px 0px 5px 0px;
+            margin: 10px 0px 5px 0px;
 
             .btn {
                 border: 1px;

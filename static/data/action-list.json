@@ -1,0 +1,23 @@
+{
+    "items": [{
+            "image": "/images/footer/footer-home.png",
+            "link": "https://sukabet.com/"
+        },
+        {
+            "image": "/images/footer/footer-profile.png",
+            "link": "https://sukabet.com/"
+        },
+        {
+            "image": "/images/footer/footer-wallet.png",
+            "link": "https://sukabet.com/"
+        },
+        {
+            "image": "/images/footer/footer-promo.png",
+            "link": "https://sukabet.com/"
+        },
+        {
+            "image": "/images/footer/footer-chat.png",
+            "link": "https://sukabet.com/"
+        }
+    ]
+}
