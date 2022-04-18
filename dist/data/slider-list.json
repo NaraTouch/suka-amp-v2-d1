@@ -1,0 +1,19 @@
+{
+    "items": [{
+            "url": "/images/about/3.jpg",
+            "alt": "Her er en kat!"
+        },
+        {
+            "url": "/images/about/3.jpg",
+            "alt": "Her er gudhjælpemig en anden kat!"
+        },
+        {
+            "url": "/images/about/3.jpg",
+            "alt": "WTF! En tredje kat!"
+        },
+        {
+            "url": "/images/about/3.jpg",
+            "alt": "Shit happens: en fjerde kat!"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "items": [{
+            "image": "/images/card/poker-thumb.png",
+            "alt": "Her er en kat!"
+        },
+        {
+            "image": "/images/card/poker-thumb.png",
+            "alt": "Her er en kat!"
+        }
+    ]
+}

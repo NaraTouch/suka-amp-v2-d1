@@ -1,0 +1,53 @@
+{
+    "items": [{
+            "image": "/images/flag/hongkong-logo.png",
+            "name": "HONG KONG",
+            "price": "8906"
+        },
+        {
+            "image": "/images/flag/sydney-logo.png",
+            "name": "SYDNEY",
+            "price": "1227"
+        },
+        {
+            "image": "/images/flag/singapore-logo.png",
+            "name": "SINGAPORE",
+            "price": "5438"
+        },
+        {
+            "image": "/images/flag/bangkok-logo.png",
+            "name": "BANGKOK",
+            "price": "6868"
+        },
+        {
+            "image": "/images/flag/saigon-logo.png",
+            "name": "SAIGON",
+            "price": "3590"
+        },
+        {
+            "image": "/images/flag/hongkong-logo.png",
+            "name": "HONG KONG",
+            "price": "8906"
+        },
+        {
+            "image": "/images/flag/sydney-logo.png",
+            "name": "SYDNEY",
+            "price": "1227"
+        },
+        {
+            "image": "/images/flag/singapore-logo.png",
+            "name": "SINGAPORE",
+            "price": "5438"
+        },
+        {
+            "image": "/images/flag/bangkok-logo.png",
+            "name": "BANGKOK",
+            "price": "6868"
+        },
+        {
+            "image": "/images/flag/saigon-logo.png",
+            "name": "SAIGON",
+            "price": "3590"
+        }
+    ]
+}
