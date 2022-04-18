@@ -1,6 +1,5 @@
 <template>
     <div class="table-field">
-        <!-- <amp-list width="auto" height="300px" layout="fixed-height" src="/data/tablelist.json" v-html="tableList" /> -->
         <amp-list class="table-responsive" id="myAmpList" reset-on-refresh layout="fixed-height" height="725" src="/data/table-field-list-winner.json" binding="no" v-html="tableList" />
     </div>
 </template>
@@ -52,22 +51,27 @@ export default {
             .image-placeholder {
                 margin-right: var(--space-3);
             }
+
             .image-placeholder {
                 width: 150px;
                 height: 100px;
                 background-color: #999;
             }
+
             .image-padding {
                 margin: 0px 25px 0px 0px;
             }
+
             .tab-text {
                 margin: 5px;
+
                 .font-size-name {
                     font-size: 13px;
                     font-weight: 200;
                     color: $tab-cr;
                     margin: 0px 0px 5px 1px;
                 }
+
                 .font-size-price {
                     font-size: 45px;
                     font-weight: 700;
@@ -77,6 +81,7 @@ export default {
                 }
             }
         }
+        
         amp-selector[role=tablist].tabs-with-flex [role=tabpanel][data-v-064377cf] {
             padding: 0px;
         }

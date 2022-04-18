@@ -4,14 +4,7 @@
       <span>Stay connected</span>
     </div>
     <div class="inner-grid-connected">
-      <amp-list
-        class="connected"
-        width="auto"
-        height="70"
-        layout="fixed-height"
-        src="/data/connection-list.json"
-        v-html="imageList"
-      />
+      <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
     </div>
   </div>
 </template>
@@ -33,31 +26,36 @@ export default {
 </script>
 
 <style lang="scss">
-.stay-connected-list {
-  // margin: 15px 0px 0px 0px;
-  .header {
-    text-align: justify;
-    padding: 15px 0px 0px 15px;
-    color: $color-white;
-    span {
-      font-size: 15px;
-      font-weight: 500;
+  .stay-connected-list {
+    .header {
+      text-align: justify;
+      padding: 15px 0px 0px 15px;
+      color: $color-white;
+
+      span {
+        font-size: 15px;
+        font-weight: 500;
+      }
     }
-  }
-  .inner-grid-connected {
-    margin: 10px 0px 0px 10px;
-    .connected {
-      margin: 0px 0px -8px 7px;
-      .connected-image {
-        margin: 0px 10px;
-        &:first-child {
-          margin: 0px 8px 0px 0px;
-        }
-        &:last-child {
-          margin: 0px 0px 0px 0px;
+
+    .inner-grid-connected {
+      margin: 10px 0px 0px 10px;
+
+      .connected {
+        margin: 0px 0px -8px 7px;
+
+        .connected-image {
+          margin: 0px 10px;
+
+          &:first-child {
+            margin: 0px 8px 0px 0px;
+          }
+          
+          &:last-child {
+            margin: 0px 0px 0px 0px;
+          }
         }
       }
     }
   }
-}
 </style>

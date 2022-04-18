@@ -30,7 +30,7 @@ export default {
     .tab-scroll-bar {
         overflow: auto;
         height: 385px;
-        padding: 0px 12px 0px 0px;
+        padding: 0px 11px 0px 0px;
         margin: 0px -18px 0px 0px;
         position: relative;
 
@@ -57,18 +57,20 @@ export default {
             flex-wrap: wrap;
             font-weight: 700;
             font-size: 15px;
+
             #tab1 {
                 border-right: 1px solid $border-right-cr;
             }
+            
             #tab2 {
                 border-right: 1px solid $border-right-cr;
             }
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tab] {
             @extend .tab-bg-img;
             flex-grow: 1;
             text-align: center;
-            // padding: var(--space-1);
             color: $text-color-1;
             padding: 10px 8px 10px 5px;
 
@@ -76,19 +78,21 @@ export default {
                 border-top-left-radius: 4px;
             }
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             @extend .tab-selec-bg-img;
             outline: none;
-            // background: $btn-color-1;
             color: white;
             padding: 10px;
         
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
             display: none;
             width: 100%;
             order: 1; 
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
             display: block;
         }
@@ -96,22 +100,27 @@ export default {
         amp-selector[role=tablist].tabs-with-selector {
             display: flex;
         }
+
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
             outline: none;
             border-bottom: 2px solid var(--color-primary);
         }
+
         amp-selector[role=tablist].tabs-with-selector {
             display: flex;
         }
+
         amp-selector[role=tablist].tabs-with-selector [role=tab] {
         width: 100%;
         text-align: center;
         padding: var(--space-1);
         }
+
         amp-selector.tabpanels [role=tabpanel] {
         display: none;
         padding: var(--space-4);
         }
+
         amp-selector.tabpanels [role=tabpanel][selected] {
         outline: none;
         display: block;

@@ -2,16 +2,21 @@
     <div class="card-container">
         <div class="card-left" v-for=" (cardDataLeft, index) in cardDataLefts" :key="index">
             <div class="mr-card" v-for=" (data, index) in cardDataLeft" :key="index">
-            <Card  :title="data.title" :imageTitle="data.titleIcon"
-            :imageBodyFirst="data.imageFirst" 
-            :imageBodySecound="data.imageSecond"
-            :linkButton="data.link" />
+                <Card  :title="data.title" :imageTitle="data.titleIcon"
+                :imageBodyFirst="data.imageFirst" 
+                :imageBodySecound="data.imageSecond"
+                :linkButton="data.link" />
             </div>
         </div>
 
-        <!-- <div class="card-right" v-for=" (cardDataRight, index) in cardDataRights" :key="index">
-            <Card />
-        </div>         -->
+        <div class="card-right" v-for=" (cardDataRight, index) in cardDataRights" :key="index">
+            <div class="mr-card" v-for=" (data, index) in cardDataRight" :key="index">
+                <Card  :title="data.title" :imageTitle="data.titleIcon"
+                :imageBodyFirst="data.imageFirst" 
+                :imageBodySecound="data.imageSecond"
+                :linkButton="data.link" />
+            </div>
+        </div>        
     </div>
 </template>
 
@@ -58,31 +63,31 @@ export default {
                 {
                     sportsGames: {
                         title: "Sorts",
-                        titleIcon: "",
-                        imageFirst: "",
-                        imageSecond: "",
-                        link: "link"
+                        titleIcon: "/images/card/hot-game-image.png",
+                        imageFirst: "/images/card/poker-thumb.png",
+                        imageSecond: "/images/card/poker-thumb.png",
+                        link: "https://www.w3schools.com/"
                     },
                     slotsGames: {
                         title: "Slots",
-                        titleIcon: "",
-                        imageFirst: "",
-                        imageSecond: "",
-                        link: "link"
+                        titleIcon: "/images/card/hot-game-image.png",
+                        imageFirst: "/images/card/poker-thumb.png",
+                        imageSecond: "/images/card/poker-thumb.png",
+                        link: "https://www.w3schools.com/"
                     },
                      arcadeGames: {
                         title: "Arcade",
-                        titleIcon: "",
-                        imageFirst: "",
-                        imageSecond: "",
-                        link: "link"
+                        titleIcon: "/images/card/hot-game-image.png",
+                        imageFirst: "/images/card/poker-thumb.png",
+                        imageSecond: "/images/card/poker-thumb.png",
+                        link: "https://www.w3schools.com/"
                     },
                     cockFightingGames: {
                         title: "Cock Fighting",
-                        titleIcon: "",
-                        imageFirst: "",
-                        imageSecond: "",
-                        link: "link"
+                        titleIcon: "/images/card/hot-game-image.png",
+                        imageFirst: "/images/card/poker-thumb.png",
+                        imageSecond: "/images/card/poker-thumb.png",
+                        link: "https://www.w3schools.com/"
                     },
                 }
             ]
@@ -96,16 +101,13 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
-
-        .card-left {    
-            .mr-card {
-                margin-bottom: 10px;
+        
+        .mr-card {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0px;
             }
         }
-        .card-right {
-
-        }
-
     }
         
 </style>

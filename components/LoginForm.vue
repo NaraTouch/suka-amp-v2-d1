@@ -46,38 +46,47 @@
     right: 0px; 
     top: 15px;
     bottom: 0px;
+
     .left-inner-addon {
       position: relative;
+
       .span-style {
         position: absolute;
         padding: 6px 0px 0px 5px;
       }
+
       a {
         text-decoration: none;
         color: $color-white;
       }
+
       .input-custom-style {
         padding: 6px 2px 6px 25px;
         border: 1px solid $color-gray;
         border-radius: 3px;
         width: 150px;
       }
+
       .btn {
         border: 1px;
         padding: 6px 15px 6px 13px;
         border-radius: 3px;
         font-weight: 600;
       }
+
       .btn-color-Masuk {
         @extend .btn-bg-red;
         color: $color-white;
       }
+
       .btn-color-Daftar {
         @extend .btn-bg-white;
       }
-      svg{ 
-        fill:  $color-gray; 
+
+      svg { 
+        fill: $color-gray; 
       }
+
       input:focus {
         outline: none;
       }

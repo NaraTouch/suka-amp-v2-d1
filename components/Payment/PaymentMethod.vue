@@ -50,6 +50,7 @@ export default {
                 margin: -3px 10px 0px 0px;
                 border-radius: 2px;
             }
+
             .span-right {
                 font-size: 15px;
                 font-weight: 500;
@@ -64,19 +65,18 @@ export default {
             .mr-r-l {
                 padding: 0px 0px 10px 0px;
             }
-            // .amp-padding-image {
-            //     margin: 0px 5px;
-            // }
         }
         .button-style { 
             text-align: center;
             margin: 5px 0px 5px 0px;
+
             .btn {
                 border: 1px;
                 padding: 8px 40px 8px 40px;
                 border-radius: 3px;
                 font-weight: 600;
             }
+            
             .btn-color-promosi {
                 @extend .btn-bg-red;
                 color: $color-white;

@@ -4,7 +4,9 @@
             <div class="row" v-for="(cardItem, index) in cardItems" :key="index">
                <div class="line"></div>
                 <ImageIcon :src="cardItem.imageOne"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
-                 <LoadingComponent />
+
+                <LoadingComponent />
+
                 <ImageIcon :src="cardItem.imageTwo"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
             </div>
         </div>
@@ -60,13 +62,16 @@ export default {
         border: 1px solid $color-white;
         border-radius: 3px;
         overflow: hidden;
+
         .running-text {
             -moz-animation: marquee 15s linear infinite;
             -webkit-animation: marquee 15s linear infinite;
             animation: marquee 15s linear infinite;
             display: flex;
+
             .row {
                 display: flex;
+                
                  &:first-child {
                         .line {
                         width: 0px;
@@ -74,6 +79,7 @@ export default {
                         margin: 0px 10px;
                     }
                 }
+                
                 .line {
                     width: 1px;
                     background: $border-color-1;

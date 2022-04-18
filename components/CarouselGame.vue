@@ -27,6 +27,7 @@ export default {
         margin-bottom:15px;
         transition:all .9s
     }
+
     .container {
     max-width: 100%;
     margin: 4% auto;
@@ -37,16 +38,20 @@ export default {
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     border-radius: 8px;
     }
+
     .blue-box, .green-box, .red-box {
         width: 100%;
         height: 280px;
     }
+
     .blue-box {
         background: #00f;
     }
+
     .green-box {
         background: green;
     }
+    
     .red-box {
         background: red;
     }

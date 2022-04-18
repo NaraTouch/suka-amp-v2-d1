@@ -1,15 +1,10 @@
 <template>
     <div class="inner-grid">
-        <!-- <div class="image">
-            <div class="image-size"  v-for=" (ampImage, index) in ampImages" :key="index">
-                <amp-img sizes="(max-width: 767px) 100px, 140px" class="image-space" :src="ampImage.src" :width="ampImage.width" :height="ampImage.height" :alt="ampImage.alt"></amp-img>
-            </div>
-        </div> -->
-            <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
-                <a :href="ampImage.url" target="_blank"> 
-                    <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
-                </a>
-            </div>
+        <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
+            <a :href="ampImage.url" target="_blank"> 
+                <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -38,8 +33,8 @@ export default {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
         grid-auto-rows: 100px;
-        
         grid-column-gap: 10px;
+
         .bg-color-ig {
             @extend .nav-image-bg;
             background-repeat: repeat-x;
@@ -47,28 +42,5 @@ export default {
             height: max-content;
             border-radius: 5px;
         }
-         // Mobile Landscpe
-        @media #{$md-device} { 
-            
-        }
-
-        // mobile 
-        @media #{$sm-device} { 
-
-        }
-        // .image {
-        //     margin-bottom: 10px;
-        //     .image-size {
-        //         display: inline-block;
-        //         margin: 0px 28px 0px 0px;
-        //         &:last-child {
-        //             margin: 0px 0px 0px 0px;
-        //         }
-        //         .image-space {
-        //             border-radius: 5px;
-        //             border: 1px solid $color-white;
-        //         }
-        //     }
-        // }
     }
 </style>

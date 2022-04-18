@@ -22,22 +22,17 @@ export default {
         margin: 0px 10px;
         background: #180278;
         display: flex;
-        .text-center {
-            
-        }
+
         .text-loading {
             font-weight: bold;
             font-size: 16px;
             margin: -2px 10px 0px 0px;
         }
-        .bg-1 {
-            
-        }
+        
         .box-area {
             display: flex;
         }
-        .box-area span {
-        }
+        
         .box {
             display: inline-block;
             overflow: hidden;

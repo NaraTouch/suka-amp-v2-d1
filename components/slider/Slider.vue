@@ -1,11 +1,10 @@
 <template>
     <div>
         <div v-if="slider" class="slider-promotion">
-            <!-- <amp-list class="slider" width="375" height="400" items="." single-item="." :src="slideList" v-html="listSlierPromotion" />  -->
             <amp-img class="image-br" :src="imagePromotion" height="400" layout="fixed-height"></amp-img>
         </div>
-        <div v-else class="test">
-            <amp-list class="slider" height="280" items="." single-item="." layout="fixed-height" :src= "slideList" v-html="listSlierImage" />
+        <div v-else class="list-slider">
+            <amp-list class="slider" height="280" items="." single-item="." layout="fixed-height" :src= "slideList" v-html="listSliderImage" />
         </div>
     </div>
 </template>
@@ -32,7 +31,7 @@ export default {
                     </amp-carousel>
                 </template>
             `,
-            listSlierImage: `
+            listSliderImage: `
                 <template type="amp-mustache">
                     <amp-carousel  height="280" class="carousel" layout="fixed-height" type="slides" autoplay lightbox delay="3000">
                             {{#items}}
@@ -62,7 +61,7 @@ export default {
             }
         }
     }
-    .test {
+    .list-slider {
         margin: 0px 0px -2px;
         .slider {
              @extend .card;

@@ -1,6 +1,6 @@
 <template>
    <div class="square-small" >
-        <amp-fit-text width="300" height="100" layout="responsive" max-font-size="16">
+        <amp-fit-text class="color-text" width="300" height="100" layout="responsive" max-font-size="16">
             Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque
             inermis reprehendunt. Lorem ipsum dolor sit amet, has nisl nihil convenire
             et, vim at aeque inermis reprehendunt
@@ -20,6 +20,10 @@ export default {
 <style lang="scss">
     .square-small {
         text-align: left;
+            .color-text {
+                color: $color-white;
+            }
+            
             .link-text {
             margin: 10px 0px;
             a {

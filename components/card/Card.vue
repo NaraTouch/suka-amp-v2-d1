@@ -1,7 +1,7 @@
 <template>
     <div class="card-box">
         <div class="title">
-            <title-image :title="title" :image-title="imageTitle"/>
+            <title-image :title="title" :image-title="imageTitle" :width="width" :height="height"/>
         </div>
         <div class="image-body">
             <ImageList :first-image="imageBodyFirst" :second-image="imageBodySecound" />
@@ -31,6 +31,8 @@ export default {
     data() {
         return {
             images: "/images/card/poker-thumb.png",
+            width: "25",
+            height: "30",
         }
     },
 }
@@ -38,24 +40,28 @@ export default {
 
 <style lang="scss">
     .card-box {
-        background: $color-gray;
+        background: $bg-body-field;
         border-radius: 3px;
-
+       
         .title {
             @extend .card-br-ig;
-            border-radius: 3px;
+             border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
             padding: 3px 0px 3px 10px;
         }
+
         .footer-button {
             text-align: center;
             padding-bottom: 10px;
         }
+
         .btn {
             border: 1px;
             padding: 8px 40px 8px 40px;
             border-radius: 3px;
             font-weight: 600;
         }
+        
         .btn-color {
             @extend .btn-bg-red;
             color: $color-white;

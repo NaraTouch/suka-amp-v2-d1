@@ -31,23 +31,26 @@
               <tab-winner />
             </div>
 
-            <!-- slider-promotion -->
-            <div class="slider-promotion">
-              <slider :slide-list="sliderPromotion" :slider="slderCondition" />
-            </div>
-            <!-- stay-connected -->
-            <div class="stay-connected">
-              <stay-connected />
+            <div class="border-row">
+              <!-- slider-promotion -->
+              <div class="slider-promotion">
+                <slider :slide-list="sliderPromotion" :slider="slderCondition" />
+              </div>
+              <!-- stay-connected -->
+              <div class="stay-connected">
+                <stay-connected />
+              </div>
+
+              <!-- payment-method -->
+              <div class="payment-method">
+                <payment-method />
+              </div>
             </div>
 
-            <!-- payment-method -->
-            <div class="payment-method">
-              <payment-method />
-            </div>
             <!-- contect-text -->
-            <div class="content-text">
-               <content-text />
-            </div>
+              <div class="content-text">
+                <content-text />
+              </div>
           </section>
 
           <article class="row-right">
@@ -106,49 +109,72 @@
       margin: 0 auto;
       padding: 10px 0px;
     }
+
     .navbar-header {
       padding: 10px 0px;
     }
+
     .running-image-header {
       padding: 6px 0px 0px 0px;
     }
+
     .body-field {
       display: flex;
       margin-top: 10px;
 
+      .border-row {
+          padding: 0px 13px 0px 0px;
+          margin: 0px -16px 0px 0px;
+          position: relative;
+          z-index : 1;
+
+          &:before {
+            @extend .border-right;
+              content: "";
+              position: absolute;
+              bottom: 112px;
+              right: 0;
+              height: 87%;
+          }
+      }
+
       .row-left {
         min-width: 265px;
-        background: burlywood;
         padding-right: 15px;
 
         .tab-winner {
           border-bottom-right-radius: 4px;
         }
+
         .slider-promotion {
           @extend .mr-box;
         }
+
         .stay-connected {
           margin-bottom: 30px;
           background-color: $bg-body-field;
           @extend .border-radius-5px;
         }
+
         .payment-method {
           padding-bottom: 10px;
           @extend .border-radius-5px;
           background-color: $bg-body-field;
         }
+
         .content-text {
             margin-top: 20px;
         }
       }
+
       .row-right {
         min-width: 760px;
-        background: yellowgreen;
         padding-left: 15px;
 
         .slider-image {
           background-color: $bg-body-field;
         }
+
         .card-content {
           padding: 10px 0px 0px 0px;
         }

@@ -1,7 +1,7 @@
 <template>
     <div class="header-title">
         <div class="image">
-            <amp-img alt="image" :src="imageTitle" width="25" height="30" />
+            <amp-img alt="image" :src="imageTitle" :width="width" :height="height" />
         </div>
         <div class="title-card">
             <span class="span-right">{{title}}</span>
@@ -14,6 +14,8 @@ export default {
     props: {
         title: String,
         imageTitle: String,
+        width: String, 
+        height: String,
      }
 }
 </script>
@@ -21,9 +23,7 @@ export default {
 <style lang="scss">
     .header-title {
         display: flex;
-        .image {
-
-        }
+       
         .title-card {
             padding: 7px 0px 0px 10px;
             color: $text-color-1;
