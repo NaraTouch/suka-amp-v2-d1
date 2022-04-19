@@ -29,16 +29,12 @@ export default {
 <style lang="scss">
     .table-field {
         background: $bg-body-field;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
+        @extend .br-bottom-right-left;
 
         .list-overflow {
             width: max-content;
-            margin: var( --space-2);
             margin-left: auto;
-            padding: var( --space-2);
-            color: var(--color-text-light);
-            background-color: var(--color-primary);
+           
         }
 
         .product {
@@ -48,9 +44,6 @@ export default {
             align-items: center;
             border-bottom: 1px solid $border-right-cr;
 
-            .image-placeholder {
-                margin-right: var(--space-3);
-            }
 
             .image-placeholder {
                 width: 150px;

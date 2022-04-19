@@ -8,7 +8,7 @@
         </div>
         <div class="footer-button">
             <a :href="linkButton">
-                <button class="btn btn-color">Lihat Semua</button>
+                <button class="btn-color">Lihat Semua</button>
             </a> 
         </div>
     </div>  
@@ -18,7 +18,6 @@
 export default {
      components: {
         ImageList: () => import('../list/ImageList'),
-        CustomButton: () => import('../button/CustomButton'),
         TitleImage: () => import('../TitleImage'),
     },
     props : {
@@ -41,11 +40,11 @@ export default {
 <style lang="scss">
     .card-box {
         background: $bg-body-field;
-        border-radius: 3px;
+        @extend .border-radius-3px;
        
         .title {
             @extend .card-br-ig;
-             border-top-right-radius: 3px;
+            border-top-right-radius: 3px;
             border-top-left-radius: 3px;
             padding: 3px 0px 3px 10px;
         }
@@ -55,14 +54,8 @@ export default {
             padding-bottom: 10px;
         }
 
-        .btn {
-            border: 1px;
-            padding: 8px 40px 8px 40px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-        
         .btn-color {
+            @extend .btn-custom;
             @extend .btn-bg-red;
             color: $color-white;
         }

@@ -29,8 +29,6 @@
 <style lang="scss" scoped>
   .navbar-header {
      @extend .header-image-br-ig;
-    background-repeat: repeat-x;
-    background-size: contain;
 
     .header-container {
        @extend .container-size;
@@ -64,14 +62,6 @@
           bottom: 0px;
           color: $text-color-1;
         }
-        
-        .header-clear {
-          height: 50px;
-        }
-      }
-
-      .container-div {
-        margin: 0px 20px;
       }
     }
   }

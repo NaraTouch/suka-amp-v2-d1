@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
     .inner-grid-btn {
-        display: grid;
+        @extend .display-grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 5px;
         padding: 13px 10px;
@@ -22,7 +22,7 @@ export default {
         .btn {
             border: 1px;
             padding: 8px 15px 8px 10px;
-            border-radius: 3px;
+            @extend .border-radius-3px;
             font-weight: 600;
         }
 

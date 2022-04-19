@@ -52,7 +52,7 @@
 
 <style lang="scss" scoped>
   .header {
-    position: fixed;
+    @extend .position-fixed;
     height: 50px;
     width: 100%;
     z-index: 99999;

@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="button-style">
-            <button class="btn btn-color-promosi">Lihat semua</button>
+            <button class="btn-color-promosi">Lihat semua</button>
         </div>
     </div>
 </template>
@@ -57,9 +57,8 @@ export default {
             }
         }
         .grid-container-item {
-            display: grid;
+            @extend .display-grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
             margin: 0px 15px;
 
             .mr-r-l {
@@ -70,14 +69,8 @@ export default {
             text-align: center;
             margin: 10px 0px 5px 0px;
 
-            .btn {
-                border: 1px;
-                padding: 8px 40px 8px 40px;
-                border-radius: 3px;
-                font-weight: 600;
-            }
-            
             .btn-color-promosi {
+                @extend .btn-custom;
                 @extend .btn-bg-red;
                 color: $color-white;
             }

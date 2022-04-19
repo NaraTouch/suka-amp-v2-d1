@@ -24,12 +24,12 @@ export default {
 </script>
 <style lang="scss">
     .action {
-        position: fixed;
+        @extend .position-fixed;
         z-index: 9999;
         bottom: -240px;
 
         // set 2 path to move button to right equal to card 
-        display: grid;
+        @extend .display-grid;
         grid-template-columns: 2.54fr 1fr;
 
         .right-div {

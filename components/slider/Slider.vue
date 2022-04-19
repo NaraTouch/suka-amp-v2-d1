@@ -52,25 +52,13 @@ export default {
 <style lang="scss">
     .slider-promotion {
         .image-br {
-            @extend .border-radius-5px;
-        }
-        .carousel {
-            border-radius: 10px;
-            .slide > amp-img > img {
-                // position: fixed;
-            }
+            @extend .border-radius-3px;
         }
     }
     .list-slider {
         margin: 0px 0px -2px;
         .slider {
              @extend .card;
-        }
-        .carousel {
-            .slide > amp-img > img {
-                // object-fit: contain;
-                //  position: fixed;
-            }
         }
     }
 </style>

@@ -2,7 +2,7 @@
     <div class="inner-grid">
         <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
             <NuxtLink :to="ampImage.url" class="header-logo">
-                <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
+                <amp-img class="test" :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
             </NuxtLink>
         </div>
     </div>
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
     .inner-grid {
-        display: grid;
+        @extend .display-grid;
         grid-template-columns: repeat(9, 1fr);
         grid-auto-rows: 100px;
         grid-column-gap: 10px;
@@ -40,7 +40,10 @@ export default {
             background-repeat: repeat-x;
             background-size: contain;
             height: max-content;
-            border-radius: 5px;
+            @extend .border-radius-3px;
+            &:last-child {
+                @extend .free-daily-spain;
+            }
         }
     }
 </style>

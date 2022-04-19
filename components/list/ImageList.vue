@@ -15,19 +15,13 @@ export default {
         firstImage: String,
         secondImage: String,
     },
-    data() {
-        return {
-          
-        }
-    },
 }
 </script>
 
 <style lang="scss">
      .list-show {
-        display: grid;
+        @extend .display-grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
         margin: 10px 15px;
      }
 </style>

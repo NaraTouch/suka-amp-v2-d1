@@ -18,26 +18,9 @@ $border-right-cr: #bdc9c5;
 $border-div-left: #383c3f;
 $tab-cr: #f1f0f5;
 $tab-cr-border-bottom: #9c9ba0;
-$background-image: url("/images/header/header-announcement-back.png");
-:root {
-    --color-primary: #005AF0;
-    --space-1: .5rem;
-    --space-4: 2rem;
-    --space-2: 0.5rem;
-    --space-3: 1rem;
-    --color-bg-light: #FAFAFC;
-    --color-text-light: #fff;
-    --box-shadow-1: 0 1px 1px 0 rgb(0 0 0 / 49%), 0 1px 1px -1px rgb(0 0 0 / 42%), 0 1px 5px 0 rgb(0 0 0 / 57%);
-}
-
 // gradient color build
-$rgb-light-1: rgb(255,
-168,
-0);
-$rgba-older-1: rgba(255,
-205,
-2,
-1);
+$rgb-light-1: rgb(255, 168, 0);
+$rgba-older-1: rgba(255, 205, 2, 1);
 // Media Screen
 $xxl-device: 'only screen and (min-width: 1400px)';
 $xl-device: 'only screen and (max-width: 1399px)';

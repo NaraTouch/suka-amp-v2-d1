@@ -7,7 +7,7 @@
                 </div>
                 <div id="tab2" role="tab" aria-controls="tabpanel2" option>TOGEL</div>
                 <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
-                <div id="tab3" role="tab" aria-controls="tabpanel3" option>DAILY WIN</div>
+                <div id="tab3" class="loading" role="tab" aria-controls="tabpanel3" option>DAILY WIN</div>
                 <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">Tab three content... </div>
         </amp-selector>
     </div>
@@ -49,7 +49,24 @@ export default {
         }
 
         #tab3 { 
+            
             border-top-right-radius: 4px;
+
+        }
+        .loading {
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: -1px;
+                right: 10px;
+                background: url(/images/slider-promotion/hot-offer.png) no-repeat;
+                background-size: contain;
+                animation: blink 1.2s step-start 0s infinite;
+                -webkit-animation: blink 1.2s step-start 0s infinite;
+                padding: 12px;
+            }
+            @extend .keyframes;
         }
 
         amp-selector[role=tablist].tabs-with-flex {

@@ -20,8 +20,8 @@
     box-shadow: var(--box-shadow-1);
 }
 
-.border-radius-5px {
-    border-radius: 4px;
+.border-radius-3px {
+    border-radius: 3px;
 }
 
 .mr-box {
@@ -46,41 +46,92 @@
 
 .header-image-br-ig {
     background-image: url('/images/header/nav-bg.jpg');
+    @extend .bg-size-repeat;
+}
+
+.bg-size-repeat {
+    background-size: contain;
+    background-repeat: repeat-x;
 }
 
 //button 
 .btn-bg-red {
     background-image: url('/images/button/button-nav-red.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
+    @extend .bg-size-repeat;
 }
 
 .btn-bg-white {
     background-image: url('/images/button/button-nav-white.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
+    @extend .bg-size-repeat;
 }
 
 // tab-br
 .tab-bg-img {
     background-image: url('/images/tab/tab-img.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
+    @extend .bg-size-repeat;
 }
 
 .tab-selec-bg-img {
     background-image: url('/images/tab/tab-select-img.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
+    @extend .bg-size-repeat;
 }
 
 // card-br-ig 
 .card-br-ig {
     background-image: url('/images/card/card-ig.png');
-    background-size: contain;
-    background-repeat: repeat-x;
+    @extend .bg-size-repeat;
 }
 
 .border-right {
     border-right: 1px solid $border-div-left;
+}
+
+// free-daily-spain on navbar
+.free-daily-spain {
+    &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        margin: -113px 0px 0px 64px;
+        padding: 25px;
+        background: url('/images/slider-promotion/free-daily-spain.png') no-repeat;
+        background-size: contain;
+        animation: blink 1.2s step-start 0s infinite;
+        -webkit-animation: blink 1.2s step-start 0s infinite
+    }
+    @extend .keyframes;
+}
+
+.keyframes {
+    @keyframes blink {
+        50% {
+            opacity: 0
+        }
+    }
+    @-webkit-keyframes blink {
+        50% {
+            opacity: 0
+        }
+    }
+}
+
+.btn-custom {
+    border: 1px;
+    padding: 8px 40px 8px 40px;
+    @extend .border-radius-3px;
+    font-weight: 600;
+}
+
+.br-bottom-right-left {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.display-grid {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.position-fixed {
+    position: fixed;
 }

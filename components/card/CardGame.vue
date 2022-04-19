@@ -98,9 +98,8 @@ export default {
 
 <style lang="scss">
     .card-container {
-        display: grid;
+        @extend .display-grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
         
         .mr-card {
             margin-bottom: 10px;

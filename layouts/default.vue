@@ -42,9 +42,5 @@ html {
   margin: 0 auto;
   padding: 0 10px;
   width: 100%;
-  /* max-width: 1140px; */
-  /* running-text */
-
-  /* position: relative; */
 }
 </style>
