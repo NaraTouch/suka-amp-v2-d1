@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="header">
         <NuxtLink to="/" class="header-logo">
-            <amp-img alt="site logo" src="/images/sk-image/SK-Logo-New.png" width="300" height="41" layout="responsive" class="desktop"></amp-img>
+            <amp-img alt="site logo" :src="image" width="300" height="41" layout="responsive" class="desktop"></amp-img>
         </NuxtLink>
         <div class="hidden-input">
           <LoginForm />
@@ -14,11 +14,16 @@
 </template>
 
 <script>
-export default {
-    components: {
-         LoginForm: () => import('../LoginForm'),
-    }
-}
+  export default {
+      components: {
+          LoginForm: () => import('../LoginForm'),
+      },
+      data() {
+        return {
+          image: "/images/sk-image/SK-Logo-New.png"
+        }
+      },
+  }
 </script>
 
 <style lang="scss" scoped>

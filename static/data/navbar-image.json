@@ -1,0 +1,48 @@
+{
+    "items": [{
+            "image": "/images/navbar-logo/01-hot-games.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/02-sports.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/03-casino.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/04-slots.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/05-poker.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/06-togel.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/07-arcade.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/08-cock-fight.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        },
+        {
+            "image": "/images/navbar-logo/09-lucky-spin.png",
+            "link": "https://www.w3schools.com/css/css_grid.asp",
+            "alt": "a sample image"
+        }
+    ]
+}
