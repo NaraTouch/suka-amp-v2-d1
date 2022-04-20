@@ -6,7 +6,7 @@
             <amp-img alt="site logo" :src="image" width="300" height="41" layout="responsive" class="desktop"></amp-img>
         </NuxtLink>
         <div class="hidden-input">
-          <LoginForm />
+          <LoginForm  :number="number" />
         </div>
       </div>
     </div>
@@ -20,7 +20,8 @@
       },
       data() {
         return {
-          image: "/images/sk-image/SK-Logo-New.png"
+          image: "/images/sk-image/SK-Logo-New.png",
+          number: "1234",
         }
       },
   }
@@ -35,15 +36,15 @@
        @extend .magrin-0-auto;
 
       .header {
+        @extend .z-index-1;
         position: relative;
         height: 60px;
         width: 100%;
-        z-index: 99999;
         
         .header-logo {
+          @extend .display-inline-block;
           width: 150px;
           height: 100%;
-          display: inline-block;
           padding: 20px 0px 0px;
         }
         

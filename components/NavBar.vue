@@ -50,10 +50,10 @@
 
 <style lang="scss" scoped>
   .header {
+    @extend .z-index-1;
     @extend .position-fixed;
     height: 50px;
     width: 100%;
-    z-index: 99999;
     border-bottom: solid 1px rgba(0,0,0,0.1);
     .header-logo {
       width: 100px;

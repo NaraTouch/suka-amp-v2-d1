@@ -1,6 +1,6 @@
 <template>
    <div class="square-small" >
-        <amp-fit-text class="color-text" width="255" height="140"  max-font-size="16">
+        <amp-fit-text class="color-text" width="255" height="120"  max-font-size="13">
             Selamat datang di situs Sukabet, situs permainan online terlengkap dan terpercaya. Pada halaman ini anda dapat 
             memilih kategori permainan yang anda ingin mainkan saat ini. Bagi anda yang belum memiliki akun, silahkan membuat 
             akun dengun mengklik "Datfar" dan
@@ -22,7 +22,7 @@ export default {
         text-align: left;
 
             .color-text {
-                @extend .color-white;
+                color: $border-right-cr;
             }
             
             .link-text {
@@ -31,6 +31,7 @@ export default {
                 a {
                     text-decoration: none;
                     color: $text-red;
+                    font-size: 14px;
                 }
         }
     }

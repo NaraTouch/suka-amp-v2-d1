@@ -66,10 +66,10 @@
         margin: 10px 0px 30px 0px;
 
         .border-row {
+            @extend .z-index-1;
             padding: 0px 13px 0px 0px;
             margin: 0px -16px 0px 0px;
             position: relative;
-            z-index : 1;
 
             &:before {
                 @extend .border-right;

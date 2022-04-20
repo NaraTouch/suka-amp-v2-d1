@@ -2,7 +2,7 @@
     <div class="inner-grid">
         <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
             <NuxtLink :to="ampImage.url" class="header-logo">
-                <amp-img class="test" :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
+                <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
             </NuxtLink>
         </div>
     </div>

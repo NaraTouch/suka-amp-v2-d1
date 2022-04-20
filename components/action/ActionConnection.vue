@@ -1,8 +1,10 @@
 <template>
-    <div class="action">
-        <div class="left-div"></div>
-        <div class="right-div">
-            <amp-list class="display-list" width="auto" height="70" layout="fixed-height" src="/data/action-list.json" v-html="actionList" />
+    <div class="actions">
+        <div></div>
+        <div>
+            <div class="display-list" v-for=" (image, index) in images" :key="index">
+                <a class="connected-image" :href="image.url" target="_blank"><amp-img :src="image.src" width="50" height="45" :alt="image.alt"></amp-img></a>
+            </div>
         </div>
     </div>
 </template>
@@ -11,37 +13,33 @@
 export default {
     data() {
         return {
-            actionList: `
-                <template type="amp-mustache">
-                    <amp-carousel  class="connected-image" id="custom-button"  width="50" height="50" type="slides" >
-                        <a class="image-pd" href="{{link}}" target="_blank"> <amp-img src="{{image}}" width="50" height="50" layout="responsive" alt="AMP Carousel"></amp-img></a>
-                    </amp-carousel>
-                </template>
-            `
+            images:[
+                { src: "/images/footer/footer-home.png", url: "https://sukabet.com/", alt: "a sample image" },
+                { src: "/images/footer/footer-profile.png", url: "https://sukabet.com/", alt: "a sample image" },
+                { src: "/images/footer/footer-wallet.png", url: "https://sukabet.com/", alt: "a sample image" },
+                { src: "/images/footer/footer-promo.png", url: "https://sukabet.com/", alt: "a sample image" },
+                { src: "/images/footer/footer-chat.png", url: "https://sukabet.com/", alt: "a sample image" },
+            ],
         }
     },
 }
 </script>
+
 <style lang="scss">
-    .action {
-        @extend .position-fixed;
-        z-index: 9999;
-        bottom: -240px;
-
-        // set 2 path to move button to right equal to card 
+    .actions {
         @extend .display-grid;
-        grid-template-columns: 2.54fr 1fr;
+        @extend .z-index-1;
+        position: fixed;
+        bottom: -5px;
+        grid-template-columns: 2.5fr 1fr;
+        
+        .display-list {
+            @extend .display-inline-block;
+            margin: 0px 10px 0px 0px;
 
-        .right-div {
-            .display-list {
-                padding: 145px;
-                .connected-image {
-                    margin: 0px 10px 0px 0px;
-                    &:last-child {
-                        margin: 0px 0px 0px 0px;
-                    }
-                }
-            } 
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
         }
     }
 </style>

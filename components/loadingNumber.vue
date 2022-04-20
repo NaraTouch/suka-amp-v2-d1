@@ -34,7 +34,7 @@ export default {
         }
         
         .box {
-            display: inline-block;
+            @extend .display-inline-block;
             overflow: hidden;
             height: 1em;
             line-height: 1em;

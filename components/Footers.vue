@@ -3,7 +3,9 @@
         <div class="footer-image">
             <amp-img alt="image" :src="image" height="27" layout="fixed-height" />
         </div>
-        <action-connection />
+        <div class="width-test">
+            <action-connection />
+        </div>
     </div>
 </template>
 
@@ -24,6 +26,9 @@
         color: red;
         .footer-image {
             width: 45%;
+        }
+        .width-test {
+            width: 1024px;
         }
     }
 </style>
