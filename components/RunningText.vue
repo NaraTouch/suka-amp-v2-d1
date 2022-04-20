@@ -35,9 +35,9 @@
 
 <style lang="scss" >
     .running-container {
+        @extend .border-radius-3px;
+        @extend .display-flex;
         background-color: $bg-gray-contain;
-        display: flex;
-        border-radius: 3px;
 
         .text {
             margin: 10px 0px 10px 10px;
@@ -49,11 +49,11 @@
             }
         }
         .marquee-container {
+            @extend .border-radius-3px;
+            @extend .display-flex;
             overflow: hidden;
             padding: 15px 0px;
             margin: 0px 0px;
-            border-radius: 2px;
-            display: flex;
             
             .marquee {
                 left: 100%;
@@ -68,7 +68,7 @@
                 animation-delay: 5s;
             }
             span { 
-                color: $color-white;
+                @extend .color-white;
             }
         }
 

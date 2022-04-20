@@ -31,16 +31,19 @@ export default {
     .navigation {
         margin: 10px 0px 0px 0px;
         .nav-responsive {
-            display: flex;
+            @extend .display-flex;
+
             .url-entry {
                 display: inline;
                 margin: 5px 15px 0px 0px;
+
                 a {
                     text-decoration: none;
                     color: $text-color-1;
-                }
-                a:hover {
-                    color: $theme-color;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
                 }
             }
         }

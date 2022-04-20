@@ -24,7 +24,7 @@
   .page-container {
      .body-container {
         @extend .container-size;
-        margin: 0 auto;
+        @extend .magrin-0-auto;
      }
   }
 </style>

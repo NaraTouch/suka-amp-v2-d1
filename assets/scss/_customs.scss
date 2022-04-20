@@ -1,19 +1,9 @@
-.bg-gradient-1 {
-    background: $rgb-light-1;
-    background: linear-gradient(0deg, $rgb-light-1 0%, $rgba-older-1 35%, $rgba-older-1 100%);
-}
-
 .input-border-radius-15 {
     border-radius: 15px;
 }
 
 .input-height-30 {
     height: 30px;
-}
-
-.input-gradient {
-    background: $theme-color-3;
-    background: linear-gradient(0deg, $theme-color-3 0%, $theme-color-2 35%, $theme-color-2 100%);
 }
 
 .card {
@@ -38,10 +28,12 @@
 
 .nav-image-bg {
     background-image: url('/images/navbar-logo/nav-ig-game.jpg');
+    @extend .bg-size-repeat;
 }
 
 .running-image-br-ig {
     background-image: url('/images/running-ig/running-image.jpg');
+    @extend .bg-size-repeat;
 }
 
 .header-image-br-ig {
@@ -116,9 +108,13 @@
 }
 
 .btn-custom {
-    border: 1px;
     padding: 8px 40px 8px 40px;
     @extend .border-radius-3px;
+    @extend .btn-font;
+}
+
+.btn-font {
+    border: 1px;
     font-weight: 600;
 }
 
@@ -134,4 +130,16 @@
 
 .position-fixed {
     position: fixed;
+}
+
+.color-white {
+    color: $color-white;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.magrin-0-auto {
+    margin: 0 auto;
 }

@@ -57,7 +57,7 @@ export default {
         .btn-color {
             @extend .btn-custom;
             @extend .btn-bg-red;
-            color: $color-white;
+            @extend .color-white;
         }
     }
 </style>

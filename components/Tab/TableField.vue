@@ -38,9 +38,9 @@ export default {
         }
 
         .product {
+            @extend .display-flex;
             margin: 7px 15px;
             padding: 0px 0px 0px 10px;
-            display: flex;
             align-items: center;
             border-bottom: 1px solid $border-right-cr;
 

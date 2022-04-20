@@ -57,26 +57,25 @@
 
       a {
         text-decoration: none;
-        color: $color-white;
+        @extend .color-white;
       }
 
       .input-custom-style {
+        @extend .border-radius-3px;
         padding: 6px 2px 6px 25px;
         border: 1px solid $color-gray;
-        border-radius: 3px;
         width: 150px;
       }
 
       .btn {
-        border: 1px;
+        @extend .border-radius-3px;
         padding: 6px 15px 6px 13px;
-        border-radius: 3px;
-        font-weight: 600;
+        @extend .btn-font;
       }
 
       .btn-color-Masuk {
         @extend .btn-bg-red;
-        color: $color-white;
+        @extend .color-white;
       }
 
       .btn-color-Daftar {

@@ -20,15 +20,14 @@ export default {
         padding: 13px 10px;
 
         .btn {
-            border: 1px;
-            padding: 8px 15px 8px 10px;
             @extend .border-radius-3px;
-            font-weight: 600;
+            @extend .btn-font;
+            padding: 8px 15px 8px 10px;
         }
 
         .btn-color-promosi {
             @extend .btn-bg-red;
-            color: $color-white;
+            @extend .color-white;
         }
 
         .btn-color-bonus {

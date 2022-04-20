@@ -22,7 +22,7 @@ export default {
         text-align: left;
 
             .color-text {
-                color: $color-white;
+                @extend .color-white;
             }
             
             .link-text {

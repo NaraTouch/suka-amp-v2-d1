@@ -55,22 +55,20 @@ export default {
 <style lang="scss" scoped>
     .running-dev {
         @extend .running-image-br-ig;
-        background-repeat: repeat-x;
-        background-size: contain;
-        color: $color-white;
+        @extend .color-white;
+        @extend .border-radius-3px;
         padding: 15px;
         border: 1px solid $color-white;
-        border-radius: 3px;
         overflow: hidden;
 
         .running-text {
+            @extend .display-flex;
             -moz-animation: marquee 15s linear infinite;
             -webkit-animation: marquee 15s linear infinite;
             animation: marquee 15s linear infinite;
-            display: flex;
 
             .row {
-                display: flex;
+                @extend .display-flex;
                 
                  &:first-child {
                         .line {

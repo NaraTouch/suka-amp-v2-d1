@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
     .header-title {
-        display: flex;
+        @extend .display-flex;
        
         .title-card {
             padding: 7px 0px 0px 10px;

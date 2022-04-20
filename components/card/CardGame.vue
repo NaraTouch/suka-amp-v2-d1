@@ -103,6 +103,7 @@ export default {
         
         .mr-card {
             margin-bottom: 10px;
+            
             &:last-child {
                 margin-bottom: 0px;
             }

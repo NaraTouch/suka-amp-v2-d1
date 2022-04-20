@@ -19,9 +19,9 @@ export default {
 
 <style lang="scss" scoped>
     .heading-block {
+        @extend .display-flex;
         margin: 0px 10px;
         background: #180278;
-        display: flex;
 
         .text-loading {
             font-weight: bold;
@@ -30,7 +30,7 @@ export default {
         }
         
         .box-area {
-            display: flex;
+            @extend .display-flex;
         }
         
         .box {

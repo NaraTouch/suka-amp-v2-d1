@@ -30,7 +30,7 @@ export default {
     .header {
       text-align: justify;
       padding: 15px 0px 0px 15px;
-      color: $color-white;
+      @extend .color-white;
 
       span {
         font-size: 15px;

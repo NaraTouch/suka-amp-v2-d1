@@ -32,7 +32,7 @@
 
     .header-container {
        @extend .container-size;
-       margin: 0 auto;
+       @extend .magrin-0-auto;
 
       .header {
         position: relative;

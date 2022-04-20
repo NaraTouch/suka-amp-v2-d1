@@ -37,10 +37,8 @@ export default {
 
         .bg-color-ig {
             @extend .nav-image-bg;
-            background-repeat: repeat-x;
-            background-size: contain;
-            height: max-content;
             @extend .border-radius-3px;
+            height: max-content;
             &:last-child {
                 @extend .free-daily-spain;
             }

@@ -44,8 +44,6 @@
   export default {
     components: {
       Navigation: () => import('../components/Navigation'),
-      CarouselGame: () => import('../components/CarouselGame'),
-      CountAnimation: () => import('../components/CountAnimation'),
     },
   };
 </script>

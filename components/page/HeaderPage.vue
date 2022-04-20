@@ -32,7 +32,7 @@
     .hedaer-page {
         .page-size {
             @extend .container-size;
-            margin: 0 auto;
+            @extend .magrin-0-auto;
             padding-top: 10px;
 
             .navbar-image {

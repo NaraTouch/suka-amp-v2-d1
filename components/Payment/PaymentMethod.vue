@@ -38,9 +38,10 @@ export default {
         .header {
             text-align: justify;
             padding: 20px 0px 15px 15px;
-            color: $color-white;
+            @extend .color-white;
 
             .span-left {
+                @extend .border-radius-3px;
                 background-image: url(/images/bank/sidebar-payment-logos.png);
                 background-repeat: no-repeat;
                 width: 40px;
@@ -48,7 +49,6 @@ export default {
                 display: block;
                 float: left;
                 margin: -3px 10px 0px 0px;
-                border-radius: 2px;
             }
 
             .span-right {
@@ -72,7 +72,7 @@ export default {
             .btn-color-promosi {
                 @extend .btn-custom;
                 @extend .btn-bg-red;
-                color: $color-white;
+                @extend .color-white;
             }
         }
     }

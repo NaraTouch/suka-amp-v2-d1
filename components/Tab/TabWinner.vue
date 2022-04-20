@@ -70,7 +70,7 @@ export default {
         }
 
         amp-selector[role=tablist].tabs-with-flex {
-            display: flex;
+            @extend .display-flex;
             flex-wrap: wrap;
             font-weight: 700;
             font-size: 15px;
@@ -115,7 +115,7 @@ export default {
         }
 
         amp-selector[role=tablist].tabs-with-selector {
-            display: flex;
+            @extend .display-flex;
         }
 
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
@@ -124,7 +124,7 @@ export default {
         }
 
         amp-selector[role=tablist].tabs-with-selector {
-            display: flex;
+            @extend .display-flex;
         }
 
         amp-selector[role=tablist].tabs-with-selector [role=tab] {

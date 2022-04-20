@@ -62,7 +62,7 @@
 
 <style lang="scss">
     .body-field {
-        display: flex;
+        @extend .display-flex;
         margin: 10px 0px 30px 0px;
 
         .border-row {
