@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .navigation {
         margin: 10px 0px 0px 0px;
         .nav-responsive {

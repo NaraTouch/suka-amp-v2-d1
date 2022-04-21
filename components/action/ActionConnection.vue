@@ -25,17 +25,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .actions {
         @extend .display-grid;
         @extend .z-index-1;
         position: fixed;
         bottom: -5px;
-        grid-template-columns: 2.5fr 1fr;
+        grid-template-columns: 2.76fr 1fr;
         
         .display-list {
             @extend .display-inline-block;
-            margin: 0px 10px 0px 0px;
+            margin: 0px 5px 0px 0px;
 
             &:last-child {
                 margin: 0px 0px 0px 0px;

@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .tab-scroll-bar {
         overflow: auto;
         height: 385px;

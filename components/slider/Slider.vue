@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .slider-promotion {
         .image-br {
             @extend .border-radius-3px;

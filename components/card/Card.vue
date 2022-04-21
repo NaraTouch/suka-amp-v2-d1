@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate >
     .card-box {
         background: $bg-body-field;
         @extend .border-radius-3px;

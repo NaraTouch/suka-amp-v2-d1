@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
   .stay-connected-list {
     .header {
       text-align: justify;

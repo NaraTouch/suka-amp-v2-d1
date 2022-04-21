@@ -21,7 +21,7 @@
         },
     }
 </script>
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .footer {
         color: red;
         .footer-image {

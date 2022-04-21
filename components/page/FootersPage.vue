@@ -10,6 +10,6 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     
 </style>

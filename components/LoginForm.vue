@@ -46,7 +46,7 @@
   };
 </script>
 
-<style lang="scss" >
+<style lang="scss" amp-boilerplate>
   .d-login-form {
     overflow: hidden;
     background-color: transparent;

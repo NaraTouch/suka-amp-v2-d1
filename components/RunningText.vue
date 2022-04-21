@@ -27,7 +27,7 @@
     }
 </script>
 
-<style lang="scss" >
+<style lang="scss" amp-boilerplate>
     .running-container {
         @extend .border-radius-3px;
         @extend .display-flex;
@@ -64,8 +64,8 @@
             }
             span { 
                 @extend .color-white;
-                font: -webkit-control;
-                font-size: 15px;
+                font: message-box;
+                font-size: 14px;
             }
         }
 

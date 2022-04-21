@@ -16,11 +16,11 @@ export default {
         imageTitle: String,
         width: String, 
         height: String,
-     }
+     }    
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .header-title {
         @extend .display-flex;
        

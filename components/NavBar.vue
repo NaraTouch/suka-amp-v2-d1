@@ -48,7 +48,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" amp-boilerplate>
   .header {
     @extend .z-index-1;
     @extend .position-fixed;

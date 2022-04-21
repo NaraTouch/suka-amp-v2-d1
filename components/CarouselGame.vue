@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" amp-boilerplate>
     img{
         width:100%;
         max-width:100%;

@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" amp-boilerplate>
     .heading-block {
         @extend .display-flex;
         margin: 0px 10px;

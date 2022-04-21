@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" amp-boilerplate>
     .running-dev {
         @extend .running-image-br-ig;
         @extend .color-white;

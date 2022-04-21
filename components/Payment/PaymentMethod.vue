@@ -33,7 +33,7 @@ export default {
    },
 }
 </script>
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .payment-methods {
         .header {
             text-align: justify;

@@ -27,7 +27,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" amp-boilerplate>
   .navbar-header {
      @extend .header-image-br-ig;
 

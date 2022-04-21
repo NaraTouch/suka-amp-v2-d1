@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .inner-grid-btn {
         @extend .display-grid;
         grid-template-columns: 1fr 1fr 1fr;

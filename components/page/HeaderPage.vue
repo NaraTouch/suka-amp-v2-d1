@@ -28,7 +28,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .hedaer-page {
         .page-size {
             @extend .container-size;
@@ -40,7 +40,7 @@
             }
 
             .running-image {
-                 padding-top: 5px;
+                //  padding-top: 5px;
             }
         }
     }

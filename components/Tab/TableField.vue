@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
     .table-field {
         background: $bg-body-field;
         @extend .br-bottom-right-left;
