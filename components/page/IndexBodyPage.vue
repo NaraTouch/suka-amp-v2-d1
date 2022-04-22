@@ -100,7 +100,7 @@
             }
 
             .payment-method {
-                padding-bottom: 5px;
+                padding-bottom: 15px;
                 @extend .border-radius-3px;
                 background-color: $bg-body-field;
             }

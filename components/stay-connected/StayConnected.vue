@@ -1,60 +1,67 @@
 <template>
   <div class="stay-connected-list">
-    <div class="header">
+    <div class="title-stay-connection">
       <span>Stay connected</span>
     </div>
-    <div class="inner-grid-connected">
-      <amp-list class="connected" width="auto" height="70" layout="fixed-height" src="/data/connection-list.json" v-html="imageList" />
+
+    <div class="body-connected">
+      <ul class="menus">
+        <li class="item-ig"><a class="link" href="#"><div></div></a></li>
+        <li class="item-fb"><a class="link" href="#"><div></div></a></li>
+        <li class="item-brid"><a class="link" href="#"><div></div></a></li>
+        <li class="item-youtube"><a class="link" href="#"><div></div></a></li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      imageList: `
-                <template type="amp-mustache">
-                    <amp-carousel  class="connected-image" id="custom-button"  width="40" height="40" type="slides" >
-                        <a href="{{url}}" target="_blank"> <amp-img src="{{logo}}" width="40" height="40" layout="responsive" alt="AMP Carousel"></amp-img></a>
-                    </amp-carousel>
-                </template>
-            `,
-    };
-  },
-};
+  export default {
+    data() {
+      return {
+        
+      };
+    },
+  };
 </script>
 
 <style lang="scss" amp-boilerplate>
-  .stay-connected-list {
-    .header {
-      text-align: justify;
-      padding: 15px 0px 0px 15px;
+  .stay-connected-list { 
+    .title-stay-connection {
+      padding: 20px 0px 0px 15px;
       @extend .color-white;
-
-      span {
-        font-size: 15px;
-        font-weight: 500;
-      }
     }
 
-    .inner-grid-connected {
-      margin: 10px 0px 0px 10px;
+    .body-connected {
+      padding: 10px 10px 20px 10px;
 
-      .connected {
-        margin: 0px 0px -8px 7px;
+      .menus {
+        list-style-type: none;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        
+        li {
+          font-size: 16px;
+          font-family: "Trebuchet MS", Arial, sans-serif;
 
-        .connected-image {
-          margin: 0px 10px;
-
-          &:first-child {
-            margin: 0px 8px 0px 0px;
-          }
-          
-          &:last-child {
-            margin: 0px 0px 0px 0px;
+          a {
+            div {
+              background: url(/images/brand-logo/stay-connected.png) no-repeat;
+              height: 50px;
+              width: 50px;
+            }
           }
         }
+
+        .item-ig { a { div { background-position: 0px 0px; } } }
+
+        .item-fb { a { div { background-position: -50px 0px; } } }
+
+        .item-brid { a { div { background-position: 0px -50px; } } }
+        
+        .item-youtube { a { div { background-position: -50px -50px; } } }
       }
     }
   }

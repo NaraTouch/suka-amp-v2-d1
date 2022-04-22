@@ -38,10 +38,6 @@
             .navbar-image {
                  padding: 10px 0px;
             }
-
-            .running-image {
-                //  padding-top: 5px;
-            }
         }
     }
 </style>

@@ -49,67 +49,67 @@
 </script>
 
 <style lang="scss" amp-boilerplate>
-  .header {
-    @extend .z-index-1;
-    @extend .position-fixed;
-    height: 50px;
-    width: 100%;
-    border-bottom: solid 1px rgba(0,0,0,0.1);
-    .header-logo {
-      width: 100px;
-      height: 100%;
-      margin-left: 15px;
-      display: block;
-    }
-    .header-nav-icon {
-      overflow: hidden;
-      background-color: transparent;
-      border: none;
-      position: absolute;
-      line-height: 65px;
-      text-align: center; 
-      width: 60px;
-      display: block;
-      font-size: 14px;
-      right: 0px; 
-      top: 3px;
-      bottom: 0px;
-      color: $text-color-1;
-    }
-    .header-clear {
-      height: 50px;
-    }
-    .container-div {
-      margin: 0px 20px;
-    }
-  }
+  // .header {
+  //   @extend .z-index-1;
+  //   @extend .position-fixed;
+  //   height: 50px;
+  //   width: 100%;
+  //   border-bottom: solid 1px rgba(0,0,0,0.1);
+  //   .header-logo {
+  //     width: 100px;
+  //     height: 100%;
+  //     margin-left: 15px;
+  //     display: block;
+  //   }
+  //   .header-nav-icon {
+  //     overflow: hidden;
+  //     background-color: transparent;
+  //     border: none;
+  //     position: absolute;
+  //     line-height: 65px;
+  //     text-align: center; 
+  //     width: 60px;
+  //     display: block;
+  //     font-size: 14px;
+  //     right: 0px; 
+  //     top: 3px;
+  //     bottom: 0px;
+  //     color: $text-color-1;
+  //   }
+  //   .header-clear {
+  //     height: 50px;
+  //   }
+  //   .container-div {
+  //     margin: 0px 20px;
+  //   }
+  // }
 
-  @media #{$sm-device} {
-    .header {
-      .hidden-input:first-of-type {
-          visibility: hidden;
-      }
-      .hidden-input:last-of-type {
-          visibility: hidden;
-      }
-      .header-logo[data-v-0957edea] {
-          margin-inline: auto;
-      }
-      // desktop
-      .desktop {
-        display: none;
-      }
-    }
-    .bg-gradient-1[data-v-0957edea] {
-        background: $color-black;
-        // background: #000000;
-    }
-  }
-  @media #{$sm-down-device} {
-    .header {
-      .mobile {
-        display: none;
-      }
-    }
-  }
+  // @media #{$sm-device} {
+  //   .header {
+  //     .hidden-input:first-of-type {
+  //         visibility: hidden;
+  //     }
+  //     .hidden-input:last-of-type {
+  //         visibility: hidden;
+  //     }
+  //     .header-logo[data-v-0957edea] {
+  //         margin-inline: auto;
+  //     }
+  //     // desktop
+  //     .desktop {
+  //       display: none;
+  //     }
+  //   }
+  //   .bg-gradient-1[data-v-0957edea] {
+  //       background: $color-black;
+  //       // background: #000000;
+  //   }
+  // }
+  // @media #{$sm-down-device} {
+  //   .header {
+  //     .mobile {
+  //       display: none;
+  //     }
+  //   }
+  // }
 </style>

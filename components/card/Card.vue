@@ -1,11 +1,13 @@
 <template>
     <div class="card-box">
         <div class="title">
-            <title-image :title="title" :image-title="imageTitle" :width="width" :height="height"/>
+            <title-image :customClass="customClassImageTitle" :customComponent="condition" :title="title" :image-title="imageTitle" :width="width" :height="height" />
         </div>
+
         <div class="image-body">
-            <ImageList :first-image="imageBodyFirst" :second-image="imageBodySecound" />
+            <ImageList :customClassSecond="customClassSecond" :customClassFirst="customClassFirst" />
         </div>
+        
         <div class="footer-button">
             <a :href="linkButton">
                 <button class="btn-color">Lihat Semua</button>
@@ -23,21 +25,22 @@ export default {
     props : {
         title: String,
         imageTitle: String,
-        imageBodyFirst: String,
-        imageBodySecound: String,
         linkButton: String,
+        customClassImageTitle: String,
+        customClassFirst: String,
+        customClassSecond: String,
     },
     data() {
         return {
-            images: "/images/card/poker-thumb.png",
             width: "25",
             height: "30",
+            condition: true,
         }
     },
 }
 </script>
 
-<style lang="scss" amp-boilerplate >
+<style lang="scss" amp-boilerplate>
     .card-box {
         background: $bg-body-field;
         @extend .border-radius-3px;
@@ -46,7 +49,7 @@ export default {
             @extend .card-br-ig;
             border-top-right-radius: 3px;
             border-top-left-radius: 3px;
-            padding: 3px 0px 3px 10px;
+            padding: 3px 0px 3px 6px;
         }
 
         .footer-button {

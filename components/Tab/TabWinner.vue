@@ -120,7 +120,6 @@ export default {
 
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
             outline: none;
-            border-bottom: 2px solid var(--color-primary);
         }
 
         amp-selector[role=tablist].tabs-with-selector {
@@ -130,12 +129,10 @@ export default {
         amp-selector[role=tablist].tabs-with-selector [role=tab] {
         width: 100%;
         text-align: center;
-        padding: var(--space-1);
         }
 
         amp-selector.tabpanels [role=tabpanel] {
         display: none;
-        padding: var(--space-4);
         }
 
         amp-selector.tabpanels [role=tabpanel][selected] {

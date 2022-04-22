@@ -1,12 +1,4 @@
 <template>
-    <!-- <div class="inner-grid">
-        <div class="bg-color-ig" v-for=" (ampImage, index) in ampImages" :key="index">
-            <NuxtLink :to="ampImage.url" class="header-logo">
-                <amp-img :src="ampImage.src" width="1" height="1" layout="responsive" alt="AMP Carousel"></amp-img>
-            </NuxtLink>
-        </div>
-    </div> -->
-
     <div class="navbar-images">
         <ul class="menus">
             <li class="item-hot-game"><a class="link" href="#"><div><span>Hot Game</span></div></a></li>
@@ -17,25 +9,19 @@
             <li class="item-arcade"><a class="link" href="#"><div><span>Arcade</span></div></a></li>
             <li class="item-togel"><a class="link" href="#"><div><span>Togel</span></div></a></li>
             <li class="item-cock-fighter"><a class="link" href="#"><div><span class="span-custom" >Cock Fighter</span></div></a></li>
-            <li class="item-lucky-spain"><a class="link-padding" href="#"><div class="test"></div></a></li>
+            <li class="item-lucky-spain"><a class="link-padding" href="#"><div class="lucky-spain-image"></div></a></li>
         </ul>
     </div>
-
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            image: "/images/navbar-logo/9-lucky-spain.png",
-        }
-    },
-}
+    export default {
+    
+    }
 </script>
 
 <style lang="scss" amp-boilerplate>
     .navbar-images {
-            // height: 92px;
         .hot-game {
             &:after {
                 display: block;
@@ -49,16 +35,16 @@ export default {
         }
         .menus {
             list-style-type: none;
-            display: flex;
+            display: grid;
             padding: 0px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
 
             li {
-                // padding: 0px 0px 18px 0px;
                 font-size: 16px;
                 font-family: "Trebuchet MS", Arial, sans-serif;
-                margin-right: 19px;
                 width: 100%;
-                // margin: 0px 10px 0px 0px;
+
                 &:first-child {
                     @extend .hot-game;
                 }
@@ -100,99 +86,35 @@ export default {
                         }
                     }
                 }
-                .link-padding {
-                    .images {
-                        background: url(/images/navbar-logo/09-lucky-spin.png) no-repeat;
-                    }
-                }
-            }
-            .item-hot-game {
-                .link {
-                    div {
-                        background-position: 0px -5px;
-                    }
-                }
-            }
-            .item-sports {
-                .link {
-                    div {
-                        background-position: -67px -10px;
-                    }
-                }
-            }
-            .item-casino {
-                .link {
-                    div {
-                        background-position: -131px -10px;
-                    }
-                }
-            }
-            .item-slots {
-                .link {
-                    div {
-                        background-position: -194px -7px;
-                    }
-                }
-            }
-            .item-poker {
-                .link {
-                    div {
-                        background-position: -2px -134px;
-                    }
-                }
-            }
-            .item-arcade {
-                .link {
-                    div {
-                        background-position: -66px -133px;
-                    }
-                }
-            }
-            .item-togel {
-                .link {
-                    div {
-                        background-position: -130px -137px;
-                    }
-                }
-            }
-            .item-cock-fighter {
-                .link {
-                    div {
-                        background-position: -191px -140px;
-                    }
-                }
-            }
-            .item-lucky-spain {
-                .link-padding {
-                    .test {
-                        @extend .border-radius-3px;
-                        background: url(/images/navbar-logo/9-lucky-spain.png) no-repeat;
-                        padding: 50px;
-                        border: 1px solid $color-white;
-                    }
-                    .images { 
-                        // background-position: -131px 0px;
-                        // width: 64px;
+
+                .link-padding { .images { background: url(/images/navbar-logo/09-lucky-spin.png) no-repeat;} } }
+
+                .item-hot-game { .link { div { background-position: 0px -5px; } } }
+                
+                .item-sports { .link { div { background-position: -67px -10px; } } }
+                
+                .item-casino { .link { div { background-position: -131px -10px; } } }
+                
+                .item-slots { .link { div { background-position: -194px -7px; } } }
+                
+                .item-poker { .link { div { background-position: -2px -134px; } } }
+
+                .item-arcade { .link { div { background-position: -66px -133px; } } }
+
+                .item-togel { .link { div { background-position: -130px -137px; } } }
+
+                .item-cock-fighter { .link { div { background-position: -191px -140px; } } }
+
+                .item-lucky-spain {
+                    .link-padding {
+                        .lucky-spain-image {
+                            @extend .border-radius-3px;
+                            background: url(/images/navbar-logo/9-lucky-spain.png) no-repeat;
+                            padding: 50px;
+                            border: 1px solid $color-white;
+                        }
                     }
                 }
             }
         }
-    }
-
-
-    // .inner-grid {
-    //     @extend .display-grid;
-    //     grid-template-columns: repeat(9, 1fr);
-    //     grid-auto-rows: 100px;
-    //     grid-column-gap: 10px;
-
-    //     .bg-color-ig {
-    //         @extend .nav-image-bg;
-    //         @extend .border-radius-3px;
-    //         height: max-content;
-    //         &:last-child {
-    //             @extend .free-daily-spain;
-    //         }
-    //     }
-    // }
 </style>

@@ -57,8 +57,5 @@ export default {
     }
     .list-slider {
         margin: 0px 0px -2px;
-        .slider {
-             @extend .card;
-        }
     }
 </style>

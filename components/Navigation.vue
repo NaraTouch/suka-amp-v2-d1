@@ -28,34 +28,34 @@ export default {
 </script>
 
 <style lang="scss" amp-boilerplate>
-    .navigation {
-        margin: 10px 0px 0px 0px;
-        .nav-responsive {
-            @extend .display-flex;
+    // .navigation {
+    //     margin: 10px 0px 0px 0px;
+    //     .nav-responsive {
+    //         @extend .display-flex;
 
-            .url-entry {
-                display: inline;
-                margin: 5px 15px 0px 0px;
+    //         .url-entry {
+    //             display: inline;
+    //             margin: 5px 15px 0px 0px;
 
-                a {
-                    text-decoration: none;
-                    color: $text-color-1;
+    //             a {
+    //                 text-decoration: none;
+    //                 color: $text-color-1;
 
-                    &:hover {
-                        color: $theme-color;
-                    }
-                }
-            }
-        }
-        @media #{$sm-device} {
-            .nav-responsive {
-                &:first-of-type {
-                    visibility: visible;
-                }
-                &:last-of-type {
-                    visibility: hidden;
-                }
-            }
-        }
-    }
+    //                 &:hover {
+    //                     color: $theme-color;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     @media #{$sm-device} {
+    //         .nav-responsive {
+    //             &:first-of-type {
+    //                 visibility: visible;
+    //             }
+    //             &:last-of-type {
+    //                 visibility: hidden;
+    //             }
+    //         }
+    //     }
+    // }
 </style>
