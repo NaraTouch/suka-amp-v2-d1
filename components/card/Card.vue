@@ -1,7 +1,7 @@
 <template>
     <div class="card-box">
         <div class="title">
-            <title-image :customClass="customClassImageTitle" :customComponent="condition" :title="title" :image-title="imageTitle" :width="width" :height="height" />
+            <title-image :customClass="customClassImageTitle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
 
         <div class="image-body">
@@ -24,7 +24,6 @@ export default {
     },
     props : {
         title: String,
-        imageTitle: String,
         linkButton: String,
         customClassImageTitle: String,
         customClassFirst: String,

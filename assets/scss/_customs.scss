@@ -96,14 +96,14 @@
 }
 
 .btn-custom {
-    padding: 8px 40px 8px 40px;
+    padding: 7px 40px 7px 40px;
     @extend .border-radius-3px;
     @extend .btn-font;
 }
 
 .btn-font {
     border: 1px;
-    font-weight: 600;
+    @extend .font-size;
 }
 
 .br-bottom-right-left {
@@ -138,4 +138,9 @@
 
 .z-index-1 {
     z-index: 9999;
+}
+
+.font-size {
+    font-weight: 700;
+    font-size: 15px;
 }

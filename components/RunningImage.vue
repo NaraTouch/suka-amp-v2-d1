@@ -1,13 +1,9 @@
 <template>
     <div class="running-dev">
         <div class="running-text">
-            <div class="row" v-for="(cardItem, index) in cardItems" :key="index">
-               <div class="line"></div>
-                <ImageIcon :src="cardItem.imageOne"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
-
-                <LoadingComponent />
-
-                <ImageIcon :src="cardItem.imageTwo"  :width="cardItem.widthImage" :height="cardItem.heightImage" />
+            <div class="display-row" v-for="(item, index) in items" :key="index">
+                <div class="line"></div>
+                <ImageIcon :customClassFirst="item.classFirst"  :customClassSecond="item.classSecond" />
             </div>
         </div>
     </div>
@@ -16,37 +12,15 @@
 <script>
 export default {
     components: {
-        LoadingComponent: () => import('./loadingNumber'),
         ImageIcon: () => import('./ImageIcon'),
-        CountAnimation: () => import('./CountAnimation'),
     },
     data() {
         return {
-            jackport: '../images/running-ig/jackpot.png',
-            idn: '../images/running-ig/idn.png',
-            pg: '../images/running-ig/idn.png',
-            widthImage: '100px',
-            heightImage: '20px',
-            cardItems: [
-                {
-                    imageOne: '../images/running-ig/jackpot.png',
-                    imageTwo: '../images/running-ig/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                },
-                {
-                    imageOne: '../images/running-ig/jackpot.png',
-                    imageTwo: '../images/running-ig/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                },
-                {
-                    imageOne: '../images/running-ig/jackpot.png',
-                    imageTwo: '../images/running-ig/idn.png',
-                    widthImage: '100px',
-                    heightImage: '20px',
-                }
-            ]
+            items: [
+                { classFirst: "item-jackopt", classSecond: "item-idnlive" },
+                { classFirst: "item-jackopt", classSecond: "item-pg" },
+                { classFirst: "item-jackopt", classSecond: "item-idnlive" }
+            ],
         }
     },
 }
@@ -57,7 +31,7 @@ export default {
         @extend .running-image-br-ig;
         @extend .color-white;
         @extend .border-radius-3px;
-        padding: 15px;
+        padding: 8px;
         border: 1px solid $color-white;
         overflow: hidden;
 
@@ -67,39 +41,32 @@ export default {
             -webkit-animation: marquee 15s linear infinite;
             animation: marquee 15s linear infinite;
 
-            .row {
+            .display-row {
                 @extend .display-flex;
-                
-                 &:first-child {
-                        .line {
+        
+                &:first-child {
+                    .line {
                         width: 0px;
-                        background: $border-color-1;
+                        background: $color-white;
                         margin: 0px 10px;
                     }
                 }
-                
+            
                 .line {
                     width: 1px;
-                    background: $border-color-1;
+                    background: $color-white;
                     margin: 0px 10px;
                 }
             }
         }
+
         @-moz-keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
         @-webkit-keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
         @keyframes marquee {
             0% {

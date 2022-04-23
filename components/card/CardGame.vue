@@ -4,7 +4,6 @@
             <div class="mr-card" v-for=" (data, index) in cardDataLeft" :key="index">
                 <Card  
                     :title="data.title" 
-                    :imageTitle="data.titleIcon"
                     :linkButton="data.link" 
                     :customClassImageTitle="data.classStyle"
                     :customClassFirst="data.customClassFirst"
@@ -25,9 +24,6 @@ export default {
                 { 
                     hotGames: {
                         title: "Hot Games",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-hot-game-first",
                         customClassSecond: "item-custom-hot-game-second",
@@ -35,9 +31,6 @@ export default {
                     },
                     sportsGames: {
                         title: "Sports",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-sports-first",
                         customClassSecond: "item-custom-sports-second",
@@ -45,9 +38,6 @@ export default {
                     },
                     casinoGames: {
                         title: "Casino",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-casino-first",
                         customClassSecond: "item-custom-casino-second",
@@ -55,9 +45,6 @@ export default {
                     },
                     slotsGames: {
                         title: "Slots",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-slots-first",
                         customClassSecond: "item-custom-slots-second",
@@ -65,9 +52,6 @@ export default {
                     },
                     pokerGames: {
                         title: "Poker",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-poker-first",
                         customClassSecond: "item-custom-poker-second",
@@ -75,9 +59,6 @@ export default {
                     },
                     arcadeGames: {
                         title: "Arcade",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-arcade-first",
                         customClassSecond: "item-custom-arcade-second",
@@ -85,9 +66,6 @@ export default {
                     },
                     TogelGames: {
                         title: "Togel",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-togel-first",
                         customClassSecond: "item-custom-togel-second",
@@ -95,9 +73,6 @@ export default {
                     },
                     cockFightingGames: {
                         title: "Cock Fighting",
-                        titleIcon: "/images/card/card-title-image.png",
-                        imageFirst: "/images/card/poker-thumb.png",
-                        imageSecond: "/images/card/poker-thumb.png",
                         link: "https://www.w3schools.com/",
                         customClassFirst: "item-custom-cock-fighting-first",
                         customClassSecond: "item-custom-cock-fighting-second",

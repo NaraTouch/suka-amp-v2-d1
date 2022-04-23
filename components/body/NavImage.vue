@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-images">
         <ul class="menus">
-            <li class="item-hot-game"><a class="link" href="#"><div><span>Hot Game</span></div></a></li>
+            <li class="item-hot-game"><a class="link" href="#"><div><span>HOT GAME</span></div></a></li>
             <li class="item-sports"><a class="link" href="#"><div><span>Sports</span></div></a></li>
             <li class="item-casino"><a class="link" href="#"><div><span>Casino</span></div></a></li>
             <li class="item-slots"><a class="link" href="#"><div><span>Slots</span></div></a></li>
@@ -34,15 +34,14 @@
             }
         }
         .menus {
-            list-style-type: none;
             display: grid;
             padding: 0px;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-gap: 15px;
+            list-style-type: none;
 
             li {
                 font-size: 16px;
-                font-family: "Trebuchet MS", Arial, sans-serif;
                 width: 100%;
 
                 &:first-child {
@@ -72,17 +71,16 @@
                         span {
                             position: absolute;
                             bottom: -20px;
-                            font-size: 12px;
+                            font-size: 11px;
                             font-weight: bold;
                             text-align: center;
-                            right: 0;
+                            right: -2px;
                             left: 0;
                             text-transform: uppercase;
                         }
                         .span-custom {
-                            right: -12px;
-                            text-align: unset;
-                            left: -9px;
+                            right: -14px;
+                            left: -15px;
                         }
                     }
                 }
@@ -99,9 +97,9 @@
                 
                 .item-poker { .link { div { background-position: -2px -134px; } } }
 
-                .item-arcade { .link { div { background-position: -66px -133px; } } }
+                .item-arcade { .link { div { background-position: -130px -137px; } } }
 
-                .item-togel { .link { div { background-position: -130px -137px; } } }
+                .item-togel { .link { div { background-position: -66px -133px; } } }
 
                 .item-cock-fighter { .link { div { background-position: -191px -140px; } } }
 

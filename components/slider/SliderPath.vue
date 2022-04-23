@@ -22,7 +22,7 @@ export default {
         .btn {
             @extend .border-radius-3px;
             @extend .btn-font;
-            padding: 8px 15px 8px 10px;
+            padding: 7px 15px 7px 10px;
         }
 
         .btn-color-promosi {

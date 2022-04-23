@@ -1,44 +1,58 @@
 <template>
     <div class="actions">
         <div></div>
-        <div>
-            <div class="display-list" v-for=" (image, index) in images" :key="index">
-                <a class="connected-image" :href="image.url" target="_blank"><amp-img :src="image.src" width="50" height="45" :alt="image.alt"></amp-img></a>
-            </div>
+        <div class="action-image">
+            <ul class="menu">
+                <li class="item-home"><a href="#"><div></div></a></li>
+                <li class="item-profile"><a href="#"><div></div></a></li>
+                <li class="item-bullets"><a href="#"><div></div></a></li>
+                <li class="item-box"><a href="#"><div></div></a></li>
+                <li class="item-chat"><a href="#"><div></div></a></li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            images:[
-                { src: "/images/footer/footer-home.png", url: "https://sukabet.com/", alt: "a sample image" },
-                { src: "/images/footer/footer-profile.png", url: "https://sukabet.com/", alt: "a sample image" },
-                { src: "/images/footer/footer-wallet.png", url: "https://sukabet.com/", alt: "a sample image" },
-                { src: "/images/footer/footer-promo.png", url: "https://sukabet.com/", alt: "a sample image" },
-                { src: "/images/footer/footer-chat.png", url: "https://sukabet.com/", alt: "a sample image" },
-            ],
-        }
-    },
-}
+    export default {
+    
+    }
 </script>
 
 <style lang="scss" amp-boilerplate>
+
     .actions {
         @extend .display-grid;
         @extend .z-index-1;
         position: fixed;
-        bottom: -5px;
-        grid-template-columns: 2.76fr 1fr;
+        bottom: -1px;
+        grid-template-columns: 2.693fr 1fr;
         
-        .display-list {
-            @extend .display-inline-block;
-            margin: 0px 5px 0px 0px;
+        .action-image {
+            .menu {
+                list-style-type: none;
+                display: grid;
+                padding: 0px;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-gap: 0px;
+                li {
+                    a {
+                        div {
+                            background: url(/images/footer/action-image.png) no-repeat;
+                            width: 55px;
+                            height: 45px;
+                        }
+                    }
+                }
+                .item-home { a { div { background-position: 0px 1px; } } }
 
-            &:last-child {
-                margin: 0px 0px 0px 0px;
+                .item-profile { a { div { background-position: -54px 1px; } } }
+                
+                .item-bullets { a { div { background-position: -107px 1px; } } }
+                
+                .item-box { a { div { background-position: 3px -45px; } } }
+                
+                .item-chat { a { div { background-position: -51px -45px; } } }
             }
         }
     }

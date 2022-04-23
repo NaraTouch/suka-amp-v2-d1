@@ -21,16 +21,20 @@ export default {
     .heading-block {
         @extend .display-flex;
         margin: 0px 10px;
-        background: #180278;
+        // background: #180278;
 
         .text-loading {
             font-weight: bold;
             font-size: 16px;
-            margin: -2px 10px 0px 0px;
+            margin: 0px 5px 0px 0px;
+            background: #180278;
+            padding: 2px 4px 2px 4px;
         }
         
         .box-area {
             @extend .display-flex;
+            background: #180278;
+            padding: 3px 4px 0px 4px;
         }
         
         .box {

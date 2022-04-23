@@ -35,6 +35,7 @@ export default {
         @extend .display-flex;
        
         .title-card {
+            @extend .font-size;
             padding: 7px 0px 0px 5px;
             color: $text-color-1;
         }

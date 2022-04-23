@@ -7,20 +7,12 @@
         </div>
 
         <div class="input-mr">
-          <span class="span-style">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
-          </span>
+          <div class="input-icon"><div class="bg-position-usename"></div></div>
           <input type="password" class="input-custom-style" placeholder="username" />
         </div>
 
         <div class="input-mr">
-          <span class="span-style">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
-          </span>
+          <div class="input-icon"><div class="bg-position-password"></div></div>
           <input type="password" class="input-custom-style" placeholder="password" />
         </div>
 
@@ -29,7 +21,7 @@
           <input type="password" class="input-custom-style-code" placeholder="code" />
         </div>
 
-        <div>
+        <div class="btn-style" >
           <button class="btn btn-color-Masuk">Masuk</button>
           <button class="btn btn-color-Daftar">Daftar</button>
         </div>
@@ -64,11 +56,36 @@
       display: flex;
 
       .mr-password {
-        margin: 5px;
+        margin: 5px 5px 0px 0px;
       }
 
       .input-mr {
-          margin-right: 5px;
+        display: flex;
+        position: relative;
+        margin: 0px 0px 0px 7px;
+
+        .input-icon {
+          margin: 7px -20px 0px 0px;
+          z-index: 1;
+
+          div {
+            background: url(/images/input-icon/input-icon.png) no-repeat;
+            height: 16px;
+            width: 16px;
+          }
+
+          .bg-position-usename {
+            background-position: 0px 0px;
+          }
+          
+          .bg-position-password {
+            background-position: -18px 0px;
+          }
+        }
+      }
+
+      .btn-style {
+        margin-left: 5px;
       }
 
       .span-style {
@@ -79,9 +96,10 @@
       .span-style-code {
         @extend .span-style;
         @extend .btn-color-Masuk;
-        padding: 6px 5px 7px 5px;
+        padding: 7px 5px 8px 5px;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
+        margin: 0px 0px 0px -3px;
       }
 
       a {
@@ -119,11 +137,7 @@
       .btn-color-Daftar {
         @extend .btn-bg-white;
       }
-
-      svg { 
-        fill: $color-gray; 
-      }
-
+     
       input:focus {
         outline: none;
       }

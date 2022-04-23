@@ -18,7 +18,7 @@
         },
         data() {
             return {
-                titleIcon: "/images/card/running-text-logo.png",
+                titleIcon: "/images/running-ig/running-text-logo.png",
                 width: "25",
                 height: "20",
                 title: "Selamat datang di Sukabet! Silahkan masuk atau daftar jika anda belum memiliki akun. Jadi pemenang berikutnya dan rasakan bermain di Sukabet!"
@@ -34,7 +34,7 @@
         background-color: $bg-gray-contain;
 
         .text {
-            margin: 13px 0px 0px 5px;
+            margin: 13px 0px 0px 10px;
             
             span {
                 svg{ 
@@ -51,7 +51,7 @@
             width: 100%;
             
             .marquee {
-                left: 100%;
+                // left: 100%;
                 width: 100%;
                 overflow: hidden;
                 position: relative;

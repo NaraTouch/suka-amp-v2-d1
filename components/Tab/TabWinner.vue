@@ -71,9 +71,8 @@ export default {
 
         amp-selector[role=tablist].tabs-with-flex {
             @extend .display-flex;
+            @extend .font-size;
             flex-wrap: wrap;
-            font-weight: 700;
-            font-size: 15px;
 
             #tab1 {
                 border-right: 1px solid $border-right-cr;
