@@ -29,15 +29,26 @@
         </section>
 
         <article class="column-right">
+            
+            <!-- body-container-sport -->
+            <div class="body-container-sport">
+                <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyle" :customComponent="condition" :title="title" :width="width" :height="height" />
+            </div>
+            
+            <!-- card-content -->
+            <div class="card-content-sport">
+                <card-game :cardMultiple="cardMultiple" />
+            </div>
+
             <!-- slider-image -->
-            <div class="slider-image">
+            <!-- <div class="slider-image">
                 <slider :slide-list="sliderImage" />
                 <slider-path />
             </div>
 
             <div class="card-content">
-                <card-game :cardMultiple="cardMultiple" />
-            </div>
+                <card-game />
+            </div> -->
         </article>
     </div>
 </template>
@@ -46,16 +57,24 @@
     export default {
         components: {
             TabWinner: () => import('../Tab/TabWinner'),
-            Slider: () => import('../slider/Slider'),
+                Slider: () => import('../slider/Slider'),
         },
-        data() {
+         data() {
             return {
-                cardMultiple: true,
+                cardMultiple: false,
                 count: 0,
                 src: "../static/images/images.jpg",
                 sliderPromotion: "/data/slider-list.json",
                 sliderImage: "/data/slider-image-list.json",
                 slderCondition: true, 
+                width: "25",
+                height: "30",
+                condition: true,
+                title: "SPORTS",
+                classStyle: "item-custom-sports",
+                customClassStyle: true,
+                hrContainerTitle: "hr-conatiner-title"
+
             };
         },
     }
@@ -114,14 +133,24 @@
         .column-right {
             min-width: 760px;
             padding-left: 15px;
-
-            .slider-image {
-                background-color: $bg-body-field;
+            
+            .body-container-sport {
+                @extend .btn-bg-red;
+                @extend .border-radius-3px;
+                // padding: 10px 0px;
             }
 
-            .card-content {
-                padding: 10px 0px 0px 0px;
+            .card-content-sport {
+
             }
+
+            // .slider-image {
+            //     background-color: $bg-body-field;
+            // }
+
+            // .card-content {
+            //     padding: 10px 0px 0px 0px;
+            // }
         }
     }
 </style>

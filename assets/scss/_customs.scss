@@ -1,7 +1,3 @@
-.input-height-30 {
-    height: 30px;
-}
-
 .border-radius-3px {
     border-radius: 3px;
 }
@@ -64,6 +60,10 @@
 
 .border-right {
     border-right: 1px solid $border-div-left;
+}
+
+.border-cr-white {
+    border: 1px solid $color-white;
 }
 
 // free-daily-spain on navbar

@@ -1,11 +1,15 @@
 <template>
     <div class="card-box">
-        <div class="title">
-            <title-image :customClass="customClassImageTitle" :customComponent="condition" :title="title" :width="width" :height="height" />
+        <div v-if="cardTitle" class="title">
+            <title-image :CustomClassStyle="customClassStyle" :customClass="customClassImageTitle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
 
-        <div class="image-body">
-            <ImageList :customClassSecond="customClassSecond" :customClassFirst="customClassFirst" />
+        <div v-if="multipleImage" class="image-body">
+            <image-list :customClassSecond="customClassSecond" :customClassFirst="customClassFirst" />
+        </div>
+
+        <div class="oneimage-body" v-else>
+            <image-one :customClass="customClassImageOne" /> 
         </div>
         
         <div class="footer-button">
@@ -17,26 +21,31 @@
 </template>
 
 <script>
-export default {
-     components: {
-        ImageList: () => import('../list/ImageList'),
-        TitleImage: () => import('../TitleImage'),
-    },
-    props : {
-        title: String,
-        linkButton: String,
-        customClassImageTitle: String,
-        customClassFirst: String,
-        customClassSecond: String,
-    },
-    data() {
-        return {
-            width: "25",
-            height: "30",
-            condition: true,
-        }
-    },
-}
+    export default {
+        components: {
+            ImageList: () => import('../list/ImageList'),
+            TitleImage: () => import('../TitleImage'),
+            ImageOne: () => import('../list/ImageOne'),
+        },
+        props : {
+            cardTitle: Boolean,
+            title: String,
+            linkButton: String,
+            multipleImage: Boolean,
+            customClassImageTitle: String,
+            customClassFirst: String,
+            customClassSecond: String,
+            customClassImageOne: String,
+        },  
+        data() {
+            return {
+                width: "25",
+                height: "30",
+                condition: true,
+                customClassStyle: false,
+            }
+        },
+    }
 </script>
 
 <style lang="scss" amp-boilerplate>
@@ -60,6 +69,10 @@ export default {
             @extend .btn-custom;
             @extend .btn-bg-red;
             @extend .color-white;
+        }
+        
+        .oneimage-body {
+            padding: 10px;
         }
     }
 </style>

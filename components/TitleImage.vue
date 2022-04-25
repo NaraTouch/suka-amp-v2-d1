@@ -1,6 +1,6 @@
 <template>
     <div class="header-title">
-        <div v-if="customComponent" class="custom-class">
+        <div v-if="customComponent" :class="CustomClassStyle ? 'custom-class-pr' : 'custom-class-no-pr'">
             <ul class="menus">
                 <li :class="customClass"><a class="link" href="#"><div></div></a></li>
             </ul>
@@ -10,7 +10,9 @@
             <amp-img alt="image" :src="imageTitle" :width="width" :height="height" />
         </div>
 
-        <div class="title-card" :class="customClass">
+        <div :class="hrContainerTitle"></div>
+        
+        <div class="title-card" :class="CustomClassStyle ? 'custom-class-pr' : 'custom-class-no-pr'">
             <span class="span-right">{{title}}</span>
         </div>
     </div>
@@ -26,6 +28,8 @@ export default {
         customClass: String,
         customComponent: Boolean,
         customClass: String,
+        CustomClassStyle: Boolean,
+        hrContainerTitle: String,
      }    
 }
 </script>
@@ -42,6 +46,20 @@ export default {
 
         .custom {
             padding: 4px 0px 0px 10px;
+        }
+
+        .hr-conatiner-title {
+            background-image: url('/images/card/hr-container-sport.png');
+            background-repeat: no-repeat;
+            width: 4px;
+        }
+
+        .custom-class-pr {
+            margin: 5px 5px;
+            @extend .custom-class;
+        }
+        .custom-class-no-pr {
+            @extend .custom-class;
         }
 
         .custom-class {

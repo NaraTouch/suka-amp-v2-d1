@@ -9,15 +9,19 @@
             <a href="https://www.w3schools.com">Baca selanjutnya</a>
         </div>
     </div>
+
 </template>
 
 <script>
 export default {
-    
+   
 }
 </script>
 
 <style lang="scss" amp-boilerplate>
+    .test-color {
+        color: red;
+    } 
     .square-small {
         text-align: left;
 
