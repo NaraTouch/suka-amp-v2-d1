@@ -10,7 +10,8 @@
                         :linkButton="data.link" 
                         :customClassImageTitle="data.classStyle"
                         :customClassFirst="data.customClassFirst"
-                        :customClassSecond="data.customClassSecond" />
+                        :customClassSecond="data.customClassSecond"
+                        :btnTitle="data.btnTitle" />
                 </div>
             </div>
         </div>
@@ -23,7 +24,8 @@
                         :cardTitle="data.cardTitle"
                         :linkButton="data.link"
                         :customClassImageOne="data.classStyle"
-                        />
+                        :btnTitle="data.btnTitle"
+                        :btnStyle="data.btnStyle" />
                 </div>
             </div>
         </div>
@@ -51,6 +53,7 @@
                             customClassFirst: "item-custom-hot-game-first",
                             customClassSecond: "item-custom-hot-game-second",
                             classStyle: "item-custom-hot-game",
+                            btnTitle: "Lihat Semua"
                         },
                         sportsGames: {
                             multipleImage: true,
@@ -60,6 +63,7 @@
                             customClassFirst: "item-custom-sports-first",
                             customClassSecond: "item-custom-sports-second",
                             classStyle: "item-custom-sports",
+                            btnTitle: "Lihat Semua",
                         },
                         casinoGames: {
                             multipleImage: true,
@@ -69,6 +73,7 @@
                             customClassFirst: "item-custom-casino-first",
                             customClassSecond: "item-custom-casino-second",
                             classStyle: "item-custom-casino",
+                            btnTitle: "Lihat Semua",
                         },
                         slotsGames: {
                             multipleImage: true,
@@ -78,6 +83,7 @@
                             customClassFirst: "item-custom-slots-first",
                             customClassSecond: "item-custom-slots-second",
                             classStyle: "item-custom-slots",
+                            btnTitle: "Lihat Semua",
                         },
                         pokerGames: {
                             multipleImage: true,
@@ -87,6 +93,7 @@
                             customClassFirst: "item-custom-poker-first",
                             customClassSecond: "item-custom-poker-second",
                             classStyle: "item-custom-poker",
+                            btnTitle: "Lihat Semua",
                         },
                         arcadeGames: {
                             multipleImage: true,
@@ -96,6 +103,7 @@
                             customClassFirst: "item-custom-arcade-first",
                             customClassSecond: "item-custom-arcade-second",
                             classStyle: "item-custom-arcade",
+                            btnTitle: "Lihat Semua",
                         },
                         TogelGames: {
                             multipleImage: true,
@@ -105,6 +113,7 @@
                             customClassFirst: "item-custom-togel-first",
                             customClassSecond: "item-custom-togel-second",
                             classStyle: "item-custom-togel",
+                            btnTitle: "Lihat Semua",
                         },
                         cockFightingGames: {
                             multipleImage: true,
@@ -114,6 +123,7 @@
                             customClassFirst: "item-custom-cock-fighting-first",
                             customClassSecond: "item-custom-cock-fighting-second",
                             classStyle: "item-custom-cock-fighting",
+                            btnTitle: "Lihat Semua",
                         },
                     }
                 ],
@@ -125,6 +135,8 @@
                             title: "MAXBET",
                             classStyle: "maxbet-image",
                             link: "https://www.w3schools.com/",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
                         },
                         CO9: {
                             multipleImage: false,
@@ -132,6 +144,8 @@
                             title: "CO9",
                             classStyle: "co9-sport-image",
                             link: "https://www.w3schools.com/",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
                         },
                         CMD368: {
                             multipleImage: false,
@@ -139,6 +153,8 @@
                             title: "CMD368",
                             classStyle: "cmd-368-image",
                             link: "https://www.w3schools.com/",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
                         },
                         PRAGMATICPLAY: {
                             multipleImage: false,
@@ -146,6 +162,8 @@
                             title: "PRAGMATIC PLAY",
                             classStyle: "pragmatic-play",
                             link: "https://www.w3schools.com/",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
                         }
                     }
                 ],

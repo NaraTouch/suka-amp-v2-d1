@@ -31,9 +31,9 @@ export default {
         @extend .running-image-br-ig;
         @extend .color-white;
         @extend .border-radius-3px;
-        @extend .border-cr-white;
         padding: 8px;
         overflow: hidden;
+        border: 1px solid $color-white;
 
         .running-text {
             @extend .display-flex;

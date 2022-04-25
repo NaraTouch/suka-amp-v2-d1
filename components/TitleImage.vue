@@ -13,7 +13,7 @@
         <div :class="hrContainerTitle"></div>
         
         <div class="title-card" :class="CustomClassStyle ? 'custom-class-pr' : 'custom-class-no-pr'">
-            <span class="span-right">{{title}}</span>
+            <span  >{{title}}</span>
         </div>
     </div>
 </template>
@@ -57,7 +57,13 @@ export default {
         .custom-class-pr {
             margin: 5px 5px;
             @extend .custom-class;
+
+            span {
+                font-size: 22px;
+                font-weight: 100;
+            }
         }
+        
         .custom-class-no-pr {
             @extend .custom-class;
         }

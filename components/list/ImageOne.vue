@@ -27,14 +27,14 @@ export default {
                         div {
                             @extend .border-radius-3px;
                             @extend .border-right;
-                            @extend .border-cr-white;
+                            border: 1px solid $color-white;
                             background: url(/images/card/card-image-sport.png) no-repeat;
                             height: 212px;
                             width: 154px;
                         }
                     }
                 }
-                .maxbet-image { a { div { background-position: 0px 0px; } } }
+                .maxbet-image { a { div { background-position: -1px 0px; } } }
 
                 .co9-sport-image {a { div { background-position: -158px 0px; } }}
 

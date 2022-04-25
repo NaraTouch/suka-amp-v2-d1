@@ -30,7 +30,6 @@
     background-repeat: repeat-x;
 }
 
-//button 
 .btn-bg-red {
     background-image: url('/images/button/button-nav-red.jpg');
     @extend .bg-size-repeat;
@@ -60,10 +59,6 @@
 
 .border-right {
     border-right: 1px solid $border-div-left;
-}
-
-.border-cr-white {
-    border: 1px solid $color-white;
 }
 
 // free-daily-spain on navbar

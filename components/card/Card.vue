@@ -14,7 +14,7 @@
         
         <div class="footer-button">
             <a :href="linkButton">
-                <button class="btn-color">Lihat Semua</button>
+                <button class="btn-color" :class="btnStyle"> {{ btnTitle }}</button>
             </a> 
         </div>
     </div>  
@@ -36,6 +36,8 @@
             customClassFirst: String,
             customClassSecond: String,
             customClassImageOne: String,
+            btnTitle: String,
+            btnStyle: String,
         },  
         data() {
             return {
@@ -43,6 +45,7 @@
                 height: "30",
                 condition: true,
                 customClassStyle: false,
+                spanStyle: "span-style",
             }
         },
     }
@@ -63,6 +66,10 @@
         .footer-button {
             text-align: center;
             padding-bottom: 10px;
+
+            .btn-style {
+                padding: 7px 25px 7px 25px; 
+            }
         }
 
         .btn-color {
@@ -70,7 +77,7 @@
             @extend .btn-bg-red;
             @extend .color-white;
         }
-        
+
         .oneimage-body {
             padding: 10px;
         }

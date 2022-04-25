@@ -141,7 +141,8 @@
             }
 
             .card-content-sport {
-
+                border-bottom: 1px solid $border-right-cr;
+                padding-bottom: 10px;
             }
 
             // .slider-image {
