@@ -37,7 +37,7 @@
             
             <!-- card-content -->
             <div class="card-content-sport">
-                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" :customimageClassStyle="customimageClassStyle" :oneimageBodyCustom="oneimageBodyCustom" />
+                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
             </div>
         </article>
     </div>
@@ -64,7 +64,7 @@
                 classStyle: "item-custom-casino",
                 customClassStyle: true,
                 hrContainerTitle: "hr-conatiner-title",
-
+               
                 CardDataOneSlots: [
                     {
                         bgGame: { 

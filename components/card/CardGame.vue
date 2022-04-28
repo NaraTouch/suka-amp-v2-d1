@@ -42,8 +42,6 @@
         props: {
             cardMultiple: Boolean,
             CardDataOneSlots: Array,
-            customimageClassStyle: String,
-            oneimageBodyCustom: String,
         },
         data() {
             return {

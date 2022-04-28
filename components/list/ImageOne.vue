@@ -13,7 +13,12 @@ export default {
     props: {
         customClass: String,
         customimageClassStyle: String,
-    }
+    },
+    data() {
+        return {
+            
+        }
+    },
 }
 </script>
 

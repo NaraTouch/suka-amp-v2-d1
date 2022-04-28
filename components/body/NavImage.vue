@@ -4,7 +4,7 @@
             <li class="item-hot-game"><a class="link" href="#"><div><span>HOT GAME</span></div></a></li>
             <li class="item-sports"><a class="link" href="/sports"><div><span>Sports</span></div></a></li>
             <li class="item-casino"><a class="link" href="/casino"><div><span>Casino</span></div></a></li>
-            <li class="item-slots"><a class="link" href="#"><div><span>Slots</span></div></a></li>
+            <li class="item-slots"><a class="link" href="/slots"><div><span>Slots</span></div></a></li>
             <li class="item-poker"><a class="link" href="#"><div><span>Poker</span></div></a></li>
             <li class="item-arcade"><a class="link" href="#"><div><span>Arcade</span></div></a></li>
             <li class="item-togel"><a class="link" href="#"><div><span>Togel</span></div></a></li>

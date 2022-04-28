@@ -37,7 +37,7 @@
             
             <!-- card-content -->
             <div class="card-content-sport">
-                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" :customimageClassStyle="customimageClassStyle" />
+                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
             </div>
         </article>
     </div>
