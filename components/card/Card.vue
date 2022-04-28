@@ -8,8 +8,8 @@
             <image-list :customClassSecond="customClassSecond" :customClassFirst="customClassFirst" />
         </div>
 
-        <div class="oneimage-body" v-else>
-            <image-one :customClass="customClassImageOne" /> 
+        <div class="oneimage-body" :class="oneimageBodyCustom" v-else>
+            <image-one :customClass="customClassImageOne" :customimageClassStyle="customimageClassStyle" /> 
         </div>
         
         <div class="footer-button">
@@ -37,6 +37,8 @@
             customClassSecond: String,
             customClassImageOne: String,
             btnTitle: String,
+            customimageClassStyle: String,
+            oneimageBodyCustom: String,
             btnStyle: String,
         },  
         data() {
@@ -80,6 +82,9 @@
 
         .oneimage-body {
             padding: 10px;
+        }
+        .oneimage-body-custom {
+            padding: 10px 0px;
         }
     }
 </style>

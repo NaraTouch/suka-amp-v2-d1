@@ -24,6 +24,8 @@
                         :cardTitle="data.cardTitle"
                         :linkButton="data.link"
                         :customClassImageOne="data.classStyle"
+                        :customimageClassStyle="data.customimageClassStyle"
+                        :oneimageBodyCustom="data.oneimageBodyCustom"
                         :btnTitle="data.btnTitle"
                         :btnStyle="data.btnStyle" />
                 </div>
@@ -36,10 +38,12 @@
     export default {
         components: {
             Card: () => import('../card/Card'),
-            CardOneSLot: () => import('../card/CardOneSLot'),
         },
         props: {
             cardMultiple: Boolean,
+            CardDataOneSlots: Array,
+            customimageClassStyle: String,
+            oneimageBodyCustom: String,
         },
         data() {
             return {
@@ -125,46 +129,6 @@
                             classStyle: "item-custom-cock-fighting",
                             btnTitle: "Lihat Semua",
                         },
-                    }
-                ],
-                CardDataOneSlots: [
-                    {
-                        MaxBetGame: { 
-                            multipleImage: false,
-                            cardTitle: false,
-                            title: "MAXBET",
-                            classStyle: "maxbet-image",
-                            link: "https://www.w3schools.com/",
-                            btnTitle: "Main Sekarang",
-                            btnStyle: "btn-style",
-                        },
-                        CO9: {
-                            multipleImage: false,
-                            cardTitle: false,
-                            title: "CO9",
-                            classStyle: "co9-sport-image",
-                            link: "https://www.w3schools.com/",
-                            btnTitle: "Main Sekarang",
-                            btnStyle: "btn-style",
-                        },
-                        CMD368: {
-                            multipleImage: false,
-                            cardTitle: false,
-                            title: "CMD368",
-                            classStyle: "cmd-368-image",
-                            link: "https://www.w3schools.com/",
-                            btnTitle: "Main Sekarang",
-                            btnStyle: "btn-style",
-                        },
-                        PRAGMATICPLAY: {
-                            multipleImage: false,
-                            cardTitle: false,
-                            title: "PRAGMATIC PLAY",
-                            classStyle: "pragmatic-play",
-                            link: "https://www.w3schools.com/",
-                            btnTitle: "Main Sekarang",
-                            btnStyle: "btn-style",
-                        }
                     }
                 ],
             }

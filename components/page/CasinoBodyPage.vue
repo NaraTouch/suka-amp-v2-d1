@@ -37,7 +37,7 @@
             
             <!-- card-content -->
             <div class="card-content-sport">
-                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" :customimageClassStyle="customimageClassStyle" />
+                <card-game :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" :customimageClassStyle="customimageClassStyle" :oneimageBodyCustom="oneimageBodyCustom" />
             </div>
         </article>
     </div>
@@ -60,49 +60,98 @@
                 width: "25",
                 height: "30",
                 condition: true,
-                title: "SPORTS",
-                classStyle: "item-custom-sports",
+                title: "CASINO",
+                classStyle: "item-custom-casino",
                 customClassStyle: true,
                 hrContainerTitle: "hr-conatiner-title",
+
                 CardDataOneSlots: [
                     {
-                        MaxBetGame: { 
+                        bgGame: { 
                             multipleImage: false,
                             cardTitle: false,
-                            title: "MAXBET",
+                            title: "DG",
                             classStyle: "maxbet-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        CO9: {
+                        idnGame: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "CO9",
+                            title: "IDNGAME",
                             classStyle: "co9-sport-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        CMD368: {
+                        C09Live: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "CMD368",
+                            title: "C09LIVE",
                             classStyle: "cmd-368-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        PRAGMATICPLAY: {
+                        HoGaming: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "PRAGMATIC PLAY",
+                            title: "HOGAMING",
+                            classStyle: "ho-gaming",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                        },
+                        DreamGaming: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "DREAM GAMING",
                             classStyle: "pragmatic-play",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                        },
+                        D88GreenDragon: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "D88 GREEN DRAGON",
+                            classStyle: "green-dragon",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                        },
+                        WWCasino: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "WW CASINO",
+                            classStyle: "ww-casino",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                        },
+                        ICONCasino: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "ICON CASINO",
+                            classStyle: "icon-casino",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-casino",
+                            oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
