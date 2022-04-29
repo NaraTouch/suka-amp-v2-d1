@@ -37,17 +37,12 @@
 
 <script>
     export default {
-        components: { 
-            TitleImage: () => import('../TitleImage'),
-            TabSLotsGame : () =>import('../Tab/TabSLotsGame'),
-        },
         data() {
             return {
                 width: "25",
                 height: "30",
                 condition: true,
                 customClassStyle: true,
-                spanStyle: "span-style",
                 title: "SLOTS",
                 classStyle: "item-custom-slots",
                 hrContainerTitle: "hr-conatiner-title",
@@ -167,7 +162,8 @@
 
             .column-left {
                 min-width: 265px;
-                padding-right: 15px;
+                // padding-right: 15px;
+                padding-right: 5px;
 
                 .tab-winner {
                     border-bottom-right-radius: 4px;
@@ -196,7 +192,7 @@
 
             .column-right {
                 min-width: 760px;
-                padding-left: 15px;
+                padding-right: 5px;
                 
                 .body-container-sport {
                     @extend .btn-bg-red;

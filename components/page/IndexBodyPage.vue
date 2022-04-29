@@ -24,7 +24,7 @@
 
             <!-- contect-text -->
             <div class="content-text">
-                <content-text />
+                <content-text :width="widthContentText" :height="heightContentText" :ContentText="ContentText" />
             </div>
         </section>
 
@@ -44,15 +44,12 @@
 
 <script>
     export default {
-        components: {
-            TabWinner: () => import('../Tab/TabWinner'),
-            Slider: () => import('../slider/Slider'),
-        },
         data() {
             return {
+                widthContentText: "243px",
+                heightContentText: "105px",
+                ContentText: 'Selamat datang di situs Sukabet, situs permainan online terlengkap dan terpercaya. Pada halaman ini anda dapat memilih kategori permainan yang anda ingin mainkan saat ini. Bagi anda yang belum memiliki akun, silahkan membuat akun dengun mengklik "Datfar" dan',
                 cardMultiple: true,
-                count: 0,
-                src: "../static/images/images.jpg",
                 sliderPromotion: "/data/slider-list.json",
                 sliderImage: "/data/slider-image-list.json",
                 slderCondition: true, 

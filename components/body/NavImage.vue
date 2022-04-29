@@ -1,14 +1,14 @@
 <template>
     <div class="navbar-images">
         <ul class="menus">
-            <li class="item-hot-game"><a class="link" href="#"><div><span>HOT GAME</span></div></a></li>
+            <li class="item-hot-game"><a class="link" href="/hotGame"><div><span>HOT GAME</span></div></a></li>
+            <li class="item-slots"><a class="link" href="/slots"><div><span>Slots</span></div></a></li>
             <li class="item-sports"><a class="link" href="/sports"><div><span>Sports</span></div></a></li>
             <li class="item-casino"><a class="link" href="/casino"><div><span>Casino</span></div></a></li>
-            <li class="item-slots"><a class="link" href="/slots"><div><span>Slots</span></div></a></li>
-            <li class="item-poker"><a class="link" href="#"><div><span>Poker</span></div></a></li>
-            <li class="item-arcade"><a class="link" href="#"><div><span>Arcade</span></div></a></li>
-            <li class="item-togel"><a class="link" href="#"><div><span>Togel</span></div></a></li>
-            <li class="item-cock-fighter"><a class="link" href="#"><div><span class="span-custom" >Cock Fighter</span></div></a></li>
+            <li class="item-poker"><a class="link" href="/poker"><div><span>Poker</span></div></a></li>
+            <li class="item-arcade"><a class="link" href="/arcade"><div><span>Arcade</span></div></a></li>
+            <li class="item-togel"><a class="link" href="/togel"><div><span>Togel</span></div></a></li>
+            <li class="item-cock-fighter"><a class="link" href="/cockFighting"><div><span class="span-custom" >Cock Fighter</span></div></a></li>
             <li class="item-lucky-spain"><a class="link-padding" href="#"><div class="lucky-spain-image"></div></a></li>
         </ul>
     </div>
@@ -22,6 +22,11 @@
 
 <style lang="scss" amp-boilerplate>
     .navbar-images {
+        // custom border
+        .border-style {
+            border: 1px solid $color-white;
+        }
+        
         .hot-game {
             &:after {
                 display: block;
@@ -50,19 +55,30 @@
 
                 &:last-child{
                     margin-right: 0px;
-                    @extend .free-daily-spain;
+                    &:after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        margin: -113px 0px 0px 64px;
+                        padding: 25px;
+                        background: url('/images/slider-promotion/free-daily-spain.png') no-repeat;
+                        background-size: contain;
+                        animation: blink 1.2s step-start 0s infinite;
+                        -webkit-animation: blink 1.2s step-start 0s infinite
+                    }
+                    @extend .keyframes;
                 }
 
                 .link {
                     @extend .border-radius-3px;
                     @extend .nav-image-bg;
-                    border: 1px solid $color-white;
+                    @extend .border-style;
                     padding: 48px 15px 32px 15px;
 
                     div {
                         @extend .color-white;
+                        @extend .display-inline-block;
                         height: 64px;
-                        display: inline-block;
                         background: url(/images/navbar-logo/navbar-image.png) no-repeat;
                         width: 64px;
                         position: relative;
@@ -107,9 +123,9 @@
                     .link-padding {
                         .lucky-spain-image {
                             @extend .border-radius-3px;
+                            @extend .border-style;
                             background: url(/images/navbar-logo/9-lucky-spain.png) no-repeat;
                             padding: 50px;
-                            border: 1px solid $color-white;
                         }
                     }
                 }

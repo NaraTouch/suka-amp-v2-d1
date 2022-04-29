@@ -24,7 +24,7 @@
     .actions {
         @extend .display-grid;
         @extend .z-index-1;
-        position: fixed;
+        @extend .position-fixed;
         bottom: -1px;
         grid-template-columns: 2.693fr 1fr;
         

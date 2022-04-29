@@ -1,9 +1,9 @@
 <template>
     <div class="body-field">
-         <div class="body-container-sport">
+        <div class="body-container-hot-game">
             <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
-        
+
         <div class="card-content-sport">
             <card-game :gridColunmCard="gridColunmCard" :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
         </div>
@@ -16,11 +16,11 @@
 
 <script>
     export default {
-        components: {
+        components: { 
             TabWinner: () => import('../Tab/TabWinner'),
-                Slider: () => import('../slider/Slider'),
+            Slider: () => import('../slider/Slider'),
         },
-         data() {
+        data() {
             return {
                 widthContentText: "1024px",
                 heightContentText: "60px",
@@ -30,77 +30,76 @@
                 width: "25",
                 height: "30",
                 condition: true,
-                title: "SPORTS",
-                classStyle: "item-custom-sports",
+                title: "HOT GAMES",
+                classStyle: "item-custom-hot-game",
                 customClassStyle: true,
                 hrContainerTitle: "hr-conatiner-title",
                 CardDataOneSlots: [
                     {
-                        MaxBetGame: { 
+                        BANDARBACCARAT: { 
                             multipleImage: false,
                             cardTitle: false,
-                            title: "MAXBET",
+                            title: "BANDARBACCARAT",
                             classStyle: "maxbet-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        CO9: {
+                        BANDARCAPSA: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "CO9",
+                            title: "BANDARCAPSA",
                             classStyle: "co9-sport-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        CMD368: {
+                        DOMINO: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "CMD368",
+                            title: "DOMINO",
                             classStyle: "cmd-368-image",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        PRAGMATICPLAY: {
+                        CAPSASUSUN: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "PRAGMATIC PLAY",
+                            title: "CAPSASUSUN",
                             classStyle: "pragmatic-play",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
-                        SBOBET: {
+                        BANDARCEME: {
                             multipleImage: false,
                             cardTitle: false,
-                            title: "TESTING",
+                            title: "BANDARCEME",
                             classStyle: "sbobet",
                             link: "https://www.w3schools.com/",
-                            customimageClassStyle: "menus-sport",
+                            customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
                         },
                     }
                 ],
-            };
+            }
         },
     }
 </script>
 
 <style lang="scss" amp-boilerplate>
-    .body-field { 
-        .body-container-sport {
+    .body-field {
+        .body-container-hot-game {
             @extend .btn-bg-red;
             @extend .border-radius-3px;
             margin: 10px 0px;
         }
-
         .card-content-sport {
             border-bottom: 1px solid $border-right-cr;
             padding: 0px 0px 20px 0px;
@@ -109,5 +108,4 @@
             padding: 0px 0px 20px 0px;
         }
     }
-    
 </style>

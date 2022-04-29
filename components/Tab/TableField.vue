@@ -29,7 +29,8 @@ export default {
 <style lang="scss" amp-boilerplate>
     .table-field {
         background: $bg-body-field;
-        @extend .br-bottom-right-left;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
 
         .list-overflow {
             width: max-content;

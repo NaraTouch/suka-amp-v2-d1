@@ -62,21 +62,6 @@
 }
 
 // free-daily-spain on navbar
-.free-daily-spain {
-    &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        margin: -113px 0px 0px 64px;
-        padding: 25px;
-        background: url('/images/slider-promotion/free-daily-spain.png') no-repeat;
-        background-size: contain;
-        animation: blink 1.2s step-start 0s infinite;
-        -webkit-animation: blink 1.2s step-start 0s infinite
-    }
-    @extend .keyframes;
-}
-
 .keyframes {
     @keyframes blink {
         50% {
@@ -99,11 +84,6 @@
 .btn-font {
     border: 1px;
     @extend .font-size;
-}
-
-.br-bottom-right-left {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
 }
 
 .display-grid {

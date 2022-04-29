@@ -10,7 +10,7 @@
   </section>
 </template>
 
-<script>
+<script> 
   export default {
     components: {
       HeaderPage: () => import('../components/page/HeaderPage'),
@@ -20,7 +20,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" amp-boilerplate>
   .page-container {
      .body-container {
         @extend .container-size;

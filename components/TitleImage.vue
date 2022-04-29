@@ -40,8 +40,8 @@ export default {
        
         .title-card {
             @extend .font-size;
+            @extend .color-white;
             padding: 7px 0px 0px 5px;
-            color: $text-color-1;
         }
 
         .custom {

@@ -22,9 +22,9 @@
 
 <style lang="scss" amp-boilerplate>
      .page-container {
-     .body-container {
-        @extend .container-size;
-        @extend .magrin-0-auto;
-     }
-  }
+        .body-container {
+            @extend .container-size;
+            @extend .magrin-0-auto;
+        }
+    }
 </style>

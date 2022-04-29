@@ -1,5 +1,5 @@
 <template>
-    <div class="card-container">
+    <div class="card-container" :class="customFourColumn" >
         <div v-if="cardMultiple">
             <div class="card-grid" v-for=" (cardData, index) in cardDatas" :key="index">
                 <div class="mr-card" v-for=" (data, index) in cardData" :key="index">
@@ -17,7 +17,7 @@
         </div>
 
         <div v-else>
-            <div  class="card-grid-one-image" v-for=" (CardDataOneSlot, index) in CardDataOneSlots" :key="index">
+            <div  :class="gridColunmCard" v-for=" (CardDataOneSlot, index) in CardDataOneSlots" :key="index">
                 <div class="mr-card" v-for=" (data, index) in CardDataOneSlot" :key="index">
                     <Card  
                         :multipleImage="data.multipleImage"
@@ -42,6 +42,8 @@
         props: {
             cardMultiple: Boolean,
             CardDataOneSlots: Array,
+            gridColunmCard: String,
+            customFourColumn: String,
         },
         data() {
             return {
@@ -137,15 +139,25 @@
 <style lang="scss" amp-boilerplate>
     .card-container {
         .card-grid {
-            display: grid;
+            @extend .display-grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
         }
-        .card-grid-one-image {
-            display: grid;
+        .five-column {
+            @extend .display-grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .four-column {
+            @extend .display-grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 10px;
-            margin-top: 10px;
         }
+        .two-column {
+            @extend .display-grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .custom-center-column {
+        display: grid;
+        place-items:  center;
     }
 </style>
