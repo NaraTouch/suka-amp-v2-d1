@@ -119,3 +119,23 @@
     font-weight: 700;
     font-size: 15px;
 }
+
+.span-font {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.body-container-style {
+    @extend .btn-bg-red;
+    @extend .border-radius-3px;
+    margin: 10px 0px;
+}
+
+.card-content-style {
+    border-bottom: 1px solid $border-right-cr;
+    padding: 0px 0px 20px 0px;
+}
+
+.contend-text-style {
+    padding: 0px 0px 20px 0px;
+}

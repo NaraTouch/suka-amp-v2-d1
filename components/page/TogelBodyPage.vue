@@ -1,10 +1,10 @@
 <template>
     <div class="body-field">
-        <div class="body-container-arcade">
+        <div class="body-container-togel">
             <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
         
-        <div class="card-content-arcade">
+        <div class="card-content-togel">
             <card-game :customFourColumn="customFourColumn" :gridColunmCard="gridColunmCard" :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
         </div>
 
@@ -62,17 +62,14 @@
 
 <style lang="scss" amp-boilerplate>
     .body-field {
-        .body-container-arcade {
-            @extend .btn-bg-red;
-            @extend .border-radius-3px;
-            margin: 10px 0px;
+        .body-container-togel {
+            @extend .body-container-style;
         }
-        .card-content-arcade {
-            border-bottom: 1px solid $border-right-cr;
-            padding: 0px 0px 20px 0px;
+        .card-content-togel {
+            @extend .card-content-style;
         }
         .content-text {
-            padding: 0px 0px 20px 0px;
+            @extend .contend-text-style;
         }
     }
 </style>

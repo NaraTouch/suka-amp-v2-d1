@@ -1,10 +1,10 @@
 <template>
    <div class="body-field">
-        <div class="body-container-hot-game">
+        <div class="body-container-poker">
             <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
 
-        <div class="card-content-sport">
+        <div class="card-content-poker">
             <card-game :customFourColumn="customFourColumn" :gridColunmCard="gridColunmCard" :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
         </div>
 
@@ -82,17 +82,14 @@
 
 <style lang="scss" amp-boilerplate>
     .body-field {
-        .body-container-hot-game {
-            @extend .btn-bg-red;
-            @extend .border-radius-3px;
-            margin: 10px 0px;
+        .body-container-poker {
+            @extend .body-container-style;
         }
-        .card-content-sport {
-            border-bottom: 1px solid $border-right-cr;
-            padding: 0px 0px 20px 0px;
+        .card-content-poker {
+           @extend .card-content-style;
         }
         .content-text {
-            padding: 0px 0px 20px 0px;
+            @extend .contend-text-style;
         }
     }
 </style>

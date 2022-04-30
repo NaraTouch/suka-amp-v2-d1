@@ -96,17 +96,14 @@
 <style lang="scss" amp-boilerplate>
     .body-field { 
         .body-container-sport {
-            @extend .btn-bg-red;
-            @extend .border-radius-3px;
-            margin: 10px 0px;
+            @extend .body-container-style;
         }
 
         .card-content-sport {
-            border-bottom: 1px solid $border-right-cr;
-            padding: 0px 0px 20px 0px;
+            @extend .card-content-style;
         }
         .content-text {
-            padding: 0px 0px 20px 0px;
+            @extend .contend-text-style;
         }
     }
     

@@ -1,10 +1,10 @@
 <template>
     <div class="body-field">
-        <div class="body-container-hot-game">
+        <div class="body-container-cock-fighting">
             <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyle" :customComponent="condition" :title="title" :width="width" :height="height" />
         </div>
 
-        <div class="card-content-sport">
+        <div class="card-content-cock-fighting">
             <card-game :customFourColumn="customFourColumn" :gridColunmCard="gridColunmCard" :cardMultiple="cardMultiple" :CardDataOneSlots="CardDataOneSlots" />
         </div>
 
@@ -61,18 +61,15 @@ export default {
 </script>
 
 <style lang="scss" amp-boilerplate>
-     .body-field {
-        .body-container-arcade {
-            @extend .btn-bg-red;
-            @extend .border-radius-3px;
-            margin: 10px 0px;
+    .body-field { 
+        .body-container-cock-fighting {
+            @extend .body-container-style;
         }
-        .card-content-arcade {
-            border-bottom: 1px solid $border-right-cr;
-            padding: 0px 0px 20px 0px;
+        .card-content-cock-fighting {
+            @extend .card-content-style;
         }
         .content-text {
-            padding: 0px 0px 20px 0px;
+            @extend .contend-text-style;
         }
     }
 </style>
