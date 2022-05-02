@@ -42,6 +42,7 @@
                             customimageClassStyle: "menus-togel",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         SV388: {
                             multipleImage: false,
@@ -52,6 +53,7 @@
                             customimageClassStyle: "menus-togel",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                     }
                 ],

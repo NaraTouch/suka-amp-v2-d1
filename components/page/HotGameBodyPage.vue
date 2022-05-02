@@ -45,6 +45,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         BANDARCAPSA: {
                             multipleImage: false,
@@ -55,6 +56,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         DOMINO: {
                             multipleImage: false,
@@ -65,6 +67,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         CAPSASUSUN: {
                             multipleImage: false,
@@ -75,6 +78,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         BANDARCEME: {
                             multipleImage: false,
@@ -85,6 +89,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                     }
                 ],

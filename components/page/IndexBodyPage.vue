@@ -36,7 +36,7 @@
             </div>
 
             <div class="card-content">
-                <card-game :cardMultiple="cardMultiple" />
+                <card-game :cardMultiple="cardMultiple" :cardDatas="cardDatas" />
             </div>
         </article>
     </div>
@@ -53,6 +53,98 @@
                 sliderPromotion: "/data/slider-list.json",
                 sliderImage: "/data/slider-image-list.json",
                 slderCondition: true, 
+                cardDatas: [
+                    { 
+                        hotGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Hot Games",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-hot-game-first",
+                            customClassSecond: "item-custom-hot-game-second",
+                            classStyle: "item-custom-hot-game",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        sportsGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Sports",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-sports-first",
+                            customClassSecond: "item-custom-sports-second",
+                            classStyle: "item-custom-sports",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        casinoGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Casino",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-casino-first",
+                            customClassSecond: "item-custom-casino-second",
+                            classStyle: "item-custom-casino",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        slotsGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Slots",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-slots-first",
+                            customClassSecond: "item-custom-slots-second",
+                            classStyle: "item-custom-slots",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        pokerGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Poker",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-poker-first",
+                            customClassSecond: "item-custom-poker-second",
+                            classStyle: "item-custom-poker",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        arcadeGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Arcade",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-arcade-first",
+                            customClassSecond: "item-custom-arcade-second",
+                            classStyle: "item-custom-arcade",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        TogelGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Togel",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-togel-first",
+                            customClassSecond: "item-custom-togel-second",
+                            classStyle: "item-custom-togel",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                        cockFightingGames: {
+                            multipleImage: true,
+                            cardTitle: true,
+                            title: "Cock Fighting",
+                            link: "https://www.w3schools.com/",
+                            customClassFirst: "item-custom-cock-fighting-first",
+                            customClassSecond: "item-custom-cock-fighting-second",
+                            classStyle: "item-custom-cock-fighting",
+                            btnTitle: "Lihat Semua",
+                            buttonClick: true
+                        },
+                    }
+                ],
             };
         },
     }

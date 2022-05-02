@@ -46,6 +46,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         idnGame: {
                             multipleImage: false,
@@ -57,6 +58,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         C09Live: {
                             multipleImage: false,
@@ -68,6 +70,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         HoGaming: {
                             multipleImage: false,
@@ -79,6 +82,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         DreamGaming: {
                             multipleImage: false,
@@ -90,6 +94,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         D88GreenDragon: {
                             multipleImage: false,
@@ -101,6 +106,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         WWCasino: {
                             multipleImage: false,
@@ -112,6 +118,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         ICONCasino: {
                             multipleImage: false,
@@ -123,6 +130,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         PragmaticPlay: {
                             multipleImage: false,
@@ -134,6 +142,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         SBOBET: {
                             multipleImage: false,
@@ -145,6 +154,7 @@
                             oneimageBodyCustom: "oneimage-body-custom",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                     }
                 ],

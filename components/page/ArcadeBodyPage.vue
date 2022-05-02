@@ -41,6 +41,7 @@ export default {
                         customimageClassStyle: "menus-arcade",
                         btnTitle: "Main Sekarang",
                         btnStyle: "btn-style",
+                        buttonClick: true
                     },
                     FISHCATCH: {
                         multipleImage: false,
@@ -51,6 +52,7 @@ export default {
                         customimageClassStyle: "menus-arcade",
                         btnTitle: "Main Sekarang",
                         btnStyle: "btn-style",
+                        buttonClick: true
                     },
                     FISHINGKING: {
                         multipleImage: false,
@@ -61,6 +63,7 @@ export default {
                         customimageClassStyle: "menus-arcade",
                         btnTitle: "Main Sekarang",
                         btnStyle: "btn-style",
+                        buttonClick: true
                     },
                     PARADRSE: {
                         multipleImage: false,
@@ -71,6 +74,7 @@ export default {
                         customimageClassStyle: "menus-arcade",
                         btnTitle: "Main Sekarang",
                         btnStyle: "btn-style",
+                        buttonClick: true
                     },
                     FISHINGWAR: {
                         multipleImage: false,
@@ -81,6 +85,7 @@ export default {
                         customimageClassStyle: "menus-arcade",
                         btnTitle: "Main Sekarang",
                         btnStyle: "btn-style",
+                        buttonClick: true
                     },
                 }
             ],

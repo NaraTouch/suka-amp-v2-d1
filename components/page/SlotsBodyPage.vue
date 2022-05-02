@@ -5,9 +5,9 @@
                  <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyleMenu" :customComponent="condition" :title="title"  />
             </div>
 
-            <div class="filter-game">
-                <button class="custom-btn btn-style">Read Moress</button>
-                <button class="custom-btn btn-style">NEW GAMES</button>
+            <div class="filter-game  first-tab-style">
+                <button [class]="background" class="custom-btn btn-style btn-select">SEMUA GAMES</button>
+                <button class="custom-btn btn-style" on="tap:AMP.setState({ background: 'change-bg-br' })" >NEW GAMES</button>
                 <button class="custom-btn btn-style">MOST PLAYED</button>
                 <button class="custom-btn btn-style">WIN BOUNS</button>
                 <button class="custom-btn btn-style">BIG PRICE</button>
@@ -17,7 +17,7 @@
         <div class="body-field">
             <section class="column-left">
                 <amp-selector class="tabs-with-selector button-tab " role="tablist" on="select:myTabPanels.toggle(index=event.targetOption, value=true)" keyboard-select-mode="focus">
-                    <div class="tab-style first-tab-style" id="sample3-tab1 " role="tab" aria-controls="sample3-tabpanel1" option="0" selected>
+                    <div class="tab-style" id="sample3-tab1 " role="tab" aria-controls="sample3-tabpanel1" option="0" selected>
                         <title-image :customMenusStyle="customMenusStyle" :hrContainerTitle="hrContainerTitleHabanero" :CustomClassStyle="customClassStyleHabanero" :customClass="classStyle" :customComponent="condition" :title="titleHabanero" :spanStyle="spanStyle" />
                     </div>
                     <div v-for="(tabData, index) in tabDatas" :key="index">
@@ -38,14 +38,16 @@
             </section>
 
             <article class="column-right">
-                <div class="test">
+                <div class="tab-body">
                     <amp-selector id="myTabPanels" class="tabpanels">
-                        <div id="sample3-tabpanel1" role="tabpanel" aria-labelledby="sample3-tab1" option selected>Tab one content... </div>
+                        <div id="sample3-tabpanel1" role="tabpanel" aria-labelledby="sample3-tab1" option selected>
+                            <card-game :gridColunmCard="gridColunmCard" :slotsGames="slotsGames" :CardDataOneSlots="CardDataOneSlots" />
+                        </div>
                         <div id="sample3-tabpanel2" role="tabpanel" aria-labelledby="sample3-tab2" option>Tab two content... </div>
                         <div id="sample3-tabpanel3" role="tabpanel" aria-labelledby="sample3-tab3" option>Tab three content... </div>
                         <div id="sample3-tabpanel4" role="tabpanel" aria-labelledby="sample3-tab4" option>Tab four content... </div>
                         <div id="sample3-tabpanel5" role="tabpanel" aria-labelledby="sample3-tab5" option>Tab five content... </div>
-                        <div id="sample3-tabpanel6" role="tabpanel" aria-labelledby="sample3-tab6" option selected>Tab six content... </div>
+                        <div id="sample3-tabpanel6" role="tabpanel" aria-labelledby="sample3-tab6" option>Tab six content... </div>
                         <div id="sample3-tabpanel7" role="tabpanel" aria-labelledby="sample3-tab7" option>Tab seven content... </div>
                         <div id="sample3-tabpanel8" role="tabpanel" aria-labelledby="sample3-tab8" option>Tab eight content... </div>
                         <div id="sample3-tabpanel9" role="tabpanel" aria-labelledby="sample3-tab9" option>Tab nine content... </div>
@@ -59,7 +61,9 @@
 </template>
 
 <script>
+import CardGame from '../card/CardGame.vue'
     export default {
+  components: { CardGame },
         data() {
             return {
                 title: "SLOTS",
@@ -68,6 +72,92 @@
                 customClassStyle: true,
                 classStyleMenu: "item-custom-slots",
 
+                // card-game
+                slotsGames: true,
+                gridColunmCard: "five-column",
+                CardDataOneSlots: [
+                    {
+                        HABANERO: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "HABANERO",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        MICROGMAING: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "MICROGMAING",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        PRAGAMATICPLAY: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "MICROGMAING",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        FISHINGKING: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "FISHINGKING",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        PARADRSE: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "PARADRSE",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        FISHINGWAR: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "FISHINGWAR",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",
+                            loadingClick: true
+                        },
+                        GAMING: {
+                            multipleImage: false,
+                            cardTitle: false,
+                            title: "GAMING",
+                            classStyle: "game-image",
+                            link: "https://www.w3schools.com/",
+                            customimageClassStyle: "menus-slots",
+                            btnTitle: "Main Sekarang",
+                            btnStyle: "btn-style",  
+                            loadingClick: true
+                        },
+                    }
+                ],
+
+                // tab-game
                 customClassStyleHabanero: false,
                 customMenusStyle: "menus-tab",
                 spanStyle: "span-style",
@@ -202,76 +292,69 @@
             grid-gap: 10px;
         }
 
+        .first-tab-style {
+            &:after {
+                background-image: url(/images/button/testing.png);
+                background-repeat: no-repeat;
+                display: block;
+                content: "";
+                position: absolute;
+                margin: -4px 0px 0px -1px;
+                padding: 22px;
+                background-size: contain;
+            }
+        }
+
         .filter-game {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            margin: 5px 0px 0px 0px;
+            margin: 5px 0px 0px 2px;
 
             .custom-btn {
                 width: 148px;
                 height: 40px;
                 color: #fff;
-                padding: 10px 25px;
+                padding: 10px 20px;
                 background: transparent;
                 cursor: pointer;
-                
-                // transition: all 0.3s ease;
-                // position: relative;
-                // display: inline-block;
-                // box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-                // 7px 7px 20px 0px rgba(0,0,0,.1),
-                // 4px 4px 5px 0px rgba(0,0,0,.1);
-                // outline: none;
             }
             .btn-style {
                 border: none;
-                background: rgb(251,33,117);
-                background: linear-gradient(0deg, rgba(251,33,117,1) 0%, rgba(234,76,137,1) 100%);
+                background: $color-gray;
                 border-right: 1px solid white;
                 &:last-child {
                     border-right: 0px solid white;
+                    @extend .border-radius-3px;
+                }
+
+                &:active{
+                    background: $tab-cr-border-bottom;
+                }
+
+                &:focus{
+                    background: $tab-cr-border-bottom;
                 }
             }
-            // .btn-style:hover {
-            //     text-decoration: none;
-            //     color: #fff;
-            // }
-            // .btn-style:before {
-            //     position: absolute;
-            //     content: '';
-            //     display: inline-block;
-            //     top: -180px;
-            //     left: 0;
-            //     width: 30px;
-            //     height: 100%;
-            //     background-color: #fff;
-            //     animation: shiny-btn1 3s ease-in-out infinite;
-            // }
-            // .btn-11:active{
-            //     background:olive;
-            // }
 
-            // .btn-11:focus{
-            //     background:olive;
-            // }
-
-            // .btn-11:hover{
-            // opacity: .7;
-            // }
-            .btn-11:active{
-            // box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
-            //             -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-            //     inset -4px -4px 6px 0 rgba(255,255,255,.2),
-            //     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+            .btn-select {
+                background: $tab-cr-border-bottom;
             }
 
+            .change-bg-br {
+                border: none;
+                background: $color-gray;
+                color: #fff;
+                border-right: 1px solid white;
+                cursor: pointer;
 
-            // @-webkit-keyframes shiny-btn1 {
-            //     0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
-            //     80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
-            //     81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
-            //     100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
-            // }
+                &:active{
+                    background: $tab-cr-border-bottom;
+                }
+
+                &:focus{
+                    background: $tab-cr-border-bottom;
+                }
+            }
         }
 
         .body-field {
@@ -281,6 +364,11 @@
 
             .tab-style {
                 margin: 10px 0px;
+            }
+            .column-right {
+                .tab-body {
+                    margin-top: 10px;
+                }
             }
         }
         
@@ -293,17 +381,13 @@
         
         // tab style 
         amp-selector[role=tablist].tabs-with-flex {
-            // display: flex;
             flex-wrap: wrap;
         }
         amp-selector[role=tablist].tabs-with-flex [role=tab] {
             flex-grow: 1;
-            // text-align: center;
         }
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             outline: none;
-            // background-image: url(/images/button/btn-tab.png);
-            // @extend .bg-size-repeat; 
         }
         amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
             display: none;
@@ -316,29 +400,20 @@
         }
 
         amp-selector[role=tablist].tabs-with-selector {
-            // display: flex;
-            // background-image: url(/images/button/btn-tabs.png);
-            // @extend .bg-size-repeat;  
             border-bottom-right-radius: 3px;
         }
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
             outline: none;
-            // background-image: url(/images/button/btn-tab.png);
-            // @extend .bg-size-repeat; 
             border-radius: 3px;
             background-color: #70757d;
         }
         amp-selector[role=tablist].tabs-with-selector {
-            // display: flex;
             font-size: 12px;
         }
         amp-selector[role=tablist].tabs-with-selector [role=tab] {
-            // background-image: url(/images/button/btn-tabs.png);
-            // @extend .bg-size-repeat;  
             border-radius: 3px;
             background-color: #38383c;
             width: 100%;
-        //   text-align: center;
           color: white;
         }
         amp-selector.tabpanels [role=tabpanel] {
@@ -349,158 +424,4 @@
           display: block;
         }
     }
-    // .slots-body {
-    //     .button-tab {
-    //         margin-top: 5px;
-
-    //         .tab-style {
-    //             border-right: 1px solid $text-color-1;
-    //             padding: 13px;
-
-    //             &:last-child {
-    //                 border-right: none;
-    //                 @extend .border-radius-3px;
-    //             }
-    //         }
-
-    //         .first-tab-style {
-    //             &:after {
-    //                 background-image: url(/images/button/testing.png);
-    //                 background-repeat: no-repeat;
-    //                 display: block;
-    //                 content: "";
-    //                 position: absolute;
-    //                 margin: -31px 0px 0px -14px;
-    //                 padding: 22px;
-    //                 background-size: contain;
-    //             }
-    //         }
-    //     }
-
-    //     amp-selector[role=tablist].tabs-with-flex {
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //     }
-    //     amp-selector[role=tablist].tabs-with-flex [role=tab] {
-    //         flex-grow: 1;
-    //         text-align: center;
-    //     }
-    //     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
-    //         outline: none;
-    //         background-image: url(/images/button/btn-tab.png);
-    //         @extend .bg-size-repeat; 
-    //     }
-    //     amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
-    //         display: none;
-    //         width: 100%;
-    //         order: 1; 
-    //     }
-    //     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
-    //         display: block;
-            
-    //     }
-
-    //     amp-selector[role=tablist].tabs-with-selector {
-    //         display: flex;
-    //         background-image: url(/images/button/btn-tabs.png);
-    //         @extend .bg-size-repeat;  
-    //         border-bottom-right-radius: 3px;
-    //     }
-    //     amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
-    //         outline: none;
-    //         background-image: url(/images/button/btn-tab.png);
-    //         @extend .bg-size-repeat; 
-    //     }
-    //     amp-selector[role=tablist].tabs-with-selector {
-    //         display: flex;
-    //         font-size: 12px;
-    //     }
-    //     amp-selector[role=tablist].tabs-with-selector [role=tab] {
-    //       width: 100%;
-    //       text-align: center;
-    //       color: white;
-    //     }
-    //     amp-selector.tabpanels [role=tabpanel] {
-    //       display: none;
-    //     }
-    //     amp-selector.tabpanels [role=tabpanel][selected] {
-    //       outline: none;
-    //       display: block;
-    //     }
-
-    //     .tap-container {
-    //         @extend .border-radius-3px;
-    //         @extend .btn-bg-red;
-    //         background: url(/images/button/container-slots-btn.png);
-    //         display: grid;
-    //         grid-template-columns: 1.1fr 3fr;
-    //         // grid-gap: 10px;
-    //     }
-
-    //     .body-field {
-    //         @extend .display-flex;
-    //         margin: 10px 0px 30px 0px;
-
-    //         .border-row {
-    //             @extend .z-index-1;
-    //             padding: 0px 13px 0px 0px;
-    //             margin: 0px -16px 0px 0px;
-    //             position: relative;
-
-    //             &:before {
-    //                 @extend .border-right;
-    //                 content: "";
-    //                 position: absolute;
-    //                 bottom: 112px;
-    //                 right: 0;
-    //                 height: 87%;
-    //             }
-    //         }
-
-    //         .column-left {
-    //             min-width: 265px;
-    //             // padding-right: 15px;
-    //             padding-right: 5px;
-
-    //             .tab-winner {
-    //                 border-bottom-right-radius: 4px;
-    //             }
-
-    //             .slider-promotion {
-    //                 @extend .mr-box;
-    //             }
-
-    //             .stay-connected {
-    //                 margin-bottom: 30px;
-    //                 background-color: $bg-body-field;
-    //                 @extend .border-radius-3px;
-    //             }
-
-    //             .payment-method {
-    //                 padding-bottom: 15px;
-    //                 @extend .border-radius-3px;
-    //                 background-color: $bg-body-field;
-    //             }
-
-    //             .content-text {
-    //                 margin-top: 20px;
-    //             }
-    //         }
-
-    //         .column-right {
-    //             min-width: 760px;
-    //             padding-right: 5px;
-                
-    //             .body-container-sport {
-    //                 @extend .btn-bg-red;
-    //                 @extend .border-radius-3px;
-    //             }
-
-    //             .card-content-sport {
-    //                 border-bottom: 1px solid $border-right-cr;
-    //                 padding-bottom: 10px;
-    //             }
-    //         }
-    //     }
-    // }
 </style>

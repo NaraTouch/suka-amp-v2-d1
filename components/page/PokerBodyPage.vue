@@ -42,6 +42,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         NINEGAMING: {
                             multipleImage: false,
@@ -52,6 +53,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         IDNPOKER: {
                             multipleImage: false,
@@ -62,6 +64,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         JAKAITAPOKER: {
                             multipleImage: false,
@@ -72,6 +75,7 @@
                             customimageClassStyle: "menus-hot-game",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                     }
                 ],

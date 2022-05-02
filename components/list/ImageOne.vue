@@ -186,6 +186,23 @@ export default {
 
                 .sv388-image { a { div { background-position: -198px 0px; } } }
             }
+
+            .menus-slots {
+                 @extend .li-style;
+                li {
+                    a {
+                        div {
+                            @extend .border-radius-3px;
+                            @extend .border-right;
+                            @extend .border-style;
+                            background: url(/images/card/slots-game-image.png) no-repeat;
+                            height: 120px;
+                            width: 120px;
+                        } 
+                    }
+                }
+                .game-image { a { div { background-position: 0px 0px; } } }
+            }
        }
     }
 </style>

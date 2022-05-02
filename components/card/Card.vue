@@ -8,13 +8,21 @@
             <image-list :customClassSecond="customClassSecond" :customClassFirst="customClassFirst" />
         </div>
 
-        <div class="oneimage-body" :class="oneimageBodyCustom" v-else>
+        <div v-else class="oneimage-body" :class="oneimageBodyCustom">
             <image-one :customClass="customClassImageOne" :customimageClassStyle="customimageClassStyle" /> 
         </div>
         
-        <div class="footer-button">
+        <div v-if="buttonClick" class="footer-button">
             <a :href="linkButton">
                 <button class="btn-color" :class="btnStyle"> {{ btnTitle }}</button>
+            </a> 
+        </div>
+
+        <div class="loading-style" v-if="loadingClick">
+            <a :href="linkButton">
+                <button class="btn-loading-style">
+                   <loading-style />
+                </button>
             </a> 
         </div>
     </div>  
@@ -26,6 +34,7 @@
             ImageList: () => import('../list/ImageList'),
             TitleImage: () => import('../TitleImage'),
             ImageOne: () => import('../list/ImageOne'),
+            LoadingStyle: () => import('../slotGame/LoadingStyle')
         },
         props : {
             cardTitle: Boolean,
@@ -40,6 +49,8 @@
             customimageClassStyle: String,
             oneimageBodyCustom: String,
             btnStyle: String,
+            buttonClick: Boolean,
+            loadingClick: Boolean,
         },  
         data() {
             return {

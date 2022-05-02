@@ -45,6 +45,7 @@
                             customimageClassStyle: "menus-sport",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         CO9: {
                             multipleImage: false,
@@ -55,6 +56,7 @@
                             customimageClassStyle: "menus-sport",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         CMD368: {
                             multipleImage: false,
@@ -65,6 +67,7 @@
                             customimageClassStyle: "menus-sport",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         PRAGMATICPLAY: {
                             multipleImage: false,
@@ -75,6 +78,7 @@
                             customimageClassStyle: "menus-sport",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                         SBOBET: {
                             multipleImage: false,
@@ -85,6 +89,7 @@
                             customimageClassStyle: "menus-sport",
                             btnTitle: "Main Sekarang",
                             btnStyle: "btn-style",
+                            buttonClick: true
                         },
                     }
                 ],
