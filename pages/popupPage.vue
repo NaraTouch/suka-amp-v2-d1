@@ -1,12 +1,14 @@
 <template>
     <div>
-        hellwolrd
+        <popup />
     </div>
 </template>
 
 <script>
     export default {
-        
+        components: {
+            Popup: () => import('../components/popup/Popup'),
+        }
     }
 </script>
 

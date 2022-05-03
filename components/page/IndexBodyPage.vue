@@ -180,7 +180,7 @@
             }
 
             .slider-promotion {
-                @extend .mr-box;
+                margin: 10px 0px;
             }
 
             .stay-connected {

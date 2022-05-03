@@ -1,12 +1,20 @@
 <template>
     <div class="slots-body">
+        <div class="popup-style">
+            <amp-lightbox class="z-index-style" id="modalbox" layout="nodisplay">
+                <div class="modalbox">
+                    <popup />
+                </div>
+            </amp-lightbox>
+        </div>
+
         <div class="tap-container">
             <div class="body-container-sport">
                  <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyleMenu" :customComponent="condition" :title="title"  />
             </div>
 
             <div class="filter-game  first-tab-style">
-                <button [class]="background" class="custom-btn btn-style btn-select">SEMUA GAMES</button>
+                <button [class]="background" class="custom-btn btn-style btn-select" on="tap:modalbox" role="button" tabindex="0">SEMUA GAMES</button>
                 <button class="custom-btn btn-style" on="tap:AMP.setState({ background: 'change-bg-br' })" >NEW GAMES</button>
                 <button class="custom-btn btn-style">MOST PLAYED</button>
                 <button class="custom-btn btn-style">WIN BOUNS</button>
@@ -54,16 +62,23 @@
                         <div id="sample3-tabpanel10" role="tabpanel" aria-labelledby="sample3-tab10" option>Tab ten content... </div>
                     </amp-selector>
                 </div>
+
+                <div class="content-text">
+                    <content-text :width="widthContentText" :height="heightContentText" :ContentText="ContentText" />
+                </div>
             </article>
         </div>
-
+        
     </div>
 </template>
 
 <script>
-import CardGame from '../card/CardGame.vue'
     export default {
-  components: { CardGame },
+        components: { 
+            CardGame: () => import('../card/CardGame'),
+            ContentText: () => import('../content/ContentText'),
+            Popup: () => import('../popup/Popup'),
+        },
         data() {
             return {
                 title: "SLOTS",
@@ -276,6 +291,11 @@ import CardGame from '../card/CardGame.vue'
                         },
                     }
                 ],
+
+                 // content-text
+                widthContentText: "740px",
+                heightContentText: "60px",
+                ContentText: 'Selamat datang di situs Sukabet,situs permainan online terlengkap dan terpercaya. Pada halaman ini anda dapat memilih kategori permainan yang anda ingin mainkan saat ini. Bagi anda yang belum memiliki akun, silahkan membuat akun dengan mengklik "Daftar" dan dapantkan bonus pemain baru di situs kami. Rasakan keseruan yang telah dirasakan oleh pemain lainnya. Jangan ketingalan permainan terbaru yang seru di situs kami. Kami hanya memiliki permainan-permainan terbaik agar anda tidak bingung',
             }
         },
     }
@@ -283,13 +303,36 @@ import CardGame from '../card/CardGame.vue'
 
 <style lang="scss" amp-boilerplate>
     .slots-body {
+        .popup-style {
+            .z-index-style {
+                z-index: 99999;
+                .modalbox {
+                    background: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .modal_box {
+                    margin-left: -25%;
+                    border-radius: 4px;
+                    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+                    position: absolute;
+                    top: 15%;
+                    transition: all .3s ease-in-out;
+                    width: 50%;
+                    left: 50%;
+                    background: $color-white;
+                    background-size: 40px 40px;
+                    border-radius: 10px;
+                }
+            }
+        }
         .tap-container {
             @extend .border-radius-3px;
             @extend .btn-bg-red;
+            @extend .display-grid;
             background: url(/images/button/container-slots-btn.png);
-            display: grid;
             grid-template-columns: 1.1fr 3fr;
-            grid-gap: 10px;
         }
 
         .first-tab-style {
@@ -313,17 +356,16 @@ import CardGame from '../card/CardGame.vue'
             .custom-btn {
                 width: 148px;
                 height: 40px;
-                color: #fff;
+                color: $color-white;
                 padding: 10px 20px;
-                background: transparent;
                 cursor: pointer;
             }
             .btn-style {
                 border: none;
                 background: $color-gray;
-                border-right: 1px solid white;
+                border-right: 1px solid $color-white;
                 &:last-child {
-                    border-right: 0px solid white;
+                    border-right: 0px solid $color-white;
                     @extend .border-radius-3px;
                 }
 
@@ -343,8 +385,8 @@ import CardGame from '../card/CardGame.vue'
             .change-bg-br {
                 border: none;
                 background: $color-gray;
-                color: #fff;
-                border-right: 1px solid white;
+                color: $color-white;
+                border-right: 1px solid $color-white;
                 cursor: pointer;
 
                 &:active{
@@ -358,9 +400,8 @@ import CardGame from '../card/CardGame.vue'
         }
 
         .body-field {
-            display: grid;
+            @extend .display-grid;
             grid-template-columns: 1.1fr 3fr;
-            grid-gap: 10px;
 
             .tab-style {
                 margin: 10px 0px;
@@ -368,24 +409,24 @@ import CardGame from '../card/CardGame.vue'
             .column-right {
                 .tab-body {
                     margin-top: 10px;
+                    border-bottom: 1px solid $border-right-cr;
+                    padding: 0px 0px 20px 0px;
+                }
+                 .content-text {
+                    @extend .contend-text-style;
                 }
             }
         }
         
-        // title-tab container
         .header-title {
             .title-card {
                 margin: 5px 10px;
             }
         }
         
-        // tab style 
-        amp-selector[role=tablist].tabs-with-flex {
-            flex-wrap: wrap;
-        }
-        amp-selector[role=tablist].tabs-with-flex [role=tab] {
-            flex-grow: 1;
-        }
+        // amp-selector[role=tablist].tabs-with-flex [role=tab] {
+        //     flex-grow: 1;
+        // }
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             outline: none;
         }
@@ -396,15 +437,14 @@ import CardGame from '../card/CardGame.vue'
         }
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
             display: block;
-            
         }
 
         amp-selector[role=tablist].tabs-with-selector {
             border-bottom-right-radius: 3px;
         }
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
+            @extend .border-radius-3px;
             outline: none;
-            border-radius: 3px;
             background-color: #70757d;
         }
         amp-selector[role=tablist].tabs-with-selector {
@@ -414,7 +454,7 @@ import CardGame from '../card/CardGame.vue'
             border-radius: 3px;
             background-color: #38383c;
             width: 100%;
-          color: white;
+            color: $color-white;
         }
         amp-selector.tabpanels [role=tabpanel] {
           display: none;

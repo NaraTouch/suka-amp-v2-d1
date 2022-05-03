@@ -2,10 +2,6 @@
     border-radius: 3px;
 }
 
-.mr-box {
-    margin: 10px 0px;
-}
-
 .container-size {
     width: 1024px;
 }
@@ -40,7 +36,6 @@
     @extend .bg-size-repeat;
 }
 
-// tab-br
 .tab-bg-img {
     background-image: url('/images/tab/tab-img.jpg');
     @extend .bg-size-repeat;
@@ -51,7 +46,6 @@
     @extend .bg-size-repeat;
 }
 
-// card-br-ig 
 .card-br-ig {
     background-image: url('/images/card/card-ig.png');
     @extend .bg-size-repeat;
@@ -61,7 +55,6 @@
     border-right: 1px solid $border-div-left;
 }
 
-// free-daily-spain on navbar
 .keyframes {
     @keyframes blink {
         50% {

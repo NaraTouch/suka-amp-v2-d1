@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-images">
         <ul class="menus">
-            <li class="item-hot-game"><a class="link" href="/hotGame"><div><span>HOT GAME</span></div></a></li>
+            <li class="item-hot-game"><a class="link hot-game" href="/hotGame"><div><span>HOT GAME</span></div></a></li>
             <li class="item-slots"><a class="link" href="/slots"><div><span>Slots</span></div></a></li>
             <li class="item-sports"><a class="link" href="/sports"><div><span>Sports</span></div></a></li>
             <li class="item-casino"><a class="link" href="/casino"><div><span>Casino</span></div></a></li>
@@ -27,17 +27,6 @@
             border: 1px solid $color-white;
         }
         
-        .hot-game {
-            &:after {
-                display: block;
-                content: "";
-                position: absolute;
-                margin: -68px 0px 0px 32px;
-                padding: 32px;
-                background: url(/images/navbar-logo/hot-game-image.png) no-repeat;
-                background-size: contain;
-            }
-        }
         .menus {
             display: grid;
             padding: 0px;
@@ -48,10 +37,6 @@
             li {
                 font-size: 16px;
                 width: 100%;
-
-                &:first-child {
-                    @extend .hot-game;
-                }
 
                 &:last-child{
                     margin-right: 0px;
@@ -67,6 +52,17 @@
                         -webkit-animation: blink 1.2s step-start 0s infinite
                     }
                     @extend .keyframes;
+                }
+                .hot-game {
+                    &:after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        margin: -67px 0px 0px 32px;
+                        padding: 32px;
+                        background: url(/images/navbar-logo/hot-game-image.png) no-repeat;
+                        background-size: contain;
+                    }
                 }
 
                 .link {

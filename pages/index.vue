@@ -4,7 +4,7 @@
         <header-page />
         <div class="body-container">
           <index-body-page />
-          <footers-page />
+          <footers-page :hide="hide" />
         </div>
     </div> 
   </section>
@@ -16,6 +16,11 @@
       HeaderPage: () => import('../components/page/HeaderPage'),
       IndexBodyPage: () => import('../components/page/IndexBodyPage'),
       FootersPage: () => import('../components/page/FootersPage'),
+    },
+    data() {
+      return {
+        hide: true,
+      }
     },
   }
 </script>

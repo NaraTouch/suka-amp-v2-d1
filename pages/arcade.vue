@@ -4,7 +4,7 @@
             <header-page />
             <div class="body-container">
                 <arcade-body-page />
-                <footers-page />
+                <footers-page :hide="hide" />
             </div>
         </div> 
     </section>
@@ -16,7 +16,12 @@
             HeaderPage: () => import('../components/page/HeaderPage'),
             ArcadeBodyPage: () => import('../components/page/ArcadeBodyPage'),
             FootersPage: () => import('../components/page/FootersPage')
-        }
+        },
+        data() {
+            return {
+                hide: true
+            }
+        },
     }
 </script>
 

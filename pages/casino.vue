@@ -5,7 +5,7 @@
             <div class="body-container">
                 <!-- <sports-body-page /> -->
                 <casino-body-page />
-                <footers-page />
+                <footers-page :hide="hide" />
             </div>
         </div> 
     </section>
@@ -18,7 +18,12 @@
             CasinoBodyPage: () => import('../components/page/CasinoBodyPage'),
             // SportsBodyPage: () => import('../components/page/SportsBodyPage'),
             FootersPage: () => import('../components/page/FootersPage'),
-        }
+        },
+        data() {
+            return {
+                hide: true,
+            }
+        },
     }
 </script>
 

@@ -15,11 +15,14 @@
 
 <script>
     export default {
-    
     }
 </script>
 
 <style lang="scss" amp-boilerplate>
+    .test {
+        // z-index: 0;
+        background: blue;
+    }
 
     .actions {
         @extend .display-grid;

@@ -4,7 +4,7 @@
             <header-page />
             <div class="body-container">
                 <poker-body-page />
-                <footers-page />
+                <footers-page :hide="hide" />
             </div>
         </div> 
     </section>
@@ -17,7 +17,11 @@
             PokerBodyPage: () => import('../components/page/PokerBodyPage'),
             FootersPage: () => import('../components/page/FootersPage'),
         },
-        
+        data() {
+            return {
+                hide: true
+            }
+        },
     }
 </script>
 

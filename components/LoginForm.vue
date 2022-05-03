@@ -127,6 +127,7 @@
         @extend .border-radius-3px;
         @extend .btn-font;
         padding: 7px 15px 7px 13px;
+        cursor: pointer;
       }
 
       .btn-color-Masuk {

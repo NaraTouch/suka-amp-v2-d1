@@ -4,7 +4,7 @@
             <header-page />
             <div class="body-container">
                 <hot-game-body-page />
-                <footers-page />
+                <footers-page :hide="hide" />
             </div>
         </div> 
     </section>
@@ -16,6 +16,11 @@
             HeaderPage: () => import('../components/page/HeaderPage'),
             HotGameBodyPage: () => import('../components/page/HotGameBodyPage'), 
             FootersPage: () => import('../components/page/FootersPage'),
+        },
+        data() {
+            return {
+                hide: true
+            }
         },
     }
 </script>

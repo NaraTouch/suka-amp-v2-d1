@@ -4,7 +4,7 @@
         <header-page />
         <div class="body-container">
             <sports-body-page />
-            <footers-page />
+            <footers-page :hide="hide" />
         </div>
     </div> 
   </section>
@@ -16,6 +16,11 @@
             HeaderPage: () => import('../components/page/HeaderPage'),
             SportsBodyPage: () => import('../components/page/SportsBodyPage'),
             FootersPage: () => import('../components/page/FootersPage'),
+        },
+        data() {
+            return {
+                hide: true
+            }
         },
     }
 </script>

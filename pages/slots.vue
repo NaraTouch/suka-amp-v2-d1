@@ -4,7 +4,7 @@
         <header-page />
         <div class="body-container">
             <slots-body-page />
-            <footers-page />
+            <footers-page :hide="hide" />
         </div>
     </div> 
   </section>
@@ -16,7 +16,12 @@
             SlotsBodyPage: () => import('../components/page/SlotsBodyPage'),
             HeaderPage: () => import('../components/page/HeaderPage'),
             FootersPage: () => import('../components/page/FootersPage'),
-        }
+        },
+        data() {
+            return {
+                hide: true
+            }
+        },
     }
 </script>
 

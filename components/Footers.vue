@@ -3,7 +3,7 @@
         <div class="footer-image">
             <amp-img alt="image" :src="image" height="27" layout="fixed-height" />
         </div>
-        <div class="width-test">
+        <div v-if="hide" class="width-test">
             <action-connection />
         </div>
     </div>
@@ -11,6 +11,9 @@
 
 <script>
     export default {
+        props: {
+            hide: Boolean,
+        },
         components: {
             ActionConnection: () => import('../components/action/ActionConnection'),
         },
