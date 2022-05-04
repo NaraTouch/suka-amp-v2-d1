@@ -9,19 +9,54 @@
             <li class="item-arcade"><a class="link" href="/arcade"><div><span>Arcade</span></div></a></li>
             <li class="item-togel"><a class="link" href="/togel"><div><span>Togel</span></div></a></li>
             <li class="item-cock-fighter"><a class="link" href="/cockFighting"><div><span class="span-custom" >Cock Fighter</span></div></a></li>
-            <li class="item-lucky-spain"><a class="link-padding" href="#"><div class="lucky-spain-image"></div></a></li>
+            <li class="item-lucky-spain"><a on="tap:modalboxs" role="button" tabindex="0" class="link-padding"  ><div class="lucky-spain-image"></div></a></li>
         </ul>
+
+        <!-- <div class="popup-style">
+            <amp-lightbox class="z-index-style" id="modalboxs" layout="nodisplay">
+                <div class="modalboxs">
+                    <lucky-spin />
+                </div>
+            </amp-lightbox>
+        </div> -->
     </div>
 </template>
 
 <script>
     export default {
-    
+        components: { 
+            // LuckySpin: () => import('../popup/luckySpin'),
+        },
     }
 </script>
 
 <style lang="scss" amp-boilerplate>
     .navbar-images {
+
+        .popup-style {
+            .z-index-style {
+                z-index: 99999;
+                .modalboxs {
+                    background: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .modal_boxs {
+                    border-radius: 4px;
+                    box-shadow: 0 9px 46px 8px rgb(0 0 0 / 14%), 0 11px 15px -7px rgb(0 0 0 / 12%), 0 24px 38px 3px rgb(0 0 0 / 20%);
+                    position: absolute;
+                    top: 3%;
+                    transition: all 0.3s ease-in-out;
+                    left: 0;
+                    right: 0;
+                    background-size: 40px 40px;
+                    border-radius: 10px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
         // custom border
         .border-style {
             border: 1px solid $color-white;

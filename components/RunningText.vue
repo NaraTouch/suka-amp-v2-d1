@@ -51,7 +51,6 @@
             width: 100%;
             
             .marquee {
-                // left: 100%;
                 width: 100%;
                 overflow: hidden;
                 position: relative;

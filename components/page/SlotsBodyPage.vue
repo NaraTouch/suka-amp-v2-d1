@@ -1,20 +1,20 @@
 <template>
     <div class="slots-body">
-        <div class="popup-style">
+        <!-- <div class="popup-style">
             <amp-lightbox class="z-index-style" id="modalbox" layout="nodisplay">
                 <div class="modalbox">
                     <popup />
                 </div>
             </amp-lightbox>
-        </div>
+        </div> -->
 
         <div class="tap-container">
             <div class="body-container-sport">
                  <title-image :hrContainerTitle="hrContainerTitle" :CustomClassStyle="customClassStyle" :customClass="classStyleMenu" :customComponent="condition" :title="title"  />
             </div>
 
-            <div class="filter-game  first-tab-style">
-                <button [class]="background" class="custom-btn btn-style btn-select" on="tap:modalbox" role="button" tabindex="0">SEMUA GAMES</button>
+            <div class="filter-game first-tab-style">
+                <button [class]="background" class="custom-btn btn-style btn-select" >SEMUA GAMES</button>
                 <button class="custom-btn btn-style" on="tap:AMP.setState({ background: 'change-bg-br' })" >NEW GAMES</button>
                 <button class="custom-btn btn-style">MOST PLAYED</button>
                 <button class="custom-btn btn-style">WIN BOUNS</button>
@@ -77,7 +77,6 @@
         components: { 
             CardGame: () => import('../card/CardGame'),
             ContentText: () => import('../content/ContentText'),
-            Popup: () => import('../popup/Popup'),
         },
         data() {
             return {
@@ -303,30 +302,6 @@
 
 <style lang="scss" amp-boilerplate>
     .slots-body {
-        .popup-style {
-            .z-index-style {
-                z-index: 99999;
-                .modalbox {
-                    background: rgba(0, 0, 0, 0.5);
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .modal_box {
-                    margin-left: -25%;
-                    border-radius: 4px;
-                    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
-                    position: absolute;
-                    top: 15%;
-                    transition: all .3s ease-in-out;
-                    width: 50%;
-                    left: 50%;
-                    background: $color-white;
-                    background-size: 40px 40px;
-                    border-radius: 10px;
-                }
-            }
-        }
         .tap-container {
             @extend .border-radius-3px;
             @extend .btn-bg-red;
@@ -342,7 +317,7 @@
                 display: block;
                 content: "";
                 position: absolute;
-                margin: -4px 0px 0px -1px;
+                margin: -4px 0px 0px -2px;
                 padding: 22px;
                 background-size: contain;
             }
@@ -424,9 +399,6 @@
             }
         }
         
-        // amp-selector[role=tablist].tabs-with-flex [role=tab] {
-        //     flex-grow: 1;
-        // }
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             outline: none;
         }

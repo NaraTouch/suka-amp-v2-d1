@@ -26,13 +26,6 @@
 export default {
    data() {
        return {
-           banlList: `
-                 <template type="amp-mustache">
-                    <div class="mr-r-l">
-                        <a href="{{link}}" target="_blank"> <amp-img src="{{image}}" width="200" height="80" layout="responsive" alt="AMP Carousel"></amp-img></a>
-                    </div>
-                </template>
-           `,
            imagePromosi: "/images/button/Banner_Button_promosi_red.png",
            titleIcon: "images/bank/payment-method-icon.png",
            width: "40px",
@@ -54,9 +47,8 @@ export default {
             padding: 5px 13px 15px 13px;
 
             .menus {
-                display: grid;
+                @extend .display-grid;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 10px;
                 list-style-type: none;
                 padding: 0px;
 

@@ -20,40 +20,40 @@ export default {
 </script>
 
 <style lang="scss" amp-boilerplate>
-    img{
-        width:100%;
-        max-width:100%;
-        height:auto;
-        margin-bottom:15px;
-        transition:all .9s
-    }
+    // img{
+    //     width:100%;
+    //     max-width:100%;
+    //     height:auto;
+    //     margin-bottom:15px;
+    //     transition:all .9s
+    // }
 
-    .container {
-    max-width: 100%;
-    margin: 4% auto;
-    padding: 20px;
-    color: #222;
-    font-size: 16px;
-    line-height: 1.6;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    border-radius: 8px;
-    }
+    // .container {
+    // max-width: 100%;
+    // margin: 4% auto;
+    // padding: 20px;
+    // color: #222;
+    // font-size: 16px;
+    // line-height: 1.6;
+    // box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    // border-radius: 8px;
+    // }
 
-    .blue-box, .green-box, .red-box {
-        width: 100%;
-        height: 280px;
-    }
+    // .blue-box, .green-box, .red-box {
+    //     width: 100%;
+    //     height: 280px;
+    // }
 
-    .blue-box {
-        background: #00f;
-    }
+    // .blue-box {
+    //     background: #00f;
+    // }
 
-    .green-box {
-        background: green;
-    }
+    // .green-box {
+    //     background: green;
+    // }
     
-    .red-box {
-        background: red;
-    }
+    // .red-box {
+    //     background: red;
+    // }
 
 </style>

@@ -36,11 +36,10 @@
       padding: 10px 10px 20px 10px;
 
       .menus {
+        @extend .display-grid;
         list-style-type: none;
         padding: 0px;
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
         
         li {
           font-size: 16px;

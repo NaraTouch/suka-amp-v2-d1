@@ -65,7 +65,6 @@ export default {
         }
 
         .custom-class-pr {
-            // margin: 5px 5px;
              margin: 5px 10px;
             @extend .custom-class;
 

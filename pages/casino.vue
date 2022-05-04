@@ -16,7 +16,6 @@
         components: {
             HeaderPage: () => import('../components/page/HeaderPage'),
             CasinoBodyPage: () => import('../components/page/CasinoBodyPage'),
-            // SportsBodyPage: () => import('../components/page/SportsBodyPage'),
             FootersPage: () => import('../components/page/FootersPage'),
         },
         data() {
@@ -27,11 +26,11 @@
     }
 </script>
 
-<style lang="scss">
-    .page-container {
-        .body-container {
-        @extend .container-size;
-        @extend .magrin-0-auto;
-        }
-    }
+<style lang="scss" amp-boilerplate>
+    // .page-container {
+    //     .body-container {
+    //     @extend .container-size;
+    //     @extend .magrin-0-auto;
+    //     }
+    // }
 </style>

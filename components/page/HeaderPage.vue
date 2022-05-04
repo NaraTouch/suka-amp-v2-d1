@@ -2,16 +2,16 @@
     <div class="hedaer-page">
         <nav-bar-header />
 
-        <div class="page-size">
+        <div class="page-size pr-top-10">
             <div class="running-text">
                 <running-text />
             </div>
 
-            <div class="navbar-image">
+            <div class="navbar-image pr-top-10">
                 <nav-image />
             </div>
 
-            <div class="running-image">    
+            <div class="running-image pr-top-10">    
                 <running-image />
             </div>
         </div>
@@ -33,10 +33,10 @@
         .page-size {
             @extend .container-size;
             @extend .magrin-0-auto;
-            padding-top: 10px;
+            // padding-top: 10px;
 
             .navbar-image {
-                 padding: 10px 0px;
+                //  padding: 10px 0px;
             }
         }
     }

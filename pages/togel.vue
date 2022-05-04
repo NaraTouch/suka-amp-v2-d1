@@ -26,10 +26,10 @@
 </script>
 
 <style lang="scss" amp-boilerplate>
-    .page-container {
-        .body-container {
-            @extend .container-size;
-            @extend .magrin-0-auto;
-        }
-    }
+    // .page-container {
+    //     .body-container {
+    //         @extend .container-size;
+    //         @extend .magrin-0-auto;
+    //     }
+    // }
 </style>

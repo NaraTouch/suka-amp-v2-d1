@@ -30,8 +30,8 @@
                     <br>
                     <label>
                         <p>Bank<span class="red">*</span></p>
-                        <select name="color" id="color" on="change:AMP.setState({ optionValue: true })">
-                            <option disabled selected></option>
+                        <select name="color" id="color" on="change:AMP.setState({ optionValue: true })" required>
+                            <option value="" disabled selected >Pilih Bank</option>
                             <option value="BANK BRI">BRI BANK</option>
                             <option value="red">CIMA BANK</option>
                             <option value="green">MANDIRI BANK</option>
@@ -114,7 +114,6 @@
             return {
                 image: '/images/card/hot-game-image.png',
                 hide: false,
-                CustomClass: 'test',
             }
         },
     }
@@ -132,7 +131,7 @@
             border-top-right-radius: 7px;
             border-top-left-radius: 7px;
             .header-title {
-                margin: 5px 0px 5px 80px;
+                margin: 10px 0px 10px 80px;
                 span {
                     font-size: 30px;
                     font-weight: bold;
@@ -193,7 +192,18 @@
                 display: grid;
             }
 
+           
             label {
+                select:required:invalid {
+                    color: #666;
+                }
+                option[value=""][disabled] {
+                    display: none;
+                }
+                option {
+                    color: #000;
+                }
+
                 .red {
                     color: $text-red;
                 }
@@ -250,7 +260,7 @@
 
         .modal-footer {
             background-color: #292d39;
-            padding: 10px;
+            padding: 15px 10px;
             border-bottom-right-radius: 7px;
             border-bottom-left-radius: 7px;
         }
