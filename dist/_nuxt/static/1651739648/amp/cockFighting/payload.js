@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/amp/cockFighting", {data:[{}],fetch:{},mutations:void 0});

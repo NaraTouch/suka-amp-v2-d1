@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/casino", {data:[{}],fetch:{},mutations:void 0});
