@@ -49,5 +49,9 @@ export default {
 
   .pr-top-10 {
     padding: 10px 0px 0px 0px;
+  } 
+  
+  .mr-top-10 {
+     margin: 10px 0px 0px 0px;
   }
 </style>

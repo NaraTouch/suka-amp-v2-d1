@@ -25,12 +25,12 @@
         <div class="body-field">
             <section class="column-left">
                 <amp-selector class="tabs-with-selector button-tab " role="tablist" on="select:myTabPanels.toggle(index=event.targetOption, value=true)" keyboard-select-mode="focus">
-                    <div class="tab-style" id="sample3-tab1 " role="tab" aria-controls="sample3-tabpanel1" option="0" selected>
+                    <div class="mr-top-10" id="sample3-tab1 " role="tab" aria-controls="sample3-tabpanel1" option="0" selected>
                         <title-image :customMenusStyle="customMenusStyle" :hrContainerTitle="hrContainerTitleHabanero" :CustomClassStyle="customClassStyleHabanero" :customClass="classStyle" :customComponent="condition" :title="titleHabanero" :spanStyle="spanStyle" />
                     </div>
                     <div v-for="(tabData, index) in tabDatas" :key="index">
                         <div v-for="(data, index) in tabData" :key="index">
-                            <div  class="tab-style" :id="data.simpleTab" role="tab" :aria-controls="data.sampleTabpanel" :option="data.option">
+                            <div  class="mr-top-10" :id="data.simpleTab" role="tab" :aria-controls="data.sampleTabpanel" :option="data.option">
                                 <title-image 
                                 :customMenusStyle="data.customMenusStyle"
                                 :hrContainerTitle="data.hrContainerTitle" 
@@ -63,7 +63,7 @@
                     </amp-selector>
                 </div>
 
-                <div class="content-text">
+                <div class="content-text mr-top-10">
                     <content-text :width="widthContentText" :height="heightContentText" :ContentText="ContentText" />
                 </div>
             </article>
@@ -77,6 +77,7 @@
         components: { 
             CardGame: () => import('../card/CardGame'),
             ContentText: () => import('../content/ContentText'),
+            Popup: () => import('../popup/Popup'),
         },
         data() {
             return {
@@ -302,6 +303,31 @@
 
 <style lang="scss" amp-boilerplate>
     .slots-body {
+        .popup-style {
+            .z-index-style {
+                z-index: 99999;
+                .modalbox {
+                    background: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .modal_box {
+                    margin-left: -25%;
+                    border-radius: 4px;
+                    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2);
+                    position: absolute;
+                    top: 15%;
+                    transition: all .3s ease-in-out;
+                    width: 50%;
+                    left: 50%;
+                    background: $color-white;
+                    background-size: 40px 40px;
+                    border-radius: 10px;
+                }
+            }
+        }
+
         .tap-container {
             @extend .border-radius-3px;
             @extend .btn-bg-red;
@@ -378,9 +404,6 @@
             @extend .display-grid;
             grid-template-columns: 1.1fr 3fr;
 
-            .tab-style {
-                margin: 10px 0px;
-            }
             .column-right {
                 .tab-body {
                     margin-top: 10px;

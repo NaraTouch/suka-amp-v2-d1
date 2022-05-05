@@ -8,11 +8,11 @@
 
             <div class="border-row">
                 <!-- slider-promotion -->
-                <div class="slider-promotion">
+                <div class="mr-top-10">
                     <slider :slide-list="sliderPromotion" :slider="slderCondition" />
                 </div>
                 <!-- stay-connected -->
-                <div class="stay-connected">
+                <div class="stay-connected mr-top-10">
                     <stay-connected />
                 </div>
 
@@ -35,7 +35,7 @@
                 <slider-path />
             </div>
 
-            <div class="card-content">
+            <div class="pr-top-10">
                 <card-game :cardMultiple="cardMultiple" :cardDatas="cardDatas" />
             </div>
         </article>
@@ -179,12 +179,8 @@
                 border-bottom-right-radius: 4px;
             }
 
-            .slider-promotion {
-                margin: 10px 0px;
-            }
-
             .stay-connected {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 background-color: $bg-body-field;
                 @extend .border-radius-3px;
             }
@@ -208,9 +204,6 @@
                 background-color: $bg-body-field;
             }
 
-            .card-content {
-                padding: 10px 0px 0px 0px;
-            }
         }
     }
 </style>

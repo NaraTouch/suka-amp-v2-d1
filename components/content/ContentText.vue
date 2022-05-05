@@ -23,7 +23,6 @@ export default {
 <style lang="scss" amp-boilerplate>
     .square-small {
         text-align: left;
-        padding: 10px 0px;
 
         .color-text {
             color: $text-color-1;

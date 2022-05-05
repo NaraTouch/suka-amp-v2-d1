@@ -2,7 +2,7 @@
  <section>
     <div class="page-container">
         <header-page />
-        <div class="body-container">
+        <div class="body-container pr-top-10">
             <slots-body-page />
             <footers-page :hide="hide" />
         </div>
@@ -26,9 +26,5 @@
 </script>
 
 <style lang="scss" amp-boilerplate>
-    .page-container {
-        .body-container {
-            padding: 10px 0px;
-        }
-  }
+   
 </style>
